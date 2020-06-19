@@ -1,0 +1,133 @@
+.entireShell {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: lightgoldenrodyellow;
+}
+.searchTitle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    text-align: center;
+}
+.summonerName {
+    display: inline-flex;
+    position: relative;
+    left: 5%
+
+}
+.summonerLevel {
+    position: relative;
+    display: inline-flex;
+    left: 6%
+}
+.profilePic {
+    display: inline-flex;
+    vertical-align: middle;
+    position: relative;
+    left: 25px
+}
+.soloRank {
+    display: inline-flex;
+    vertical-align: middle;
+    background-color: lightgreen;
+}
+.soloRankImage {
+    display: inline-flex;
+    vertical-align: middle;
+}
+.flexRank {
+    display: inline-flex;
+    background-color: lightsalmon;
+    vertical-align: middle;
+}
+.flexRankImage {
+    display: inline-flex;
+    vertical-align: middle;
+}
+.ranks {
+    display: block;
+    background-color: palevioletred
+}
+.matchList {
+    margin-top: 15px;
+    font-size: medium;
+}
+.matchDetails {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.basicGameStats {
+    display: inline-flex;
+    width: 125px;
+}
+.championImage {
+    display: inline-flex;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    vertical-align: middle;
+}
+.itemList {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 7px;
+    width: 13%;
+}
+.itemRow1 {
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
+}
+.itemRow2 {
+    position: relative;
+    display: inline-flex;
+    top: 30px;
+    right: 90px;
+    height: 30px;
+    width: 30px;
+}
+.summonerSpells {
+    display: inline-flex;
+    position: relative;
+    vertical-align: 7px;
+    left: 10px;
+}
+.summonerSpell {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+.basicStatsShell {
+    display: inline-flex;
+    position: relative;
+    left: 10%;
+}
+.expandMatchHistory {
+    display: inline-flex;
+    position: relative;
+    left: 15%;
+}
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    align-items: center;
+}
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

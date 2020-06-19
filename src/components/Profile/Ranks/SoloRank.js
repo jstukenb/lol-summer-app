@@ -1,6 +1,6 @@
 import React from 'react'
-import Image from '../../Image'
 import { getRankPic } from '../../../RiotAPI'
+import '../../app.css'
 
 const SoloRank = (props) => {
     let soloRank = ""
@@ -18,12 +18,17 @@ const SoloRank = (props) => {
         soloRank = "N/A"
         soloRankPic = getRankPic("0")
     } else {
-        soloRank = props.rankData[0].tier + " " + props.rankData[0].rank + " " + props.rankData[0].leaguePoints
-        soloRankPic = getRankPic(props.rankData[0].tier)
+        if (props.rankData[0].queueType === "RANKED_SOLO_5x5") {
+            soloRank = props.rankData[0].tier + " " + props.rankData[0].rank + " " + props.rankData[0].leaguePoints
+            soloRankPic = getRankPic(props.rankData[0].tier)
+        } else {
+            soloRank = props.rankData[1].tier + " " + props.rankData[1].rank + " " + props.rankData[1].leaguePoints
+            soloRankPic = getRankPic(props.rankData[1].tier) 
+        }
     }
     return(
-        <div>
-            Solo/Duo Rank: <Image imageLink = {soloRankPic}/>{soloRank}
+        <div className = "soloRank">
+            <img className = "soloRankImage" src = {soloRankPic} alt = "loading"/>Solo Rank: {soloRank}
         </div>
     )
 }

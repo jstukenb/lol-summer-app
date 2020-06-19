@@ -3,6 +3,7 @@ import {
     getMatchList,
 } from '../../RiotAPI'
 import MatchDetails from './MatchDetails'
+import '../app.css'
 
 const MatchHistory = (props) => {
     const [ matchListGrabbed, setMatchListGrabbed ] = useState()
@@ -33,13 +34,13 @@ const MatchHistory = (props) => {
         return <div>Loading...</div>
     } else {
         return (
-            <ul>
+            <div className = "matchList"> Match History
                 {matchListGrabbed.map(match => (
-                    <li key={match.gameId}> 
+                    <div key={match.gameId}> 
                         <MatchDetails {...match} accountId = {props.accountId}/>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         )
     }
 }

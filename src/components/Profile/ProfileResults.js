@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import Image from '../Image'
 import SoloRank from './Ranks/SoloRank'
 import FlexRank from './Ranks/FlexRank'
 import { getProfilePic } from '../../RiotAPI'
+import '../app.css'
 
 const Results = (props) => {
     const [ isLoaded, setIsLoaded ] = useState(false)
-    console.log("props from search: ", props)
     useEffect(() => {
         setIsLoaded(true)
     }, [])
@@ -25,11 +24,13 @@ const Results = (props) => {
                     border: 'solid black 2px'
                 }}
             >
-                <Image imageLink = {profileImageLink} width = "100" height = "100"/>
-                <h2>Summoner Name: {summonerName}</h2>
-                <h2>Summoner Level: {summonerLevel}</h2>
-                <SoloRank rankData = {props.rankData}/>
-                <FlexRank rankData = {props.rankData}/>
+                <img className = "profilePic" src = {profileImageLink} width = "100" height = "100" alt = "loading"/>
+                <h2 className = "summonerName">Summoner Name: {summonerName}</h2>
+                <h2 className = "summonerLevel">Summoner Level: {summonerLevel}</h2>
+                <div className = "ranks">
+                    <SoloRank rankData = {props.rankData}/>
+                    <FlexRank rankData = {props.rankData}/>
+                </div>
             </div>
         )
     }

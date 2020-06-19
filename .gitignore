@@ -8,6 +8,9 @@
 # environment
 .env
 
+# data
+/public/dragontail-10.11
+
 # testing
 /coverage
 

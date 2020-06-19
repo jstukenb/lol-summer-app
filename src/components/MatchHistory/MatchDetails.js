@@ -4,20 +4,24 @@ import {
     getChampionPic,
     getSummonerSpellPic
 } from '../../RiotAPI'
-import Image from '../Image'
 import ItemList from '../Items/ItemList'
+import SummonerSpell from './SummonerSpell'
+import BasicStats from './BasicStats'
+import BasicGameStats from './BasicGameStats'
+import ExpandedGameStats from './ExpandedGameStats'
+import '../app.css'
 
 const MatchDetails = (props) => {
     const [ gameData, setGameData ] = useState()
     const [ participantId, setParticipantId ] = useState()
     const [ isLoaded, setIsLoaded ] = useState(false)
+    const [ showExpanded, setShowExpanded ] = useState(false)
     const [ error, setError ] = useState(null)
 
     useEffect(() => {  
         getMatchDetails(props.gameId)
             .then((result) => {
                 setGameData(result)
-                console.log("result: ", result)
                 for(let i=0; i<result.participantIdentities.length; i++) {
                     if(result.participantIdentities[i].player.accountId === props.accountId){
                         setParticipantId(i)
@@ -31,8 +35,7 @@ const MatchDetails = (props) => {
     }, [props.gameId, props.accountId])
 
     useEffect(() => {
-        if(gameData !== undefined && participantId !== undefined) {
-            console.log("WHODATWON IS: ", participantId)           
+        if(gameData !== undefined && participantId !== undefined) {         
             setIsLoaded(true)
         }
     }, [gameData, participantId])
@@ -52,14 +55,6 @@ const MatchDetails = (props) => {
             victory = "DEFEAT"
             color = "crimson"
         }
-        let KDA = `${gameData.participants[participantId].stats.kills}/${gameData.participants[participantId].stats.deaths}/${gameData.participants[participantId].stats.assists}`
-        let KDANumber = (gameData.participants[participantId].stats.kills + gameData.participants[participantId].stats.assists) / gameData.participants[participantId].stats.deaths
-
-        if (KDANumber === Infinity) {
-            KDANumber = "PERFECT"
-        } else {
-            KDANumber = KDANumber.toFixed(2)
-        }
         let item0 = gameData.participants[participantId].stats.item0
         let item1 = gameData.participants[participantId].stats.item1
         let item2 = gameData.participants[participantId].stats.item2
@@ -69,6 +64,10 @@ const MatchDetails = (props) => {
         let item6 = gameData.participants[participantId].stats.item6
         let items = [ item0, item1, item2, item3, item4, item5, item6 ]
 
+        const handleButtonPress = e => {
+            e.preventDefault()
+            setShowExpanded(!showExpanded)
+        }
         return(
         <div
             style = {{
@@ -76,19 +75,30 @@ const MatchDetails = (props) => {
                 border: 'solid black 1px'
             }}
         >
-            <h1>
-                {victory}
-                <Image imageLink = {getChampionPic(props.champion)} width = "40" height = "40"/> 
+            <div className = "matchDetails">
+                <BasicGameStats victory = {victory} gameData = {gameData} participantId = {participantId}/>
+                <img className = "championImage" src = {getChampionPic(props.champion)} alt = "loading"/> 
+                <SummonerSpell  imageLink1 = {getSummonerSpellPic(gameData.participants[participantId].spell1Id)} imageLink2 = {getSummonerSpellPic(gameData.participants[participantId].spell2Id)}/> 
                 <ItemList items = {items}/>
-                <Image imageLink = {getSummonerSpellPic(gameData.participants[participantId].spell1Id)}/> <Image imageLink = {getSummonerSpellPic(gameData.participants[participantId].spell2Id)}/>
-                "{KDA}"
-                KDA: {KDANumber}/1
-            </h1>
-            <h3>Damage to champions: {gameData.participants[participantId].stats.totalDamageDealtToChampions}</h3>
-            
+                <BasicStats gameData = {gameData} participantId = {participantId}/>
+                <button className = "expandMatchHistory" onClick = {handleButtonPress}>poggers</button>
+                {showExpanded && gameData.participantIdentities.map(participant => (
+                    <div key = {participant.player.summonerName}>
+                        <ExpandedGameStats {...participant} gameData = {gameData} />
+                    </div>
+                ))}
+            </div> 
         </div>
         )
     }
 }
 
 export default MatchDetails
+/*
+
+
+
+
+
+
+*/

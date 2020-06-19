@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Results from '../Profile/ProfileResults'
 import MatchHistory from '../MatchHistory/MatchHistory'
+import '../app.css'
 import {
     searchSummonerName,
     getPlayerRank,
 } from '../../RiotAPI'
+
 
 const SearchStuff = () => {
     const [ summonerData, setSummonerData ] = useState()
@@ -14,7 +16,7 @@ const SearchStuff = () => {
     
     const [ dataGrabbed, setDataGrabbed ] = useState(false)
     const [ error, setError ] = useState(null)
-    
+
     async function grabData() {
         try {
             if (summonerName !== "") {
@@ -28,7 +30,6 @@ const SearchStuff = () => {
 
     useEffect(() => {
         if (summonerData !== undefined) {
-            console.log("in here")
             getPlayerRank(summonerData.id)
                 .then((result) => {
                     setRankData(result)
@@ -45,7 +46,10 @@ const SearchStuff = () => {
     
     if (dataGrabbed) {  
         return(
-            <div>
+            <div className = "entireShell">
+                <h1 className = "searchTitle">
+                Search Summoner Name
+                </h1>
                 <form>
                     <input
                         id = "summonerInfo"
@@ -66,21 +70,21 @@ const SearchStuff = () => {
         )
     }
     return(
-        <div className="SearchSummoner">
-            <h1>
-                Search Summoner Name and Champion
-                <form>
-                    <input
-                      id = "summonerInfo"
-                      placeholder = "Input a Summoner Name"
-                      type = "text"
-                      onChange = {e => setSummonerName(e.target.value)}
-                      value = {summonerName}
-                      >
-                    </input>
-                </form>
-                <button onClick = {onSearchButtonPress}>Search</button>      
+        <div className="entireShell">
+            <h1 className = "searchTitle">
+                Search Summoner Name     
             </h1>
+            <form>
+                <input
+                  id = "summonerInfo"
+                  placeholder = "Input a Summoner Name"
+                  type = "text"
+                  onChange = {e => setSummonerName(e.target.value)}
+                  value = {summonerName}
+                  >
+                </input>
+                </form>
+                <button onClick = {onSearchButtonPress}>Search</button>   
         </div>
     )
 }

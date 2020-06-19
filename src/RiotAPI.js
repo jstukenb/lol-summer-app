@@ -61,7 +61,7 @@ const searchSummonerName = summonerName => {
 }
 
 const getMatchList = (accountId) => {
-  const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=2&beginIndex=0&`
+  const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=10&beginIndex=0&`
   return riotQueryGET(url)
 }
 
