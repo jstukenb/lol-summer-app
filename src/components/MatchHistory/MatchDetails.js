@@ -9,6 +9,7 @@ import SummonerSpell from './SummonerSpell'
 import BasicStats from './BasicStats'
 import BasicGameStats from './BasicGameStats'
 import ExpandedGameStats from './ExpandedGameStats'
+import Runes from './Runes'
 import '../app.css'
 
 const MatchDetails = (props) => {
@@ -22,6 +23,7 @@ const MatchDetails = (props) => {
         getMatchDetails(props.gameId)
             .then((result) => {
                 setGameData(result)
+                console.log(result)
                 for(let i=0; i<result.participantIdentities.length; i++) {
                     if(result.participantIdentities[i].player.accountId === props.accountId){
                         setParticipantId(i)
@@ -71,23 +73,32 @@ const MatchDetails = (props) => {
         return(
         <div
             style = {{
-                backgroundColor: color,
                 border: 'solid black 1px'
             }}
         >
-            <div className = "matchDetails">
+            <div className = "matchDetails" style = {{
+                    backgroundColor: color,
+                    display: 'inline-block',
+                    marginTop: '1%',
+                    marginBottom: '1%',
+                    marginRight: 'auto',
+                    marginLeft: 'auto',
+                    border: 'solid black 2px'
+                }}>
                 <BasicGameStats victory = {victory} gameData = {gameData} participantId = {participantId}/>
                 <img className = "championImage" src = {getChampionPic(props.champion)} alt = "loading"/> 
+                <Runes gameData = {gameData} participantId = {participantId}/>
                 <SummonerSpell  imageLink1 = {getSummonerSpellPic(gameData.participants[participantId].spell1Id)} imageLink2 = {getSummonerSpellPic(gameData.participants[participantId].spell2Id)}/> 
                 <ItemList items = {items}/>
                 <BasicStats gameData = {gameData} participantId = {participantId}/>
                 <button className = "expandMatchHistory" onClick = {handleButtonPress}>poggers</button>
-                {showExpanded && gameData.participantIdentities.map(participant => (
+                
+            </div> 
+            {showExpanded && gameData.participantIdentities.map(participant => (
                     <div key = {participant.player.summonerName}>
                         <ExpandedGameStats {...participant} gameData = {gameData} />
                     </div>
                 ))}
-            </div> 
         </div>
         )
     }
