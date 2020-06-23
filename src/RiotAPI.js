@@ -47,7 +47,7 @@ const riotQueryGET = resource => {
 };
 
 const queryGET = resource => {
-  return fetch(`${urlFor(resource)}`, {
+  return fetch(resource, {
     method: "GET",
     headers: requestHeaders
   })
@@ -61,12 +61,17 @@ const searchSummonerName = summonerName => {
 }
 
 const getMatchList = (accountId) => {
-  const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=3&beginIndex=0&`
+  const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=5&beginIndex=0&`
   return riotQueryGET(url)
 }
 
 const getMatchDetails = gameId => {
   const url = `https://na1.api.riotgames.com/lol/match/v4/matches/${gameId}`
+  return riotQueryGET(url)
+}
+
+const getMatchTimeline = gameId => {
+  const url = `https://na1.api.riotgames.com/lol/match/v4/timelines/by-match/${gameId}`
   return riotQueryGET(url)
 }
 
@@ -77,7 +82,7 @@ const getChampionMastery = (summonerId, championId) => {
 
 const getPlayerRank = (summonerId) => {
   const url = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${apiKey}`
-  return queryGET(url)
+  return riotQueryGET(url)
 }
 
 const getProfilePic = profileId => {
@@ -108,4 +113,11 @@ const getRuneJson = () => {
 const getRuneImage = (secondHalfOfPath) => {
   return `/dragontail-10.11/img/${secondHalfOfPath}`
 }
-export { searchSummonerName, getMatchList, getChampionMastery, getPlayerRank, getProfilePic, getChampionPic, getMatchDetails, getItemPic, getRankPic, getSummonerSpellPic, getRuneJson, getRuneImage }
+
+const getMapImage = (mapId) => {
+  return `/dragontail-10.11/10.11.1/img/map/map${mapId}.png`
+}
+export { 
+          searchSummonerName, getMatchList, getMatchTimeline, getChampionMastery, getPlayerRank, getProfilePic, 
+          getChampionPic, getMatchDetails, getItemPic, getRankPic, getSummonerSpellPic, getRuneJson, getRuneImage, getMapImage
+        }

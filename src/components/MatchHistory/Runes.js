@@ -6,27 +6,21 @@ const Runes = props => {
     const [secondTree, setSecondTree ] = useState("")
 
     useEffect(() => {
-        console.log("RUNE PROPS: " , props)
         getRuneJson()
             .then((result) => {
-                //console.log(result)
-                for (let i = 0; i < result.length; i++) {
-                    console.log(props.gameData.participants[props.participantId])
-                    
+                for (let i = 0; i < result.length; i++) {    
                     if (result[i].id === props.gameData.participants[props.participantId].stats.perkSubStyle) {
                         let secondHalf2 = result[i].icon
-                        console.log(secondHalf2)
                         setSecondTree(getRuneImage(secondHalf2))
                     }
                     for (let j = 0; j < result[i].slots[0].runes.length; j++)
                     if (result[i].slots[0].runes[j].id  === props.gameData.participants[props.participantId].stats.perk0) {
                         let secondHalf = result[i].slots[0].runes[j].icon
-                        console.log(secondHalf)
                         setKeystone(getRuneImage(secondHalf))
                     }
                 }
             })
-    })
+    }, [props])
     
     return(
         <div style = {{

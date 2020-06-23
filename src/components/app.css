@@ -2,7 +2,6 @@
     display: block;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: lightgray;
 }
 .searchTitle {
     display: block;
@@ -31,7 +30,6 @@
 .soloRank {
     display: inline-flex;
     vertical-align: middle;
-    background-color: lightgreen;
 }
 .soloRankImage {
     display: inline-flex;
@@ -39,7 +37,6 @@
 }
 .flexRank {
     display: inline-flex;
-    background-color: lightsalmon;
     vertical-align: middle;
 }
 .flexRankImage {
@@ -48,7 +45,7 @@
 }
 .ranks {
     display: block;
-    background-color: palevioletred
+    
 }
 .matchList {
     margin-top: 15px;
@@ -118,14 +115,14 @@
     position: relative;
     left: 15%;
 }
-input {
+#summonerInfo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     align-items: center;
 }
-button {
+.search {
     display: block;
     margin-left: auto;
     margin-right: auto;

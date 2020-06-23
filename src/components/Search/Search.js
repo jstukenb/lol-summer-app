@@ -7,7 +7,6 @@ import {
     getPlayerRank,
 } from '../../RiotAPI'
 
-
 const SearchStuff = () => {
     const [ summonerData, setSummonerData ] = useState()
     const [ rankData, setRankData ] = useState()
@@ -33,7 +32,6 @@ const SearchStuff = () => {
             getPlayerRank(summonerData.id)
                 .then((result) => {
                     setRankData(result)
-                    console.log(result)
                     setDataGrabbed(true)
                 })
         }
@@ -41,11 +39,13 @@ const SearchStuff = () => {
 
     const onSearchButtonPress = (e) => {
         e.preventDefault();
+        console.log("SEARCH PRESSEd")
         grabData();
     }
     
     if (dataGrabbed) {  
         return(
+            
             <div className = "entireShell">
                 <h1 className = "searchTitle">
                 Search Summoner Name
@@ -60,12 +60,12 @@ const SearchStuff = () => {
                         >
                     </input>
                 </form>
-                <button onClick = {onSearchButtonPress}>Search</button>
+                <button className = "search" onClick = {onSearchButtonPress}>Search</button>
                 <Results 
                     summonerData = {summonerData}
                     rankData = {rankData}
                 />
-                {<MatchHistory accountId = {summonerData.accountId}/>}
+                <MatchHistory accountId = {summonerData.accountId}/>
             </div>
         )
     }
@@ -83,8 +83,8 @@ const SearchStuff = () => {
                   value = {summonerName}
                   >
                 </input>
-                </form>
-                <button onClick = {onSearchButtonPress}>Search</button>   
+            </form>
+            <button className = "search" onClick = {onSearchButtonPress}>Search</button>   
         </div>
     )
 }
