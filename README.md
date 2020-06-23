@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Purpose
+
+The purpose of this project was to practice react skills as well as working with Riot Game's API.
+
+It currently only runs for users on the NA server.
+Input a username for a League of Legends account, and you will get a list of your 5 most recent matches with extended info.
+
 ## Available Scripts
 
 In the project directory, you can run:
