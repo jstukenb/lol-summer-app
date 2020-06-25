@@ -28,7 +28,7 @@ const SoloRank = (props) => {
     }
     return(
         <div className = "soloRank">
-            <img className = "soloRankImage" src = {soloRankPic} alt = "loading"/>Solo Rank: {soloRank}
+            <img className = "soloRankImage" src = {soloRankPic} alt = "loading" height='57px' width='50px'/>Solo Rank: {soloRank}
         </div>
     )
 }

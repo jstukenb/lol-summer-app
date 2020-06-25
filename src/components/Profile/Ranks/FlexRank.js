@@ -28,7 +28,7 @@ const FlexRank = (props) => {
     }
     return(
         <div className = "flexRank">
-            <img className = "flexRankImage" src = {flexRankPic} alt = "loading"/>Flex 5x5 Rank: {flexRank}
+            <img className = "flexRankImage" src = {flexRankPic} alt = "loading" height='57px' width='50px'/>Flex 5x5 Rank: {flexRank}
         </div>
     )
 }

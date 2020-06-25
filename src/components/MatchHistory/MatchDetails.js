@@ -57,6 +57,8 @@ const MatchDetails = (props) => {
         return <div>Error: {error.message}</div>
     } else if (!isLoaded) {
         return <div>Loading...</div>
+    } else if (gameData.participants === undefined) {
+        return <div>Please reload and try again</div>
     } else {
         let victory = ""
         let color = ""
@@ -97,7 +99,7 @@ const MatchDetails = (props) => {
                     border: 'solid black 2px'
                 }}>
                     <BasicGameStats victory={victory} gameData={gameData} participantId={participantId} />
-                    <img className="championImage" src={getChampionPic(props.champion)} alt="loading" />
+                    <img className="championImage" src={getChampionPic(props.champion)} alt="loading" title="POOPPOOPOPOP"/>
                     <Runes gameData={gameData} participantId={participantId} />
                     <SummonerSpell imageLink1={getSummonerSpellPic(gameData.participants[participantId].spell1Id)} imageLink2={getSummonerSpellPic(gameData.participants[participantId].spell2Id)} />
                     <ItemList items={items} />

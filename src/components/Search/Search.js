@@ -5,11 +5,13 @@ import '../app.css'
 import {
     searchSummonerName,
     getPlayerRank,
+    getLiveData
 } from '../../RiotAPI'
 
 const SearchStuff = () => {
     const [ summonerData, setSummonerData ] = useState()
     const [ rankData, setRankData ] = useState()
+    const [ tylerLol, setTylerLol ] = useState(false)
 
     const [ summonerName, setSummonerName ] = useState("")
     
@@ -20,6 +22,8 @@ const SearchStuff = () => {
         try {
             if (summonerName !== "") {
                 setSummonerData(await searchSummonerName(summonerName))
+            } else if (summonerName === "unknown warlac") {
+                setTylerLol(true)
             } else throw "Input a valid Summoner Name"
         } catch (error) {
             setError("Sorry something went wrong");
@@ -45,10 +49,9 @@ const SearchStuff = () => {
     
     if (dataGrabbed) {  
         return(
-            
             <div className = "entireShell">
                 <h1 className = "searchTitle">
-                Search Summoner Name
+                JOSH.GG
                 </h1>
                 <form>
                     <input
@@ -69,10 +72,17 @@ const SearchStuff = () => {
             </div>
         )
     }
+    if (tylerLol) {
+        return(
+            <div>
+                WOOF WOOF TYLER DOG
+            </div>
+        )
+    }
     return(
         <div className="entireShell">
             <h1 className = "searchTitle">
-                Search Summoner Name     
+                JOSH.GG    
             </h1>
             <form>
                 <input

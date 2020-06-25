@@ -61,7 +61,7 @@ const searchSummonerName = summonerName => {
 }
 
 const getMatchList = (accountId) => {
-  const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=5&beginIndex=0&`
+  const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=10&beginIndex=5&`
   return riotQueryGET(url)
 }
 
@@ -99,7 +99,7 @@ const getItemPic = itemId => {
 }
 
 const getRankPic = rankTier => {
-  return `/dragontail-10.11/10.11.1/img/rank/${rankTier}.png`
+  return `/dragontail-10.11/10.11.1/img/ranked-emblems/Emblem_${rankTier}.png`
 }
 
 const getSummonerSpellPic = spellId => {
@@ -117,6 +117,8 @@ const getRuneImage = (secondHalfOfPath) => {
 const getMapImage = (mapId) => {
   return `/dragontail-10.11/10.11.1/img/map/map${mapId}.png`
 }
+
+
 export { 
           searchSummonerName, getMatchList, getMatchTimeline, getChampionMastery, getPlayerRank, getProfilePic, 
           getChampionPic, getMatchDetails, getItemPic, getRankPic, getSummonerSpellPic, getRuneJson, getRuneImage, getMapImage
