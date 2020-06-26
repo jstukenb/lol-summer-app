@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import {getChampionPic, getItemPic} from '../../../RiotAPI'
+import React from 'react'
+import {getChampionPic} from '../../../RiotAPI'
 
 const Event = props => {
     let time = props.timestamp / 1000

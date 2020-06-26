@@ -5,7 +5,6 @@ import '../app.css'
 import {
     searchSummonerName,
     getPlayerRank,
-    getLiveData
 } from '../../RiotAPI'
 
 const SearchStuff = () => {

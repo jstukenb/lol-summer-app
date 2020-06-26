@@ -13,10 +13,11 @@ const Runes = props => {
                         let secondHalf2 = result[i].icon
                         setSecondTree(getRuneImage(secondHalf2))
                     }
-                    for (let j = 0; j < result[i].slots[0].runes.length; j++)
-                    if (result[i].slots[0].runes[j].id  === props.gameData.participants[props.participantId].stats.perk0) {
-                        let secondHalf = result[i].slots[0].runes[j].icon
-                        setKeystone(getRuneImage(secondHalf))
+                    for (let j = 0; j < result[i].slots[0].runes.length; j++){
+                        if (result[i].slots[0].runes[j].id  === props.gameData.participants[props.participantId].stats.perk0) {
+                            let secondHalf = result[i].slots[0].runes[j].icon
+                            setKeystone(getRuneImage(secondHalf))
+                        }
                     }
                 }
             })

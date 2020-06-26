@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import FrameInterval from '../FrameInterval'
 
 const MatchTimeline = props => {
-    console.log("TIMELINE PROPS: ", props)
     
     return(
         <div style={{height: "200px", overflowY: 'scroll'}}>

@@ -24,8 +24,8 @@ const Results = (props) => {
                     border: 'solid black 2px'
                 }}
             >
-                <img className = "profilePic" src = {profileImageLink} width = "100" height = "100" alt = "loading"/>
-                <h2 className = "summonerName">Summoner Name: {summonerName}</h2>
+                <img className = "profilePic" src = {profileImageLink} width = "100" height = "100" alt = "loading" />
+                <h2 className = "summonerName" onMouseEnter={() => console.log("poop")}>Summoner Name: {summonerName}</h2>
                 <h2 className = "summonerLevel">Summoner Level: {summonerLevel}</h2>
                 <div className = "ranks">
                     <SoloRank rankData = {props.rankData}/>

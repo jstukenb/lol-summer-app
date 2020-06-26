@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {
     getMatchList,
+    getChampionJson
 } from '../../RiotAPI'
 import MatchDetails from './MatchDetails'
 import '../app.css'
@@ -9,7 +10,7 @@ const MatchHistory = (props) => {
     const [ matchListGrabbed, setMatchListGrabbed ] = useState()
     const [ isLoaded, setIsLoaded ] = useState(false)
     const [ error, setError ] = useState(null)
-
+    var blurb = ""
     useEffect(() => {
         getMatchList(props.accountId)
             .then((result) => {
@@ -20,6 +21,7 @@ const MatchHistory = (props) => {
                 setIsLoaded(true)
                 setError(error)
             })
+              
     }, [props.accountId])
 
     useEffect(() => {

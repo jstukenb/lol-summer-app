@@ -3,7 +3,8 @@ import {
     getMatchDetails,
     getChampionPic,
     getSummonerSpellPic,
-    getMatchTimeline
+    getMatchTimeline,
+    getChampionJson
 } from '../../RiotAPI'
 import ItemList from '../Items/ItemList'
 import SummonerSpell from './SummonerSpell'
@@ -22,13 +23,16 @@ const MatchDetails = (props) => {
     const [error, setError] = useState(null)
     const [playerBios, setPlayerBios] = useState()
     let tempArrayOfBios = []
+    const [blurb, setBlurb] = useState()
+    const [isShown, setIsShown] = useState(false)
+    
     useEffect(() => {
         getMatchDetails(props.gameId)
             .then((result) => {
                 setGameData(result)
                 console.log(result)
                 for (let i = 0; i < result.participantIdentities.length; i++) {
-                    let playerBio = [result.participantIdentities[i].player.summonerName, result.participants[i].championId]
+                    let playerBio = [result.participantIdentities[i].player.summonerName, result.participants[i].championId, result.participants[i].teamId]
                     tempArrayOfBios.push(playerBio)
                     if (result.participantIdentities[i].player.accountId === props.accountId) {
                         setParticipantId(i)
@@ -43,15 +47,25 @@ const MatchDetails = (props) => {
         getMatchTimeline(props.gameId)
                 .then((result) => {
                     setGameTimeline(result)
-                    console.log("timeline result: ", result)
+                    //console.log("timeline result: ", result)
                 })
+        getChampionJson()
+            .then((result) => {
+                console.log(result)
+                const champName = result.keys[props.champion]
+                console.log("CHAMP NAME: " , champName)
+
+                setBlurb(result.data[champName].blurb)
+
+            })  
+        
     }, [props.gameId, props.accountId])
 
     useEffect(() => {
-        if (gameData !== undefined && participantId !== undefined && playerBios !== undefined) {
+        if (gameData !== undefined && participantId !== undefined && playerBios !== undefined && blurb !== undefined) {
             setIsLoaded(true)
         }
-    }, [gameData, participantId, playerBios])
+    }, [gameData, participantId, playerBios, blurb])
 
     if (error) {
         return <div>Error: {error.message}</div>
@@ -98,8 +112,12 @@ const MatchDetails = (props) => {
                     marginLeft: 'auto',
                     border: 'solid black 2px'
                 }}>
+                    
                     <BasicGameStats victory={victory} gameData={gameData} participantId={participantId} />
-                    <img className="championImage" src={getChampionPic(props.champion)} alt="loading" title="POOPPOOPOPOP"/>
+                    <img className="championImage" src={getChampionPic(props.champion)} alt="loading" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}title={blurb}/>
+                    {isShown && (
+                        <div style={{display: 'flex'}}>POOOOP</div>
+                    )}
                     <Runes gameData={gameData} participantId={participantId} />
                     <SummonerSpell imageLink1={getSummonerSpellPic(gameData.participants[participantId].spell1Id)} imageLink2={getSummonerSpellPic(gameData.participants[participantId].spell2Id)} />
                     <ItemList items={items} />
