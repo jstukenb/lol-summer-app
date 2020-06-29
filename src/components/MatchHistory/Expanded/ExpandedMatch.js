@@ -19,10 +19,10 @@ const ExpandedMatch = props => {
                 </TabList>
                 <TabPanel>
                     <div>
-                        <ExpandedObjectives />
+                        <ExpandedObjectives gameData={props.gameData}/>
                         {props.gameData.participantIdentities.map(participant => (
                             <div key={participant.player.summonerName}>
-                                {<ExpandedGameStats {...participant} gameData={props.gameData} />}
+                                {<ExpandedGameStats {...participant} gameData={props.gameData} runeJson={props.runeJson} championJson={props.championJson}/>}
                             </div>
                         ))}
                     </div>

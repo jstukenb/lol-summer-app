@@ -90,8 +90,8 @@ const getProfilePic = profileId => {
   //return `https://cdn.communitydragon.org/${patch}/profile-icon/${profileId}`
 }
 
-const getChampionPic = championId => {
-  return `https://cdn.communitydragon.org/${patch}/champion/${championId}/square`
+const getChampionPic = champName => {
+  return `/dragontail-10.11/10.11.1/img/champion/${champName}.png`
 }
 
 const getItemPic = itemId => {
@@ -114,6 +114,10 @@ const getChampionJson = () => {
   return queryGET(`/dragontail-10.11/10.11.1/data/en_US/championFull.json`)
 }
 
+const getItemJson = () => {
+  return queryGET(`/dragontail-10.11/10.11.1/data/en_US/item.json`)
+}
+
 const getRuneImage = (secondHalfOfPath) => {
   return `/dragontail-10.11/img/${secondHalfOfPath}`
 }
@@ -122,8 +126,16 @@ const getMapImage = (mapId) => {
   return `/dragontail-10.11/10.11.1/img/map/map${mapId}.png`
 }
 
+const fetchTest = () => {
+  fetch('/dragontail-10.11/10.11.1/data/en_US/item.json')
+    .then(response => {
+      if (!response.ok) {throw response}
+      return response.json()
+    })
+}
+
 
 export { 
           searchSummonerName, getMatchList, getMatchTimeline, getChampionMastery, getPlayerRank, getProfilePic, getChampionJson,
-          getChampionPic, getMatchDetails, getItemPic, getRankPic, getSummonerSpellPic, getRuneJson, getRuneImage, getMapImage
+          getChampionPic, getMatchDetails, getItemPic, getRankPic, getSummonerSpellPic, getRuneJson, getRuneImage, getMapImage, getItemJson, fetchTest
         }

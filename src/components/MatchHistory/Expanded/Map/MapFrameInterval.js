@@ -2,7 +2,6 @@ import React from 'react'
 import MapDot from './MapDot'
 
 const MapFrameInterval = props => {
-    console.log("MAP INTERVAL PROPS: ", props)
     var tracker = 0
     function getUniqueKey() {
         tracker += 1

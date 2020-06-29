@@ -22,6 +22,10 @@ const ExpandedGameStats = props => {
     let item5 = props.gameData.participants[props.participantId - 1].stats.item5
     let item6 = props.gameData.participants[props.participantId - 1].stats.item6
     let items = [item0, item1, item2, item3, item4, item5, item6]
+
+    const champName = props.championJson.keys[props.gameData.participants[props.participantId - 1].championId]
+    //let blurb = props.championJson.data[champName].blurb
+
     return (
         <div style={{
             position: 'relative',
@@ -33,9 +37,9 @@ const ExpandedGameStats = props => {
             border: 'solid black 2px'
         }}>
             <p className="pTest">{summonerName}</p>
-            <img className="championImage" src={getChampionPic(props.gameData.participants[props.participantId - 1].championId)} alt="loading" />
+            <img className="championImage" src={getChampionPic(champName)} alt="loading" />
             <SummonerSpell imageLink1={getSummonerSpellPic(props.gameData.participants[props.participantId - 1].spell1Id)} imageLink2={getSummonerSpellPic(props.gameData.participants[props.participantId - 1].spell2Id)} />
-            <Runes gameData={props.gameData} participantId={props.participantId - 1} />
+            <Runes gameData={props.gameData} participantId={props.participantId - 1} runeJson={props.runeJson} />
             <ItemList items={items} />
             <BasicStats gameData={props.gameData} participantId={props.participantId - 1} />
         </div>

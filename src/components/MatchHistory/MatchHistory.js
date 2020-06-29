@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import {
     getMatchList,
-    getChampionJson
 } from '../../RiotAPI'
 import MatchDetails from './MatchDetails'
 import '../app.css'
 
 const MatchHistory = (props) => {
+    console.log("MATCH HISTORY PROPS: ", props)
     const [ matchListGrabbed, setMatchListGrabbed ] = useState()
     const [ isLoaded, setIsLoaded ] = useState(false)
     const [ error, setError ] = useState(null)
-    var blurb = ""
     useEffect(() => {
+        
         getMatchList(props.accountId)
             .then((result) => {
                 setMatchListGrabbed(result.matches)
@@ -39,7 +39,7 @@ const MatchHistory = (props) => {
             <div className = "matchList"> Match History
                 {matchListGrabbed.map(match => (
                     <div key={match.gameId}> 
-                        <MatchDetails {...match} accountId = {props.accountId}/>
+                        <MatchDetails {...match} accountId = {props.accountId} championJson={props.championJson} itemJson={props.itemJson} runeJson={props.runeJson}/>
                     </div>
                 ))}
             </div>

@@ -5,6 +5,10 @@ import '../app.css'
 import {
     searchSummonerName,
     getPlayerRank,
+    getChampionJson,
+    getRuneJson,
+    getItemJson,
+    fetchTest
 } from '../../RiotAPI'
 
 const SearchStuff = () => {
@@ -13,16 +17,24 @@ const SearchStuff = () => {
     const [ tylerLol, setTylerLol ] = useState(false)
 
     const [ summonerName, setSummonerName ] = useState("")
+
+    const [ championJson, setChampionJson ] = useState()
+    const [ itemJson, setItemJson ] = useState()
+    const [ runeJson, setRuneJson ] = useState()
     
     const [ dataGrabbed, setDataGrabbed ] = useState(false)
     const [ error, setError ] = useState(null)
 
     async function grabData() {
         try {
-            if (summonerName !== "") {
-                setSummonerData(await searchSummonerName(summonerName))
-            } else if (summonerName === "unknown warlac") {
+            if (summonerName === "unknown warlac") {
+                console.log(await fetchTest())
                 setTylerLol(true)
+            } else if (summonerName !== "") {
+                setSummonerData(await searchSummonerName(summonerName))
+                setChampionJson(await getChampionJson())
+                setRuneJson(await getRuneJson())
+                setItemJson(await getItemJson())
             } else throw "Input a valid Summoner Name"
         } catch (error) {
             setError("Sorry something went wrong");
@@ -31,14 +43,14 @@ const SearchStuff = () => {
     }
 
     useEffect(() => {
-        if (summonerData !== undefined) {
+        if (summonerData !== undefined && championJson !== undefined && itemJson !== undefined && runeJson !== undefined ) {
             getPlayerRank(summonerData.id)
                 .then((result) => {
                     setRankData(result)
                     setDataGrabbed(true)
                 })
         }
-    }, [ summonerData ])
+    }, [ summonerData, championJson, itemJson, runeJson ])
 
     const onSearchButtonPress = (e) => {
         e.preventDefault();
@@ -67,13 +79,13 @@ const SearchStuff = () => {
                     summonerData = {summonerData}
                     rankData = {rankData}
                 />
-                <MatchHistory accountId = {summonerData.accountId}/>
+                <MatchHistory accountId = {summonerData.accountId} championJson={championJson} runeJson={runeJson} itemJson={itemJson}/>
             </div>
         )
     }
     if (tylerLol) {
         return(
-            <div>
+            <div style={{display: 'block', position: 'relative', left:'50%'}}>
                 WOOF WOOF TYLER DOG
             </div>
         )
