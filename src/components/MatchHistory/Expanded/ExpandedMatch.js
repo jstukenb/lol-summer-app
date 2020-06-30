@@ -22,7 +22,7 @@ const ExpandedMatch = props => {
                         <ExpandedObjectives gameData={props.gameData}/>
                         {props.gameData.participantIdentities.map(participant => (
                             <div key={participant.player.summonerName}>
-                                {<ExpandedGameStats {...participant} gameData={props.gameData} runeJson={props.runeJson} championJson={props.championJson}/>}
+                                {<ExpandedGameStats {...participant} gameData={props.gameData} itemJson={props.itemJson} runeJson={props.runeJson} championJson={props.championJson}/>}
                             </div>
                         ))}
                     </div>

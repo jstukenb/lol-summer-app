@@ -8,7 +8,8 @@ import {
     getChampionJson,
     getRuneJson,
     getItemJson,
-    fetchTest
+    getSummonerJson,
+
 } from '../../RiotAPI'
 
 const SearchStuff = () => {
@@ -21,6 +22,7 @@ const SearchStuff = () => {
     const [ championJson, setChampionJson ] = useState()
     const [ itemJson, setItemJson ] = useState()
     const [ runeJson, setRuneJson ] = useState()
+    const [ summonerJson, setSummonerJson ] = useState()
     
     const [ dataGrabbed, setDataGrabbed ] = useState(false)
     const [ error, setError ] = useState(null)
@@ -28,13 +30,13 @@ const SearchStuff = () => {
     async function grabData() {
         try {
             if (summonerName === "unknown warlac") {
-                console.log(await fetchTest())
                 setTylerLol(true)
             } else if (summonerName !== "") {
                 setSummonerData(await searchSummonerName(summonerName))
                 setChampionJson(await getChampionJson())
                 setRuneJson(await getRuneJson())
                 setItemJson(await getItemJson())
+                setSummonerJson(await getSummonerJson())
             } else throw "Input a valid Summoner Name"
         } catch (error) {
             setError("Sorry something went wrong");
@@ -79,7 +81,7 @@ const SearchStuff = () => {
                     summonerData = {summonerData}
                     rankData = {rankData}
                 />
-                <MatchHistory accountId = {summonerData.accountId} championJson={championJson} runeJson={runeJson} itemJson={itemJson}/>
+                <MatchHistory accountId = {summonerData.accountId} championJson={championJson} runeJson={runeJson} itemJson={itemJson} summonerJson={summonerJson}/>
             </div>
         )
     }

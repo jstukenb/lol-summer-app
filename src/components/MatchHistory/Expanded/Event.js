@@ -18,11 +18,20 @@ const Event = props => {
     const handleEvent = () => {
         switch(props.type) {
             case 'CHAMPION_KILL':
-                return (
-                    <div className = "champKill">
-                        Time: {time} <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.killerId - 1][3])} ></img> {props.playerBios[props.killerId - 1][0]} killed <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.victimId - 1][3])} ></img> {props.playerBios[props.victimId - 1][0]}
-                    </div>
-                )
+                if (props.killerId !== 0) {
+                    return (
+                        <div className = "champKill">
+                            Time: {time} <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.killerId - 1][3])} ></img> {props.playerBios[props.killerId - 1][0]} killed <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.victimId - 1][3])} ></img> {props.playerBios[props.victimId - 1][0]}
+                        </div>
+                    )
+                } else {
+                    return(
+                        <div>
+                            Time: {time} <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.victimId - 1][3])} ></img> {props.playerBios[props.victimId - 1][0]} got executed
+                        </div>
+                    )
+                }
+                
             case 'WARD_PLACED':
                 if (props.wardType !== "UNDEFINED") {
                     return (
@@ -65,29 +74,22 @@ const Event = props => {
                 
             case 'ITEM_PURCHASED':
                 return (
-                    <div>
-                        
-                    </div>
+                    null
                 )
             case 'ITEM_DESTROYED':
                 return (
-                    <div>
-                        
-                    </div>
+                    null
                 )
             case 'ITEM_SOLD':
                 return (
-                    <div>
-                        
-                    </div>
+                    null
                 )
             case 'ITEM_UNDO':
                 return (
-                    <div>
-                        
-                    </div>
+                    null
                 )
             case 'SKILL_LEVEL_UP':
+                return null
                 if (props.showSkills) {
                     return (
                         <div className = "skillLevelUp">
@@ -101,20 +103,16 @@ const Event = props => {
             case 'ASCENDED_EVENT':
                 return (
                     <div>
-                        Time: {time}
+                        Time: {time} Ascension?
                     </div>
                 )
             case 'CAPTURE_POINT':
                 return (
-                    <div>
-                        Time: {time}
-                    </div>
+                    null
                 )
             case 'PORO_KING_SUMMON':
                 return (
-                    <div>
-                        Time: {time}
-                    </div>
+                    null
                 )
             default:
                 return (

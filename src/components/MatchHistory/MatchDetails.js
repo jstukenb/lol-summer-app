@@ -11,7 +11,7 @@ import BasicStats from './BasicStats'
 import BasicGameStats from './BasicGameStats'
 import ExpandedMatch from './Expanded/ExpandedMatch'
 import Runes from './Runes'
-import HoverCard from '../HoverCard'
+import HoverCard from '../HoverCards/HoverCard'
 import '../app.css'
 
 const MatchDetails = (props) => {
@@ -107,16 +107,16 @@ const MatchDetails = (props) => {
                 }}>
                     
                     <BasicGameStats victory={victory} gameData={gameData} participantId={participantId} />
-                    <img className="championImage" src={getChampionPic(champName)} alt="loading" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} title={blurb}/>
+                    <img className="championImage" src={getChampionPic(champName)} alt="loading" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
                     {isShown && <HoverCard blurb={blurb} />}
                     <Runes gameData={gameData} participantId={participantId} runeJson={props.runeJson}/>
                     <SummonerSpell imageLink1={getSummonerSpellPic(gameData.participants[participantId].spell1Id)} imageLink2={getSummonerSpellPic(gameData.participants[participantId].spell2Id)} />
-                    <ItemList items={items} />
+                    <ItemList items={items} itemJson={props.itemJson}/>
                     <BasicStats gameData={gameData} participantId={participantId} />
                     <button className="expandMatchHistory" onClick={handleButtonPress} style={{display:'inLineFlex'}}>poggers</button>
 
                 </div>
-                {showExpanded && <ExpandedMatch playerBios={playerBios} gameTimeline={gameTimeline} gameData={gameData} runeJson={props.runeJson} championJson={props.championJson} champion={props.champion}/>}
+                {showExpanded && <ExpandedMatch playerBios={playerBios} gameTimeline={gameTimeline} gameData={gameData} itemJson={props.itemJson} runeJson={props.runeJson} championJson={props.championJson} champion={props.champion}/>}
             </div>
         )
     }

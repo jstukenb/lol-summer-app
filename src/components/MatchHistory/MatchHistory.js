@@ -11,7 +11,6 @@ const MatchHistory = (props) => {
     const [ isLoaded, setIsLoaded ] = useState(false)
     const [ error, setError ] = useState(null)
     useEffect(() => {
-        
         getMatchList(props.accountId)
             .then((result) => {
                 setMatchListGrabbed(result.matches)

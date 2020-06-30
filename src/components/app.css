@@ -82,18 +82,19 @@
     bottom: 7px;
     width: 13%;
 }
-.itemRow1 {
-    display: inline-flex;
-    height: 30px;
-    width: 30px;
+.itemImage {
+    width:30px;
+    height:30px;
 }
-.itemRow2 {
+.row1 {
     position: relative;
     display: inline-flex;
+}
+.row2 {
+    position: relative;
+    display: flex;
     top: 30px;
     right: 90px;
-    height: 30px;
-    width: 30px;
 }
 .summonerSpells {
     display: inline-flex;
