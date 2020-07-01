@@ -58,33 +58,38 @@ const queryGET = resource => {
 //'https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/{region}/{id}'
 
 const searchSummonerName = summonerName => {
-  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/na1/${summonerName}`
+  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/summoner/{region}/{summonerName}
+  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`
+  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/na1/${id}`
   return queryGET(url)
 }
 
 const getMatchList = (accountId) => {
-  const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=5&beginIndex=0&`
-  return riotQueryGET(url)
-}
-
-const getMatchDetails = gameId => {
-  const url = `https://na1.api.riotgames.com/lol/match/v4/matches/${gameId}`
-  return riotQueryGET(url)
-}
-
-const getMatchTimeline = gameId => {
-  const url = `https://na1.api.riotgames.com/lol/match/v4/timelines/by-match/${gameId}`
-  return riotQueryGET(url)
-}
-
-const getChampionMastery = (summonerId, championId) => {
-  const url = `https://na1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${summonerId}/by-champion/${championId}?api_key=${apiKey}`
+  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/matchhistory/{accountId}
+  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchhistory/na1/${accountId}`
+  //const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=5&beginIndex=0`
   return queryGET(url)
 }
 
-const getPlayerRank = (summonerId) => {
-  const url = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${apiKey}`
-  return riotQueryGET(url)
+const getMatchDetails = matchId => {
+  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/matchdetails/{matchId}
+  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchdetails/na1/${matchId}`
+  //const url = `https://na1.api.riotgames.com/lol/match/v4/matches/${matchId}`
+  return queryGET(url)
+}
+
+const getMatchTimeline = matchId => {
+  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/matchtimeline/{matchId}
+  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchtimeline/na1/${matchId}`
+  //const url = `https://na1.api.riotgames.com/lol/match/v4/timelines/by-match/${matchId}`
+  return queryGET(url)
+}
+
+const getPlayerRank = (id) => {
+  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/rank/{region}/{id}
+  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/rank/na1/${id}`
+  //const url = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}`
+  return queryGET(url)
 }
 
 const getProfilePic = profileId => {
@@ -136,7 +141,11 @@ const getTimelineImage = (asset) => {
   return `/dragontail-10.11/10.11.1/img/timeline-assets/${asset}.png`
 }
 
+const getScoreboardImage = (asset) => {
+  return `/dragontail-10.11/10.11.1/img/scoreboard/${asset}.png`
+}
+
 export { 
-          searchSummonerName, getMatchList, getMatchTimeline, getChampionMastery, getPlayerRank, getProfilePic, getChampionJson, getSummonerJson,
+          searchSummonerName, getMatchList, getMatchTimeline, getPlayerRank, getProfilePic, getChampionJson, getSummonerJson, getScoreboardImage,
           getChampionPic, getMatchDetails, getItemPic, getRankPic, getSummonerSpellPic, getRuneJson, getRuneImage, getMapImage, getItemJson, getTimelineImage,
         }

@@ -11,12 +11,10 @@ const Runes = props => {
 
     function handleMouseOver() {
         setIsShowing(true)
-        console.log("OOOGA")
     }
 
     function handleMouseExit() {
         setIsShowing(false)
-        console.log("BOOOGA")
     }
 
     useEffect(() => {
@@ -36,7 +34,7 @@ const Runes = props => {
     }, [props.runeJson])
 
     return (
-        <div style={{
+        <div width='30px' style={{
             position: 'relative',
             display: 'inline-flex',
             left: '.5%',

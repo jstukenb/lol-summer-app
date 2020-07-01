@@ -9,7 +9,7 @@ import ItemList from '../Items/ItemList'
 import SummonerSpell from './SummonerSpell'
 import BasicStats from './BasicStats'
 import BasicGameStats from './BasicGameStats'
-import ExpandedMatch from './Expanded/ExpandedMatch'
+import ExpandedMatch from './Expanded/Teams/ExpandedMatch'
 import Runes from './Runes'
 import '../app.css'
 

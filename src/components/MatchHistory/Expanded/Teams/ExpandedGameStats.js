@@ -1,9 +1,9 @@
 import React from 'react'
-import BasicStats from '../BasicStats'
-import SummonerSpell from '../SummonerSpell'
-import ItemList from '../../Items/ItemList'
-import Runes from '../Runes'
-import { getChampionPic, getSummonerSpellPic } from '../../../RiotAPI'
+import BasicStats from '../../BasicStats'
+import SummonerSpell from '../../SummonerSpell'
+import ItemList from '../../../Items/ItemList'
+import Runes from '../../Runes'
+import { getChampionPic, getSummonerSpellPic } from '../../../../RiotAPI'
 
 const ExpandedGameStats = props => {
     let color = ""

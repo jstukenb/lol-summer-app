@@ -2,8 +2,8 @@ import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import ExpandedGameStats from './ExpandedGameStats'
-import MatchTimeline from './Timeline/MatchTimeline'
-import KillMap from './Map/KillMap'
+import MatchTimeline from '../Timeline/MatchTimeline'
+import KillMap from '../Map/KillMap'
 import ExpandedObjectives from './ExpandedObjectives'
 
 const ExpandedMatch = props => {
