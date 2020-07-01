@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import FrameInterval from '../FrameInterval'
+import FrameInterval from './FrameInterval'
 
 const MatchTimeline = props => {
-    
+    console.log("TIMELINE: ", props)
     return(
-        <div style={{height: "200px", overflowY: 'scroll'}}>
+        <div style={{height: "200px", overflowY: 'auto'}}>
             match timeline
             <form>
                 <input defaultChecked type="checkbox" id="showKills" name="showKills" value ="showKills"></input>

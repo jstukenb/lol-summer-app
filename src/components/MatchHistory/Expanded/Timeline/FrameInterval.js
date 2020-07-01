@@ -1,5 +1,5 @@
 import React from 'react'
-import Event from './Expanded/Event'
+import Event from './Event'
 
 const FrameInterval = props => {
     var tracker = 0

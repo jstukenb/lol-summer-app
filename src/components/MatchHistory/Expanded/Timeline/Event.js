@@ -1,5 +1,5 @@
 import React from 'react'
-import {getChampionPic} from '../../../RiotAPI'
+import {getChampionPic, getTimelineImage} from '../../../../RiotAPI'
 
 const Event = props => {
     let time = props.timestamp / 1000
@@ -36,7 +36,7 @@ const Event = props => {
                 if (props.wardType !== "UNDEFINED") {
                     return (
                         <div className = "wardPlace">
-                            Time: {time} <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.creatorId - 1][3])}></img> {props.playerBios[props.creatorId - 1][0]} placed a {props.wardType}
+                            Time: {time} <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.creatorId - 1][3])}></img> {props.playerBios[props.creatorId - 1][0]} placed a <img height='20px' width='20px' style={{display:'inLineFlex'}} alt='loading' src={getTimelineImage(props.wardType)}></img>
                         </div>
                     )
                 } else {
@@ -46,16 +46,35 @@ const Event = props => {
             case 'WARD_KILL':
                 return (
                     <div>
-                        Time: {time} <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.killerId - 1][3])} ></img> {props.playerBios[props.killerId-1][0]} killed a {props.wardType}
+                        Time: {time} <img height = "20px" width = "20px"style = {{display: "inLineFlex"}}alt = "loading" src = {getChampionPic(props.playerBios[props.killerId - 1][3])} ></img> {props.playerBios[props.killerId-1][0]} killed a <img height='20px' width='20px' style={{display:'inLineFlex'}} alt='loading' src={getTimelineImage(props.wardType)}></img>
                     </div>
                 )
             case 'BUILDING_KILL':
                 if (props.killerId === 0) {
-                    return<div className = "buildingKill">Time: {time} A minion killed a {props.towerType} in {props.laneType}</div>
+                    if(props.buildingType==="INHIBITOR_BUILDING") {
+                        return(
+                            <div className = "buildingKill">
+                                Time: {time} A minion destroyed an <img height='20px' width='15px' style={{display:'inLineFlex'}} alt='loading' src={getTimelineImage(props.buildingType)}></img> Inhibitor
+                            </div>
+                        )
+                    } else {
+                        return(
+                            <div className = "buildingKill">
+                                Time: {time} A minion destroyed a <img height='20px' width='15px' style={{display:'inLineFlex'}} alt='loading' src={getTimelineImage(props.buildingType)}></img> Tower
+                            </div>
+                        )
+                    }
+                   
+                } else if(props.buildingType==="INHIBITOR_BUILDING") {
+                    return (
+                        <div className = "buildingKill">
+                            Time: {time} <img height="20px"width="20px"style={{display:"inLineFlex"}}alt="loading"src={getChampionPic(props.playerBios[props.killerId-1][3])}></img> {props.playerBios[props.killerId-1][0]} destroyed an <img height='20px' width='15px' style={{display:'inLineFlex'}} alt='loading' src={getTimelineImage("TOWER_BUILDING")}></img> Inhibitor
+                        </div>
+                    )
                 } else {
                     return (
                         <div className = "buildingKill">
-                            Time: {time} <img height="20px"width="20px"style={{display:"inLineFlex"}}alt="loading"src={getChampionPic(props.playerBios[props.killerId-1][3])}></img> {props.playerBios[props.killerId-1][0]} destroyed a {props.towerType} in {props.laneType}
+                            Time: {time} <img height="20px"width="20px"style={{display:"inLineFlex"}}alt="loading"src={getChampionPic(props.playerBios[props.killerId-1][3])}></img> {props.playerBios[props.killerId-1][0]} destroyed a <img height='20px' width='15px' style={{display:'inLineFlex'}} alt='loading' src={getTimelineImage(props.buildingType)}></img> Tower
                         </div>
                     )
                 }
@@ -64,10 +83,16 @@ const Event = props => {
                 //<img height="20px"width="20px"style={{display:"inLineFlex"}}alt="loading"src={getChampionPic(props.playerBios[props.participantId-1][1])}></img>
                 if (props.killerId === 0) {
                     return(<div></div>)
-                } else {
+                } else if(props.monsterType==="DRAGON"){
                     return (
                         <div className = "eliteMonsterKill">
                             Time: {time} <img height="20px"width="20px"style={{display:"inLineFlex"}}alt="loading"src={getChampionPic(props.playerBios[props.killerId-1][3])}></img> {props.playerBios[props.killerId-1][0]} killed {props.monsterSubType}
+                        </div>
+                    )
+                } else {
+                    return (
+                        <div className = "eliteMonsterKill">
+                            Time: {time} <img height="20px"width="20px"style={{display:"inLineFlex"}}alt="loading"src={getChampionPic(props.playerBios[props.killerId-1][3])}></img> {props.playerBios[props.killerId-1][0]} killed {props.monsterType}
                         </div>
                     )
                 }

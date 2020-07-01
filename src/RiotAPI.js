@@ -55,9 +55,11 @@ const queryGET = resource => {
     .then(response => response.json())
 }
 
+//'https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/{region}/{id}'
+
 const searchSummonerName = summonerName => {
-  const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}`
-  return riotQueryGET(url)
+  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/na1/${summonerName}`
+  return queryGET(url)
 }
 
 const getMatchList = (accountId) => {
@@ -130,7 +132,11 @@ const getMapImage = (mapId) => {
   return `/dragontail-10.11/10.11.1/img/map/map${mapId}.png`
 }
 
+const getTimelineImage = (asset) => {
+  return `/dragontail-10.11/10.11.1/img/timeline-assets/${asset}.png`
+}
+
 export { 
           searchSummonerName, getMatchList, getMatchTimeline, getChampionMastery, getPlayerRank, getProfilePic, getChampionJson, getSummonerJson,
-          getChampionPic, getMatchDetails, getItemPic, getRankPic, getSummonerSpellPic, getRuneJson, getRuneImage, getMapImage, getItemJson, 
+          getChampionPic, getMatchDetails, getItemPic, getRankPic, getSummonerSpellPic, getRuneJson, getRuneImage, getMapImage, getItemJson, getTimelineImage,
         }

@@ -1,11 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { getRuneImage } from '../../RiotAPI'
+import HoverCard from '../HoverCards/HoverCard'
 
 const Runes = props => {
     const [keystone, setKeystone] = useState("")
     const [secondTree, setSecondTree] = useState("")
     const [keystoneBlurb, setKeystoneBlurb] = useState("")
     const [showBlurb, setShowBlurb] = useState(false)
+    const [isShowing, setIsShowing] = useState(false)
+
+    function handleMouseOver() {
+        setIsShowing(true)
+        console.log("OOOGA")
+    }
+
+    function handleMouseExit() {
+        setIsShowing(false)
+        console.log("BOOOGA")
+    }
+
     useEffect(() => {
         for (let i = 0; i < props.runeJson.length; i++) {
             if (props.runeJson[i].id === props.gameData.participants[props.participantId].stats.perkSubStyle) {
@@ -28,10 +41,8 @@ const Runes = props => {
             display: 'inline-flex',
             left: '.5%',
         }}>
-            <img src={keystone} alt="loading" height="30px" width="30px" title={keystoneBlurb} onMouseEnter={() => setShowBlurb(true)} onMouseLeave={() => setShowBlurb(false)}></img>
-            {showBlurb && (
-                <div style={{ display: 'box', position: 'absolute', zIndex: 9, backgroundColor: 'yellow' }}>{keystoneBlurb}</div>
-            )}
+            <img src={keystone} alt="loading" height="30px" width="30px" onMouseEnter={() => handleMouseOver()} onMouseLeave={() => handleMouseExit()}></img>
+            {isShowing && <HoverCard blurb={keystoneBlurb}/>}
             <img style={{ position: 'relative', right: '30px', top: '30px' }} src={secondTree} alt="loading" height="30px" width="30px"></img>
         </div>
     )

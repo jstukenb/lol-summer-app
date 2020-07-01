@@ -11,7 +11,6 @@ import BasicStats from './BasicStats'
 import BasicGameStats from './BasicGameStats'
 import ExpandedMatch from './Expanded/ExpandedMatch'
 import Runes from './Runes'
-import HoverCard from '../HoverCards/HoverCard'
 import '../app.css'
 
 const MatchDetails = (props) => {
@@ -24,7 +23,6 @@ const MatchDetails = (props) => {
     const [playerBios, setPlayerBios] = useState()
     let tempArrayOfBios = []
     //const [blurb, setBlurb] = useState()
-    const [isShown, setIsShown] = useState(false)
     
     useEffect(() => {
         getMatchDetails(props.gameId)
@@ -107,8 +105,7 @@ const MatchDetails = (props) => {
                 }}>
                     
                     <BasicGameStats victory={victory} gameData={gameData} participantId={participantId} />
-                    <img className="championImage" src={getChampionPic(champName)} alt="loading" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}/>
-                    {isShown && <HoverCard blurb={blurb} />}
+                    <img className="championImage" src={getChampionPic(champName)} alt="loading" />
                     <Runes gameData={gameData} participantId={participantId} runeJson={props.runeJson}/>
                     <SummonerSpell imageLink1={getSummonerSpellPic(gameData.participants[participantId].spell1Id)} imageLink2={getSummonerSpellPic(gameData.participants[participantId].spell2Id)} />
                     <ItemList items={items} itemJson={props.itemJson}/>
@@ -135,12 +132,6 @@ export default MatchDetails
 {showExpanded && <ExpandedMatch gameData = {gameData} />}
 
 
-title="<b style='color: #00cfbc'>Control Ward</b><br><span>Used to disable wards and invisible traps 
-in an area.</span><br><span><groupLimit>Can only carry 2 Control Wards in inventory.</groupLimit><br>
-<br><consumable>Click to Consume:</consumable> Places a ward that grants vision of the surrounding area. 
-This device will also reveal invisible traps and reveal / disable wards. Control Wards do not disable other Control Wards. 
-Camouflaged units will also be revealed. <br><br>Limit 1 <font color='#BBFFFF'>Control Ward</font> on the map per player.
-</span><br><span>Cost:</span> <span style='color: #ffc659'>75 (75)</span>"
 
 
 */
