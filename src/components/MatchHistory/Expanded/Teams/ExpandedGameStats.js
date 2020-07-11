@@ -37,9 +37,10 @@ const ExpandedGameStats = props => {
             border: 'solid black 2px'
         }}>
             <p className="pTest">{summonerName}</p>
+            
             <img className="championImage" src={getChampionPic(champName)} alt="loading" />
-            <SummonerSpell imageLink1={getSummonerSpellPic(props.gameData.participants[props.participantId - 1].spell1Id)} imageLink2={getSummonerSpellPic(props.gameData.participants[props.participantId - 1].spell2Id)} />
             <Runes gameData={props.gameData} participantId={props.participantId - 1} runeJson={props.runeJson} />
+            <SummonerSpell imageLink1={getSummonerSpellPic(props.gameData.participants[props.participantId - 1].spell1Id)} imageLink2={getSummonerSpellPic(props.gameData.participants[props.participantId - 1].spell2Id)} />
             <ItemList items={items} itemJson={props.itemJson}/>
             <BasicStats gameData={props.gameData} participantId={props.participantId - 1} />
         </div>

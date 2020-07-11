@@ -7,6 +7,7 @@ const MapFrameInterval = props => {
         tracker += 1
         return tracker
     }
+
     return(
         <g>
             {props.events.map(event => (
@@ -29,19 +30,5 @@ export default MapFrameInterval
             ))}
 
 
-            if (props.events.length > 0) {
-        console.log("FART: ",props.events)
-        for (var key in props.events) {
-            console.log("pee",props.events[key])
-            if (props.events[key].type === "CHAMPION_KILL") {
-                console.log( "THIS WAS HITTTTT", props.events[key])
-                return <g><circle cx="0" cy="0" r="5" fill="red" style={{backgroundColor:"red"}}></circle></g>
-            } else if (props.events[key] == props.events[props.events.length-1]) {
-                return null
-            } else {continue}
-            
-        }
-    } else {
-        return null
-    }
+.filter
 */

@@ -28,65 +28,43 @@ const statusCheck = successStatuses => response => {
 
 const okCheck = statusCheck([HTTP_OK]);
 
-const riotRequestHeaders = {
-  "Content-Type": "application/json;charset=utf-8",
-  "X-Riot-Token": apiKey
-};
-
 const requestHeaders = {
-  "Content-Type": "application/json;charset=utf-8"
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+  "Access-Control-Allow-Credentials": true,
+  "Content-Type": "application/json"
 }
-
-const riotQueryGET = resource => {
-  return fetch(`${urlFor(resource)}`, {
-    method: "GET",
-    headers: riotRequestHeaders,
-  })
-    .then(okCheck, emitNativeError)
-    .then(response => response.json());
-};
 
 const queryGET = resource => {
-  return fetch(resource, {
-    method: "GET",
-    headers: requestHeaders
-  })
-    .then(okCheck, emitNativeError)
-    .then(response => response.json())
+  return fetch(resource).then(response => response.json())
 }
 
-//'https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/{region}/{id}'
-
 const searchSummonerName = summonerName => {
-  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/summoner/{region}/{summonerName}
-  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`
+  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`
   //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/na1/${id}`
-  return queryGET(url)
+  //return queryGET(url)
+  return queryGET(`https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`)
 }
 
 const getMatchList = (accountId) => {
-  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/matchhistory/{accountId}
   const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchhistory/na1/${accountId}`
   //const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=5&beginIndex=0`
   return queryGET(url)
 }
 
 const getMatchDetails = matchId => {
-  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/matchdetails/{matchId}
   const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchdetails/na1/${matchId}`
   //const url = `https://na1.api.riotgames.com/lol/match/v4/matches/${matchId}`
   return queryGET(url)
 }
 
 const getMatchTimeline = matchId => {
-  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/matchtimeline/{matchId}
   const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchtimeline/na1/${matchId}`
   //const url = `https://na1.api.riotgames.com/lol/match/v4/timelines/by-match/${matchId}`
   return queryGET(url)
 }
 
 const getPlayerRank = (id) => {
-  //https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi1/rank/{region}/{id}
   const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/rank/na1/${id}`
   //const url = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}`
   return queryGET(url)

@@ -54,10 +54,18 @@ const SearchStuff = () => {
         }
     }, [ summonerData, championJson, itemJson, runeJson ])
 
+    function resetSearch() {
+        setSummonerData()
+        setRankData()
+        setTylerLol()
+        setDataGrabbed(false)
+    }
+
     const onSearchButtonPress = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+        resetSearch()
         console.log("SEARCH PRESSEd")
-        grabData();
+        grabData()
     }
     
     if (dataGrabbed) {  

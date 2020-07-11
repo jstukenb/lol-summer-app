@@ -54,10 +54,9 @@
 }
 .matchDetails {
     display: inline-block;
+    width: 700px;
     margin-top: 1%;
     margin-bottom: 1%;
-    margin-right: auto;
-    margin-left: auto;
     border: solid black 2px
     
 }
@@ -76,8 +75,6 @@
 }
 .itemList {
     display: inline-flex;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
     bottom: 7px;
     width: 13%;
@@ -111,11 +108,12 @@
     display: inline-flex;
     position: relative;
     left: 10%;
+    width: 150px;
 }
 .expandMatchHistory {
     display: inline-flex;
     position: relative;
-    left: 15%;
+    left: 10%;
 }
 #summonerInfo {
     display: block;
@@ -133,8 +131,7 @@
 
 div {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 .pTest {
     display: inline-flex;
