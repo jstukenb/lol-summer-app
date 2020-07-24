@@ -115,16 +115,6 @@ const Event = props => {
                 )
             case 'SKILL_LEVEL_UP':
                 return null
-                if (props.showSkills) {
-                    return (
-                        <div className = "skillLevelUp">
-                            Time: {time} <img height="20px"width="20px"style={{display:"inLineFlex"}}alt="loading"src={getChampionPic(props.playerBios[props.participantId-1][3])}></img> levelled up skill slot {props.skillSlot}
-                        </div>
-                    )
-                } else {
-                    return(<div></div>)
-                }
-                
             case 'ASCENDED_EVENT':
                 return (
                     <div>

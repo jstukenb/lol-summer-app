@@ -3,6 +3,7 @@ import HoverCardMap from '../../../HoverCards/HoverCardMap'
 import {getChampionPic} from '../../../../RiotAPI'
 
 const MapDot = props => {
+    //console.log("MAP DOT PROPS", props)
     const [isShown, setIsShown] = useState(false)
     function handleMouseOver() {
         setIsShown(true)
@@ -41,10 +42,3 @@ const MapDot = props => {
 }
 
 export default MapDot
-
-/*
-
-{isShown && <rect style={{fill:"green"}} height="50px" width="50px" x='100px' y='100px'/>}
-
-
-*/

@@ -28,9 +28,9 @@ const MatchDetails = (props) => {
         getMatchDetails(props.gameId)
             .then((result) => {
                 setGameData(result)
-                console.log(result)
+                console.log("RESULT: ", result)
                 for (let i = 0; i < result.participantIdentities.length; i++) {
-                    let playerBio = [result.participantIdentities[i].player.summonerName, result.participants[i].championId, result.participants[i].teamId, props.championJson.keys[result.participants[i].championId]]
+                    let playerBio = [result.participantIdentities[i].player.summonerName, result.participants[i].championId, result.participants[i].teamId, props.championJson.keys[result.participants[i].championId], result.participantIdentities[i].participantId]
                     tempArrayOfBios.push(playerBio)
                     if (result.participantIdentities[i].player.accountId === props.accountId) {
                         setParticipantId(i)
@@ -82,7 +82,6 @@ const MatchDetails = (props) => {
         let items = [item0, item1, item2, item3, item4, item5, item6]
 
         const champName = props.championJson.keys[props.champion]
-        let blurb = props.championJson.data[champName].blurb
 
         const handleButtonPress = e => {
             e.preventDefault()
@@ -113,7 +112,7 @@ const MatchDetails = (props) => {
                     <button className="expandMatchHistory" onClick={handleButtonPress} style={{display:'inLineFlex'}}>poggers</button>
 
                 </div>
-                {showExpanded && <ExpandedMatch playerBios={playerBios} gameTimeline={gameTimeline} gameData={gameData} itemJson={props.itemJson} runeJson={props.runeJson} championJson={props.championJson} champion={props.champion}/>}
+                {showExpanded && <ExpandedMatch playerBios={playerBios} gameTimeline={gameTimeline} gameData={gameData} itemJson={props.itemJson} runeJson={props.runeJson} championJson={props.championJson} champion={props.champion} participantId={participantId}/>}
             </div>
         )
     }
