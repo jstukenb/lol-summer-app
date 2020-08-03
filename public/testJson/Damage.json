@@ -1,0 +1,2961 @@
+[
+    {
+        "name": "Long Sword",
+        "description": "<stats>+10 Attack Damage</stats>",
+        "colloq": ";",
+        "plaintext": "Slightly increases Attack Damage",
+        "into": [
+            "3077",
+            "3123",
+            "1053",
+            "3155",
+            "3134",
+            "3179",
+            "3035",
+            "3044",
+            "3052",
+            "3072",
+            "3133",
+            "3144",
+            "4003"
+        ],
+        "image": {
+            "full": "1036.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 48,
+            "y": 48,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 350,
+            "purchasable": true,
+            "total": 350,
+            "sell": 245
+        },
+        "tags": [
+            "Damage",
+            "Lane"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 10
+        }
+    },
+    {
+        "name": "Pickaxe",
+        "description": "<stats>+25 Attack Damage</stats>",
+        "colloq": ";",
+        "plaintext": "Moderately increases Attack Damage",
+        "into": [
+            "3124",
+            "3004",
+            "3005",
+            "3008",
+            "3031",
+            "3036",
+            "3053",
+            "3074",
+            "3814",
+            "3139"
+        ],
+        "image": {
+            "full": "1037.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 96,
+            "y": 48,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 875,
+            "purchasable": true,
+            "total": 875,
+            "sell": 613
+        },
+        "tags": [
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 25
+        }
+    },
+    {
+        "name": "B. F. Sword",
+        "description": "<stats>+40 Attack Damage</stats>",
+        "colloq": ";bf",
+        "plaintext": "Greatly increases Attack Damage",
+        "into": [
+            "3172",
+            "3095",
+            "3026",
+            "3031",
+            "3072",
+            "3161",
+            "3508",
+            "4403"
+        ],
+        "image": {
+            "full": "1038.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 144,
+            "y": 48,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 1300,
+            "purchasable": true,
+            "total": 1300,
+            "sell": 910
+        },
+        "tags": [
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 40
+        }
+    },
+    {
+        "name": "Vampiric Scepter",
+        "description": "<stats>+15 Attack Damage<br>+10% Life Steal</stats>",
+        "colloq": ";",
+        "plaintext": "Basic attacks restore Health",
+        "from": [
+            "1036"
+        ],
+        "into": [
+            "3072",
+            "3074",
+            "3812",
+            "3139",
+            "3144",
+            "3181",
+            "4403"
+        ],
+        "image": {
+            "full": "1053.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 432,
+            "y": 48,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 550,
+            "purchasable": true,
+            "total": 900,
+            "sell": 630
+        },
+        "tags": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 15,
+            "PercentLifeStealMod": 0.1
+        },
+        "depth": 2
+    },
+    {
+        "name": "Doran's Blade",
+        "description": "<stats>+8 Attack Damage<br>+80 Health<br>+3% Life Steal</stats>",
+        "colloq": ";dblade",
+        "plaintext": "Good starting item for attackers",
+        "image": {
+            "full": "1055.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 48,
+            "y": 96,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 450,
+            "purchasable": true,
+            "total": 450,
+            "sell": 180
+        },
+        "tags": [
+            "Damage",
+            "Health",
+            "Lane",
+            "LifeSteal"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": false,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 8,
+            "FlatHPPoolMod": 80,
+            "PercentLifeStealMod": 0.03
+        },
+        "effect": {
+            "Effect1Amount": "10"
+        }
+    },
+    {
+        "name": "Cull",
+        "description": "<stats>+7 Attack Damage<br>+3 Life on Hit</stats><br><br><unique>UNIQUE Passive:</unique> Killing a lane minion grants 1 additional Gold. Killing 100 lane minions grants an additional 350 bonus gold immediately and disables this passive.",
+        "colloq": ";dblade",
+        "plaintext": "Provides damage and Life Steal on hit - Killing minions grant bonus Gold",
+        "image": {
+            "full": "1083.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 288,
+            "y": 96,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 450,
+            "purchasable": true,
+            "total": 450,
+            "sell": 180
+        },
+        "tags": [
+            "Damage",
+            "LifeSteal",
+            "Lane"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": false,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 7
+        },
+        "effect": {
+            "Effect1Amount": "3",
+            "Effect2Amount": "1",
+            "Effect3Amount": "100",
+            "Effect4Amount": "350"
+        }
+    },
+    {
+        "name": "Elixir of Wrath",
+        "description": "<stats><levelLimit>Level 9 required to purchase.</levelLimit></stats><br><br><consumable>Click to Consume:</consumable> Grants +30 Attack Damage and <font color='#FF8811'><u>Bloodlust</u></font> for 3 minutes.<br><br><font color='#FF8811'><u>Bloodlust:</u></font> Dealing physical damage to champions heals for 15% of the damage dealt.<br><br><rules>(Only one Elixir effect may be active at a time.)</rules>",
+        "colloq": ";red",
+        "plaintext": "Temporarily grants Attack Damage and heals you when dealing physical damage to champions.",
+        "consumed": true,
+        "consumeOnFull": true,
+        "image": {
+            "full": "2140.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 0,
+            "y": 240,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 500,
+            "purchasable": true,
+            "total": 500,
+            "sell": 200
+        },
+        "tags": [
+            "Consumable",
+            "Damage",
+            "LifeSteal",
+            "SpellVamp"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {},
+        "effect": {
+            "Effect1Amount": "30",
+            "Effect2Amount": "30",
+            "Effect3Amount": "0.15",
+            "Effect4Amount": "3",
+            "Effect5Amount": "0",
+            "Effect6Amount": "0",
+            "Effect7Amount": "0",
+            "Effect8Amount": "9"
+        }
+    },
+    {
+        "name": "Manamune",
+        "description": "<stats>+35 Attack Damage<br><mana>+250 Mana</mana></stats><br><br><mana><unique>UNIQUE Passive - Awe:</unique> Grants bonus Attack Damage equal to 2% of maximum Mana. Refunds 15% of Mana spent.<br><unique>UNIQUE Passive - Mana Charge:</unique> Grants +5 maximum Mana (max +750 Mana) for each basic attack or Mana expenditure (occurs up to 3 times every 12 seconds).<br><br>Transforms into Muramana at +750 Mana.</mana><br><br><groupLimit>Limited to 1 Tear item.</groupLimit>",
+        "colloq": ";",
+        "plaintext": "Increases Attack Damage based on maximum Mana",
+        "from": [
+            "3070",
+            "1037"
+        ],
+        "image": {
+            "full": "3004.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 0,
+            "y": 288,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 675,
+            "purchasable": true,
+            "total": 2400,
+            "sell": 1680
+        },
+        "tags": [
+            "Damage",
+            "Mana",
+            "ManaRegen",
+            "OnHit"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": false,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 35,
+            "FlatMPPoolMod": 250
+        },
+        "effect": {
+            "Effect1Amount": "0.02",
+            "Effect2Amount": "4",
+            "Effect3Amount": "750",
+            "Effect4Amount": "2",
+            "Effect5Amount": "8",
+            "Effect6Amount": "1",
+            "Effect7Amount": "0.15",
+            "Effect8Amount": "5",
+            "Effect9Amount": "3",
+            "Effect10Amount": "12"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Atma's Reckoning",
+        "description": "<stats>+25 Attack Damage<br>+30 Armor<br>+30 Magic Resist</stats><br><br><unique>UNIQUE Passive:</unique> For each second in combat with enemy champions, turrets, or epic monsters, gain Attack Damage equal to 0.5% of maximum health , up to 2.5% .",
+        "colloq": ";wreckoning;Wreckoning",
+        "plaintext": "Increases Attack Damage based on maximum Health",
+        "from": [
+            "3105",
+            "1037"
+        ],
+        "image": {
+            "full": "3005.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 48,
+            "y": 288,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 925,
+            "purchasable": true,
+            "total": 2900,
+            "sell": 2030
+        },
+        "tags": [
+            "SpellBlock",
+            "Armor",
+            "Damage"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 25,
+            "FlatSpellBlockMod": 30,
+            "FlatArmorMod": 30
+        },
+        "effect": {
+            "Effect1Amount": "0.005",
+            "Effect2Amount": "5",
+            "Effect3Amount": "0.025",
+            "Effect4Amount": "25",
+            "Effect5Amount": "0.2",
+            "Effect6Amount": "75"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Manamune (Quick Charge)",
+        "description": "<stats>+35 Attack Damage<br><mana>+250 Mana</mana></stats><br><br><mana><unique>UNIQUE Passive - Awe:</unique> Grants bonus Attack Damage equal to 2% of maximum Mana. Refunds 15% of Mana spent.<br><unique>UNIQUE Passive - Mana Charge:</unique> Grants +6 maximum Mana (max +750 Mana) for each basic attack or Mana expenditure (occurs up to 3 times every 12 seconds).<br><br>Transforms into Muramana at +750 Mana.</mana>",
+        "colloq": ";",
+        "plaintext": "Increases Attack Damage based on maximum Mana",
+        "from": [
+            "3073",
+            "1037"
+        ],
+        "image": {
+            "full": "3008.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 192,
+            "y": 288,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 675,
+            "purchasable": true,
+            "total": 2400,
+            "sell": 1680
+        },
+        "tags": [
+            "Damage",
+            "Mana",
+            "ManaRegen",
+            "OnHit"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 35,
+            "FlatMPPoolMod": 250
+        },
+        "effect": {
+            "Effect1Amount": "0.02",
+            "Effect2Amount": "6",
+            "Effect3Amount": "750",
+            "Effect4Amount": "2",
+            "Effect5Amount": "8",
+            "Effect6Amount": "1",
+            "Effect7Amount": "0.15",
+            "Effect8Amount": "6",
+            "Effect9Amount": "3",
+            "Effect10Amount": "12"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Frozen Mallet",
+        "description": "<stats>+700 Health<br>+30 Attack Damage</stats><br><br><unique>UNIQUE Passive - Icy:</unique> Basic attacks slow the target's Movement Speed for 1.5 seconds on hit (40% slow for melee attacks, 20% slow for ranged attacks).",
+        "colloq": ";fm",
+        "plaintext": "Basic attacks slow enemies",
+        "from": [
+            "3052",
+            "1011"
+        ],
+        "image": {
+            "full": "3022.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 384,
+            "y": 288,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 900,
+            "purchasable": true,
+            "total": 3100,
+            "sell": 2170
+        },
+        "tags": [
+            "Damage",
+            "Health",
+            "OnHit",
+            "Slow"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 30,
+            "FlatHPPoolMod": 700
+        },
+        "effect": {
+            "Effect1Amount": "1.5",
+            "Effect2Amount": "0.4",
+            "Effect3Amount": "0.2"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Guardian Angel",
+        "description": "<stats>+45 Attack Damage<br>+40 Armor</stats><br><br><unique>UNIQUE Passive:</unique> Upon taking lethal damage, restores 50% of base Health and 30% of maximum Mana after 4 seconds of stasis (300 second cooldown).",
+        "colloq": ";ga",
+        "plaintext": "Periodically revives champion upon death",
+        "from": [
+            "1038",
+            "1031",
+            "2420"
+        ],
+        "image": {
+            "full": "3026.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 48,
+            "y": 336,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 50,
+            "purchasable": true,
+            "total": 2800,
+            "sell": 1120
+        },
+        "tags": [
+            "Armor",
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": false,
+            "21": false,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 45,
+            "FlatArmorMod": 40
+        },
+        "effect": {
+            "Effect1Amount": "0.5",
+            "Effect2Amount": "4",
+            "Effect3Amount": "300",
+            "Effect4Amount": "0.3"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Infinity Edge",
+        "description": "<stats>+80 Attack Damage<br>+25% Critical Strike Chance</stats><br><br><unique>UNIQUE Passive:</unique> Critical strikes deal 225% damage instead of 200%.",
+        "colloq": ";ie",
+        "plaintext": "Massively enhances critical strikes",
+        "from": [
+            "1038",
+            "1037",
+            "1018"
+        ],
+        "into": [
+            "3371"
+        ],
+        "image": {
+            "full": "3031.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 288,
+            "y": 336,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 425,
+            "purchasable": true,
+            "total": 3400,
+            "sell": 2380
+        },
+        "tags": [
+            "CriticalStrike",
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 80,
+            "FlatCritChanceMod": 0.25
+        },
+        "effect": {
+            "Effect1Amount": "2.25"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Mortal Reminder",
+        "description": "<stats>+45 Attack Damage</stats><br><br><unique>UNIQUE Passive - Last Whisper:</unique> +25% <a href='FlatArmorPen'>Armor Penetration</a><br><unique>UNIQUE Passive - Executioner:</unique> Physical damage inflicts <a href='GrievousWounds'>Grievous Wounds</a> on enemy champions for 5 seconds.",
+        "colloq": ";lw;grievous",
+        "plaintext": "Overcomes enemies with high Health recovery and Armor",
+        "from": [
+            "3035",
+            "3123"
+        ],
+        "image": {
+            "full": "3033.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 336,
+            "y": 336,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 550,
+            "purchasable": true,
+            "total": 2800,
+            "sell": 1960
+        },
+        "tags": [
+            "ArmorPenetration",
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 45
+        },
+        "effect": {
+            "Effect1Amount": "5",
+            "Effect2Amount": "0.25"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Last Whisper",
+        "description": "<stats>+20 Attack Damage</stats><br><br><unique>UNIQUE Passive - Last Whisper:</unique> +20% <a href='FlatArmorPen'>Armor Penetration</a>",
+        "colloq": ";lw",
+        "plaintext": "Overcomes enemies with high Armor",
+        "from": [
+            "1036",
+            "1036"
+        ],
+        "into": [
+            "3033",
+            "3036"
+        ],
+        "image": {
+            "full": "3035.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 384,
+            "y": 336,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 750,
+            "purchasable": true,
+            "total": 1450,
+            "sell": 1015
+        },
+        "tags": [
+            "ArmorPenetration",
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 20
+        },
+        "effect": {
+            "Effect1Amount": "0.25",
+            "Effect2Amount": "0.35",
+            "Effect3Amount": "0.2"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Lord Dominik's Regards",
+        "description": "<stats>+45 Attack Damage</stats><br><br><unique>UNIQUE Passive - Last Whisper:</unique> +35% <a href='FlatArmorPen'>Armor Penetration</a>",
+        "colloq": ";lw",
+        "plaintext": "Overcomes enemies with high health and armor",
+        "from": [
+            "3035",
+            "1037"
+        ],
+        "image": {
+            "full": "3036.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 432,
+            "y": 336,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 475,
+            "purchasable": true,
+            "total": 2800,
+            "sell": 1960
+        },
+        "tags": [
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 45
+        },
+        "effect": {
+            "Effect1Amount": "0.35"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Phage",
+        "description": "<stats>+200 Health<br>+15 Attack Damage</stats><br><br><unique>UNIQUE Passive - Rage:</unique> Basic attacks grant 20 Movement Speed for 2 seconds. Kills grant 60 Movement Speed instead. This Movement Speed bonus is halved for ranged champions.",
+        "colloq": ";",
+        "plaintext": "Attacks and kills give a small burst of speed",
+        "from": [
+            "1028",
+            "1036"
+        ],
+        "into": [
+            "3078",
+            "3071"
+        ],
+        "image": {
+            "full": "3044.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 192,
+            "y": 384,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 500,
+            "purchasable": true,
+            "total": 1250,
+            "sell": 875
+        },
+        "tags": [
+            "Damage",
+            "Health",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 15,
+            "FlatHPPoolMod": 200
+        },
+        "effect": {
+            "Effect1Amount": "20",
+            "Effect2Amount": "2",
+            "Effect3Amount": "60"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Jaurim's Fist",
+        "description": "<stats>+15 Attack Damage<br>+200 Health</stats><br><br><unique>UNIQUE Passive:</unique> Killing a unit grants 5 maximum Health. This bonus stacks up to 20 times.",
+        "colloq": ";enforcer",
+        "plaintext": "Attack Damage and stacking Health on Unit Kill",
+        "from": [
+            "1036",
+            "1028"
+        ],
+        "into": [
+            "3022",
+            "3053",
+            "3748"
+        ],
+        "image": {
+            "full": "3052.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 432,
+            "y": 384,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 450,
+            "purchasable": true,
+            "total": 1200,
+            "sell": 840
+        },
+        "tags": [
+            "Health",
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 15,
+            "FlatHPPoolMod": 200
+        },
+        "effect": {
+            "Effect1Amount": "20",
+            "Effect2Amount": "5",
+            "Effect3Amount": "2",
+            "Effect4Amount": "100"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Sterak's Gage",
+        "description": "<stats>+450 Health</stats><br><br><unique>UNIQUE Passive - Giant Strength:</unique> Gain 50% of your Base Attack Damage as Bonus Attack Damage <br><unique>UNIQUE Passive - Lifeline:</unique> Upon taking at least 400 to 1800 damage (based on level) within 5 seconds, gain a shield for 75% of your bonus Health. After 0.75 seconds, the shield decays over 3 seconds (60 second cooldown).<br><br><unlockedPassive>Sterak's Fury:</unlockedPassive> When <i>Lifeline</i> triggers, grow in size and strength, gaining +30% Tenacity for 8 seconds.",
+        "colloq": ";juggernaut;primal",
+        "plaintext": "Shields against large bursts of damage",
+        "from": [
+            "3052",
+            "1037",
+            "1028"
+        ],
+        "image": {
+            "full": "3053.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 0,
+            "y": 432,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 725,
+            "purchasable": true,
+            "total": 3200,
+            "sell": 2240
+        },
+        "tags": [
+            "Health",
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatHPPoolMod": 450
+        },
+        "effect": {
+            "Effect1Amount": "400",
+            "Effect2Amount": "0.5",
+            "Effect3Amount": "5",
+            "Effect4Amount": "0.75",
+            "Effect5Amount": "0",
+            "Effect6Amount": "8",
+            "Effect7Amount": "60",
+            "Effect8Amount": "3",
+            "Effect9Amount": "1800",
+            "Effect10Amount": "0.75",
+            "Effect11Amount": "0.3"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Black Cleaver",
+        "description": "<stats>+400 Health<br>+40 Attack Damage<br>+20% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> Dealing physical damage to an enemy champion Cleaves them, reducing their Armor by 4% for 6 seconds (stacks up to 6 times, up to 24%).<br><unique>UNIQUE Passive - Rage:</unique> Dealing physical damage grants 20 movement speed for 2 seconds. Assists on Cleaved enemy champions or kills on any unit grant 60 movement speed for 2 seconds instead. This Movement Speed is halved for ranged champions.",
+        "colloq": ";bc",
+        "plaintext": "Dealing physical damage to enemy champions reduces their Armor",
+        "from": [
+            "3044",
+            "3067"
+        ],
+        "into": [
+            "3380"
+        ],
+        "image": {
+            "full": "3071.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 288,
+            "y": 432,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 950,
+            "purchasable": true,
+            "total": 3000,
+            "sell": 2100
+        },
+        "tags": [
+            "ArmorPenetration",
+            "CooldownReduction",
+            "Damage",
+            "Health",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 40,
+            "FlatHPPoolMod": 400
+        },
+        "effect": {
+            "Effect1Amount": "-0.2",
+            "Effect2Amount": "0.04",
+            "Effect3Amount": "6",
+            "Effect4Amount": "6",
+            "Effect5Amount": "0.24",
+            "Effect6Amount": "20",
+            "Effect7Amount": "2",
+            "Effect8Amount": "60",
+            "Effect9Amount": "2",
+            "Effect10Amount": "0.01"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Bloodthirster",
+        "description": "<stats>+80 Attack Damage</stats><br><br><unique>UNIQUE Passive:</unique> +20% Life Steal<br><unique>UNIQUE Passive:</unique> Your basic attacks can now overheal you. Excess life is stored as a shield that can block 50-350 damage, based on champion level.<br><br>This shield decays slowly if you haven't dealt or taken damage in the last 25 seconds.",
+        "colloq": ";bt",
+        "plaintext": "Grants Attack Damage, Life Steal and Life Steal now overheals",
+        "from": [
+            "1038",
+            "1036",
+            "1053"
+        ],
+        "image": {
+            "full": "3072.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 336,
+            "y": 432,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 950,
+            "purchasable": true,
+            "total": 3500,
+            "sell": 2450
+        },
+        "tags": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 80
+        },
+        "effect": {
+            "Effect1Amount": "50",
+            "Effect2Amount": "350",
+            "Effect3Amount": "25",
+            "Effect4Amount": "0.2"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Ravenous Hydra",
+        "description": "<stats>+80 Attack Damage<br>+100% Base Health Regen <br>+18% Life Steal</stats><br><br><passive>Passive:</passive> 50% of total Life Steal applies to damage dealt by this item.<br><unique>UNIQUE Passive - Cleave:</unique> Basic attacks deal 20% to 60% of total Attack Damage as bonus physical damage to enemies near the target on hit (enemies closest to the center take the most damage).<br><active>UNIQUE Active - Crescent:</active> Deals 60% to 100% of total Attack Damage as physical damage to nearby enemy units (enemies closest to the center take the most damage) (10 second cooldown).",
+        "colloq": ";",
+        "plaintext": "Melee attacks hit nearby enemies, dealing damage and restoring Health",
+        "from": [
+            "3077",
+            "1053",
+            "1037"
+        ],
+        "image": {
+            "full": "3074.png",
+            "sprite": "item0.png",
+            "group": "item",
+            "x": 432,
+            "y": 432,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 400,
+            "purchasable": true,
+            "total": 3500,
+            "sell": 2450
+        },
+        "tags": [
+            "Active",
+            "Damage",
+            "HealthRegen",
+            "LifeSteal",
+            "OnHit"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 80,
+            "PercentLifeStealMod": 0.18
+        },
+        "effect": {
+            "Effect1Amount": "0.2",
+            "Effect2Amount": "0.6",
+            "Effect3Amount": "0.6",
+            "Effect4Amount": "1",
+            "Effect5Amount": "10",
+            "Effect6Amount": "350",
+            "Effect7Amount": "0.5",
+            "Effect8Amount": "450"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Tiamat",
+        "description": "<stats>+25 Attack Damage<br>+50% Base Health Regen </stats><br><br><unique>UNIQUE Passive - Cleave:</unique> Basic attacks deal 20% to 60% of total Attack Damage as bonus physical damage to enemies near the target on hit (enemies closest to the center take the most damage).<br><active>UNIQUE Active - Crescent:</active> Deals 60% to 100% of total Attack Damage as physical damage to nearby enemy units (enemies closest to the center take the most damage) (10 second cooldown).",
+        "colloq": ";",
+        "plaintext": "Melee attacks hit nearby enemies",
+        "from": [
+            "1036",
+            "1006",
+            "1036"
+        ],
+        "into": [
+            "3074",
+            "3748"
+        ],
+        "image": {
+            "full": "3077.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 96,
+            "y": 0,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 475,
+            "purchasable": true,
+            "total": 1325,
+            "sell": 928
+        },
+        "tags": [
+            "HealthRegen",
+            "Damage",
+            "Active"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 25
+        },
+        "effect": {
+            "Effect1Amount": "0.2",
+            "Effect2Amount": "0.6",
+            "Effect3Amount": "0.6",
+            "Effect4Amount": "1",
+            "Effect5Amount": "10"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Trinity Force",
+        "description": "<stats>+250 Health<br><mana>+250 Mana</mana><br>+25 Attack Damage<br>+40% Attack Speed<br>+20% Cooldown Reduction<br>+5% Movement Speed</stats><br><br><unique>UNIQUE Passive - Rage:</unique> Basic attacks grant 20 Movement Speed for 2 seconds. Kills grant 60 Movement Speed instead. This Movement Speed bonus is halved for ranged champions.<br><unique>UNIQUE Passive - Spellblade:</unique> After using an ability, the next basic attack deals bonus physical damage equal to 200% of base Attack Damage on hit (1.5 second cooldown).",
+        "colloq": ";triforce;tons of damage",
+        "plaintext": "Tons of Damage",
+        "from": [
+            "3101",
+            "3057",
+            "3044"
+        ],
+        "into": [
+            "3384"
+        ],
+        "image": {
+            "full": "3078.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 144,
+            "y": 0,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 333,
+            "purchasable": true,
+            "total": 3733,
+            "sell": 2613
+        },
+        "tags": [
+            "Health",
+            "Damage",
+            "AttackSpeed",
+            "Mana",
+            "CooldownReduction",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 25,
+            "PercentMovementSpeedMod": 0.05,
+            "FlatHPPoolMod": 250,
+            "FlatMPPoolMod": 250,
+            "PercentAttackSpeedMod": 0.4
+        },
+        "effect": {
+            "Effect1Amount": "20",
+            "Effect2Amount": "60",
+            "Effect3Amount": "2",
+            "Effect4Amount": "2",
+            "Effect5Amount": "1.5"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Stormrazor",
+        "description": "<stats>+50 Attack Damage<br>+25% Critical Strike Chance<br>+15% Attack Speed</stats><br><br><unique>UNIQUE Passive - Energized:</unique> Moving and attacking will make an attack <a href='Energized'>Energized</a>. <br><unique>UNIQUE Passive - Paralyze:</unique> Your Energized attacks gain <magicDamage>120 bonus magic damage</magicDamage>. Energized effects slow by 75% for 0.5 seconds.",
+        "colloq": ";Windblade",
+        "plaintext": "Tremendously empower other Energized effects.",
+        "from": [
+            "1038",
+            "1018",
+            "2015"
+        ],
+        "image": {
+            "full": "3095.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 144,
+            "y": 48,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 400,
+            "purchasable": true,
+            "total": 3200,
+            "sell": 2240
+        },
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "AttackSpeed",
+            "OnHit"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 50,
+            "FlatCritChanceMod": 0.25,
+            "PercentAttackSpeedMod": 0.15
+        },
+        "effect": {
+            "Effect1Amount": "120",
+            "Effect2Amount": "120",
+            "Effect3Amount": "5",
+            "Effect4Amount": "0.35",
+            "Effect5Amount": "0.75",
+            "Effect6Amount": "0.5"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Executioner's Calling",
+        "description": "<stats>+15 Attack Damage</stats><br><br><unique>UNIQUE Passive - Executioner:</unique> Physical damage inflicts <a href='GrievousWounds'>Grievous Wounds</a> on enemy champions for 3 seconds.",
+        "colloq": ";grievous",
+        "plaintext": "Overcomes enemies with high health gain",
+        "from": [
+            "1036"
+        ],
+        "into": [
+            "3033"
+        ],
+        "image": {
+            "full": "3123.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 432,
+            "y": 96,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 450,
+            "purchasable": true,
+            "total": 800,
+            "sell": 560
+        },
+        "tags": [
+            "Damage"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 15
+        },
+        "effect": {
+            "Effect1Amount": "3"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Guinsoo's Rageblade",
+        "description": "<stats>+25 Attack Damage<br>+25 Ability Power<br>+25% Attack Speed</stats><br><br><passive>Passive: </passive>Basic attacks deal 15 magic damage on hit.<br><unique>UNIQUE Passive - Last Whisper:</unique> Gain 15% <a href='FlatArmorPen'>Armor Penetration</a>.<br><unique>UNIQUE Passive - Dissolve:</unique> Gain 15% <a href='TotalMagicPen'>Magic Penetration</a>.<br><unique>UNIQUE Passive:</unique> Basic attacks grant +8% Attack Speed for 5 seconds (up to 6 stacks). At max stacks, gain <unlockedPassive>Guinsoo's Rage</unlockedPassive>.<br><br><unlockedPassive>Guinsoo's Rage:</unlockedPassive> Every 3 basic attacks, trigger on hit effects twice.<br><br><rules><font color='#8c8c8c'>While at half stacks, melee champions' next attack will fully stack Rageblade.</font></rules>",
+        "colloq": ";",
+        "plaintext": "Increases Attack Speed, Armor Penetration, and Magic Penetration",
+        "from": [
+            "1052",
+            "1043",
+            "1037"
+        ],
+        "image": {
+            "full": "3124.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 0,
+            "y": 144,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 790,
+            "purchasable": true,
+            "total": 3100,
+            "sell": 2170
+        },
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "SpellDamage",
+            "OnHit",
+            "MagicPenetration",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 25,
+            "FlatMagicDamageMod": 25,
+            "PercentAttackSpeedMod": 0.25
+        },
+        "effect": {
+            "Effect1Amount": "0.08",
+            "Effect2Amount": "2.5",
+            "Effect3Amount": "2.5",
+            "Effect4Amount": "5",
+            "Effect5Amount": "6",
+            "Effect6Amount": "0.1",
+            "Effect7Amount": "0.1",
+            "Effect8Amount": "15",
+            "Effect9Amount": "1",
+            "Effect10Amount": "3",
+            "Effect11Amount": "0.15",
+            "Effect12Amount": "0",
+            "Effect13Amount": "3"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Sword of the Divine",
+        "description": "<stats>+25 Attack Damage<br>+25% Attack Speed</stats><br><br><unique>UNIQUE Passive:</unique> +18 <a href='Lethality'>Lethality</a><br><active>UNIQUE Active:</active> Grants +100% Attack Speed and 100% Critical Strike Chance for 3 seconds or 3 critical strikes (90 second cooldown).",
+        "colloq": ";sotd;lethality",
+        "plaintext": "Activate to gain 100% Critical Strike Chance for a short duration",
+        "from": [
+            "3134",
+            "1042",
+            "1042"
+        ],
+        "image": {
+            "full": "3131.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 96,
+            "y": 144,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 800,
+            "purchasable": true,
+            "total": 2500,
+            "sell": 1750
+        },
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "AttackSpeed",
+            "Active",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 25,
+            "PercentAttackSpeedMod": 0.25
+        },
+        "effect": {
+            "Effect1Amount": "18",
+            "Effect2Amount": "1",
+            "Effect3Amount": "3",
+            "Effect4Amount": "3",
+            "Effect5Amount": "1",
+            "Effect6Amount": "90"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Caulfield's Warhammer",
+        "description": "<stats>+25 Attack Damage</stats><br><br><unique>UNIQUE Passive:</unique> +10% Cooldown Reduction",
+        "colloq": ";",
+        "plaintext": "Attack Damage and Cooldown Reduction",
+        "stacks": 0,
+        "from": [
+            "1036",
+            "1036"
+        ],
+        "into": [
+            "1400",
+            "1412",
+            "3812",
+            "3142",
+            "3147",
+            "3156",
+            "3508",
+            "4102",
+            "3671",
+            "4402"
+        ],
+        "image": {
+            "full": "3133.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 144,
+            "y": 144,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 400,
+            "purchasable": true,
+            "total": 1100,
+            "sell": 770
+        },
+        "tags": [
+            "Damage",
+            "CooldownReduction"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 25
+        },
+        "effect": {
+            "Effect1Amount": "-0.1"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Serrated Dirk",
+        "description": "<stats>+30 Attack Damage</stats><br><br><unique>UNIQUE Passive:</unique> +10 <a href='Lethality'>Lethality</a><br>",
+        "colloq": ";lethality",
+        "plaintext": "Increases Attack Damage and Lethality",
+        "stacks": 0,
+        "from": [
+            "1036",
+            "1036"
+        ],
+        "into": [
+            "3142",
+            "3179",
+            "3814",
+            "3131",
+            "3147",
+            "3181",
+            "4004"
+        ],
+        "image": {
+            "full": "3134.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 192,
+            "y": 144,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 400,
+            "purchasable": true,
+            "total": 1100,
+            "sell": 770
+        },
+        "tags": [
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 30
+        },
+        "effect": {
+            "Effect1Amount": "10"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Mercurial Scimitar",
+        "description": "<stats>+50 Attack Damage<br>+35 Magic Resist<br>+10% Life Steal</stats><br><br><active>UNIQUE Active - Quicksilver:</active> Removes all crowd control debuffs and also grants +50% bonus Movement Speed for 1 second (90 second cooldown).",
+        "colloq": ";",
+        "plaintext": "Activate to remove all crowd control debuffs and grant massive Movement Speed",
+        "from": [
+            "3140",
+            "1037",
+            "1053"
+        ],
+        "image": {
+            "full": "3139.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 384,
+            "y": 144,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 325,
+            "purchasable": true,
+            "total": 3400,
+            "sell": 2380
+        },
+        "tags": [
+            "SpellBlock",
+            "Damage",
+            "LifeSteal",
+            "Active",
+            "NonbootsMovement"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 50,
+            "FlatSpellBlockMod": 35,
+            "PercentLifeStealMod": 0.1
+        },
+        "effect": {
+            "Effect1Amount": "0.5",
+            "Effect2Amount": "1",
+            "Effect3Amount": "90"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Youmuu's Ghostblade",
+        "description": "<stats>+55 Attack Damage<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> +18 <a href='Lethality'>Lethality</a><br><unique>UNIQUE Passive:</unique> +40 Movement Speed out of Combat<br><active>UNIQUE Active:</active> Grants +20% Movement Speed and the ability to move through units for 6 seconds (45 second cooldown).",
+        "colloq": ";lethality",
+        "plaintext": "Activate to greatly increase Movement Speed",
+        "from": [
+            "3133",
+            "3134"
+        ],
+        "into": [
+            "3388"
+        ],
+        "image": {
+            "full": "3142.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 0,
+            "y": 192,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 700,
+            "purchasable": true,
+            "total": 2900,
+            "sell": 2030
+        },
+        "tags": [
+            "Damage",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 55
+        },
+        "effect": {
+            "Effect1Amount": "45",
+            "Effect2Amount": "18",
+            "Effect3Amount": "0.2",
+            "Effect4Amount": "0",
+            "Effect5Amount": "6",
+            "Effect6Amount": "40"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Bilgewater Cutlass",
+        "description": "<stats>+25 Attack Damage<br>+10% Life Steal</stats><br><br><active>UNIQUE Active:</active> Deals 100 magic damage and slows the target champion's Movement Speed by 25% for 2 seconds (90 second cooldown).",
+        "colloq": ";",
+        "plaintext": "Activate to deal magic damage and slow target champion",
+        "from": [
+            "1053",
+            "1036"
+        ],
+        "into": [
+            "3146",
+            "3153"
+        ],
+        "image": {
+            "full": "3144.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 96,
+            "y": 192,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 350,
+            "purchasable": true,
+            "total": 1600,
+            "sell": 1120
+        },
+        "tags": [
+            "Active",
+            "Damage",
+            "LifeSteal",
+            "Slow"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 25,
+            "PercentLifeStealMod": 0.1
+        },
+        "effect": {
+            "Effect1Amount": "-0.25",
+            "Effect2Amount": "2",
+            "Effect3Amount": "90",
+            "Effect4Amount": "100"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Hextech Gunblade",
+        "description": "<stats>+40 Attack Damage<br>+80 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Heal for 15% of damage dealt. This is 33% as effective for Area of Effect damage.<br><active>UNIQUE Active - Lightning Bolt:</active> Deals <scaleLevel>175 - 253</scaleLevel> (+30% of Ability Power) magic damage and slows the target champion's Movement Speed by 40% for 2 seconds (40 second cooldown, shared with other <font color='#9999FF'><a href='itembolt'>Hextech</a></font> items).",
+        "colloq": ";",
+        "plaintext": "Increases Attack Damage and Ability Power, activate to slow a target",
+        "from": [
+            "3144",
+            "3145"
+        ],
+        "image": {
+            "full": "3146.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 192,
+            "y": 192,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 750,
+            "purchasable": true,
+            "total": 3400,
+            "sell": 2380
+        },
+        "tags": [
+            "Active",
+            "Damage",
+            "LifeSteal",
+            "Slow",
+            "SpellDamage",
+            "SpellVamp"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 40,
+            "FlatMagicDamageMod": 80
+        },
+        "effect": {
+            "Effect1Amount": "0.15",
+            "Effect2Amount": "40",
+            "Effect3Amount": "175",
+            "Effect4Amount": "253",
+            "Effect5Amount": "0.4",
+            "Effect6Amount": "2"
+        },
+        "depth": 4
+    },
+    {
+        "name": "Duskblade of Draktharr",
+        "description": "<stats>+60 Attack Damage<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive</unique>: +21 <a href='Lethality'>Lethality</a><br><unique>UNIQUE Passive - Nightstalker:</unique> After being unseen for at least 1 second, your next basic attack against an enemy champion deals <scaleLevel>30 - 150</scaleLevel> bonus physical damage and slows them by 99% for 0.25 seconds. Ranged basic attacks do not apply the slow. (Lasts for 5 seconds after being seen by an enemy champion).",
+        "colloq": ";lethality",
+        "plaintext": "Deals additional physical damage when ambushing enemies",
+        "from": [
+            "3134",
+            "3133"
+        ],
+        "image": {
+            "full": "3147.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 240,
+            "y": 192,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 700,
+            "purchasable": true,
+            "total": 2900,
+            "sell": 2030
+        },
+        "tags": [
+            "Damage",
+            "CooldownReduction",
+            "OnHit",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 60
+        },
+        "effect": {
+            "Effect1Amount": "21",
+            "Effect2Amount": "0",
+            "Effect3Amount": "0",
+            "Effect4Amount": "0",
+            "Effect5Amount": "30",
+            "Effect6Amount": "150",
+            "Effect7Amount": "99",
+            "Effect8Amount": "0.25",
+            "Effect9Amount": "5",
+            "Effect10Amount": "30",
+            "Effect11Amount": "1",
+            "Effect12Amount": "150"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Blade of the Ruined King",
+        "description": "<stats>+40 Attack Damage<br>+25% Attack Speed<br>+12% Life Steal</stats><br><br><unique>UNIQUE Passive:</unique> Basic attacks deal 8% of the target's current Health as bonus physical damage on hit (Melee users deal 12%).<br><active>UNIQUE Active:</active> Deals 100 magic damage to target champion and steals 25% of their Movement Speed for 3 seconds (90 second cooldown).<br><br><rules>Minimum bonus physical damage dealt is 15.<br>Maximum bonus physical damage dealt to monsters and minions is 60.<br>User's Life Steal is applied to bonus physical damage dealt.</rules>",
+        "colloq": ";brk;bork;bork;bork;botrk",
+        "plaintext": "Deals damage based on target's Health, can steal Movement Speed",
+        "from": [
+            "3144",
+            "1043"
+        ],
+        "into": [
+            "3389"
+        ],
+        "image": {
+            "full": "3153.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 384,
+            "y": 192,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 700,
+            "purchasable": true,
+            "total": 3300,
+            "sell": 2310
+        },
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "LifeSteal",
+            "Active",
+            "Slow",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 40,
+            "PercentAttackSpeedMod": 0.25,
+            "PercentLifeStealMod": 0.12
+        },
+        "effect": {
+            "Effect1Amount": "0.08",
+            "Effect2Amount": "0.12",
+            "Effect3Amount": "15",
+            "Effect4Amount": "60"
+        },
+        "depth": 4
+    },
+    {
+        "name": "Hexdrinker",
+        "description": "<stats>+20 Attack Damage<br>+35 Magic Resist</stats><br><br><unique>UNIQUE Passive - Lifeline:</unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 110 to 280 (based on level) magic damage for 5 seconds (90 second cooldown).",
+        "colloq": ";",
+        "plaintext": "Increases Attack Damage and Magic Resist",
+        "stacks": 0,
+        "from": [
+            "1036",
+            "1033"
+        ],
+        "into": [
+            "3156"
+        ],
+        "image": {
+            "full": "3155.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 432,
+            "y": 192,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 500,
+            "purchasable": true,
+            "total": 1300,
+            "sell": 910
+        },
+        "tags": [
+            "Damage",
+            "SpellBlock"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 20,
+            "FlatSpellBlockMod": 35
+        },
+        "effect": {
+            "Effect1Amount": "0.3",
+            "Effect2Amount": "110",
+            "Effect3Amount": "5",
+            "Effect4Amount": "90",
+            "Effect5Amount": "280",
+            "Effect6Amount": "100",
+            "Effect7Amount": "10"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Maw of Malmortius",
+        "description": "<stats>+50 Attack Damage<br>+50 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Lifeline:</unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs up to 350 magic damage within 5 seconds (90 second cooldown).<br><unlockedPassive>Lifegrip:</unlockedPassive> When <i>Lifeline</i> triggers, gain +20 Attack Damage, +10% Spell Vamp and +10% Life Steal until out of combat.",
+        "colloq": ";",
+        "plaintext": "Grants bonus Attack Damage when Health is low",
+        "stacks": 0,
+        "from": [
+            "3155",
+            "3133"
+        ],
+        "image": {
+            "full": "3156.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 0,
+            "y": 240,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 850,
+            "purchasable": true,
+            "total": 3250,
+            "sell": 2275
+        },
+        "tags": [
+            "SpellBlock",
+            "Damage",
+            "LifeSteal",
+            "CooldownReduction",
+            "SpellVamp"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 50,
+            "FlatSpellBlockMod": 50
+        },
+        "effect": {
+            "Effect1Amount": "0",
+            "Effect2Amount": "35",
+            "Effect3Amount": "0.3",
+            "Effect4Amount": "350",
+            "Effect5Amount": "5",
+            "Effect6Amount": "90",
+            "Effect7Amount": "20",
+            "Effect8Amount": "0",
+            "Effect9Amount": "0.1",
+            "Effect10Amount": "0.1"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Spear of Shojin",
+        "description": "<stats>+65 Attack Damage<br>+200 Health<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> <a href='FlatDamageReduction'>Reduce damage</a> from champion attacks and abilities by 10 plus 15% of bonus attack damage (maximum 300).<br><unique>UNIQUE Passive:</unique> When near at least 3 enemy champions, land a basic attack to gain <unlockedPassive>Dragon Heart</unlockedPassive> (90s cooldown).<br><br><unlockedPassive>Dragon Heart:</unlockedPassive> Block 300% more damage for 8s, refreshing on takedown.<br><br><rules></rules>",
+        "colloq": ";",
+        "plaintext": "Reduce damage taken from champions by a flat amount. Attack while near multiple enemy champions to increase this amount for a short time.",
+        "stacks": 0,
+        "from": [
+            "1038",
+            "3067"
+        ],
+        "image": {
+            "full": "3161.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 144,
+            "y": 240,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 900,
+            "purchasable": true,
+            "total": 3000,
+            "sell": 2100
+        },
+        "tags": [
+            "Health",
+            "Damage",
+            "CooldownReduction"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 65,
+            "FlatHPPoolMod": 200
+        },
+        "effect": {
+            "Effect1Amount": "300",
+            "Effect2Amount": "0",
+            "Effect3Amount": "90",
+            "Effect4Amount": "0",
+            "Effect5Amount": "10",
+            "Effect6Amount": "0",
+            "Effect7Amount": "0.3",
+            "Effect8Amount": "0.15",
+            "Effect9Amount": "8",
+            "Effect10Amount": "3"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Zephyr",
+        "description": "<stats>+50 Attack Damage<br>+40% Attack Speed<br>+10% Movement Speed</stats><br><br><unique>UNIQUE Passive - Tenacity:</unique> Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%.",
+        "colloq": ";",
+        "plaintext": "Mobility and Tenacity",
+        "from": [
+            "1038",
+            "1042",
+            "1042"
+        ],
+        "image": {
+            "full": "3172.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 288,
+            "y": 240,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 900,
+            "purchasable": true,
+            "total": 2800,
+            "sell": 1960
+        },
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "NonbootsMovement",
+            "Tenacity"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 50,
+            "PercentMovementSpeedMod": 0.1,
+            "PercentAttackSpeedMod": 0.4
+        },
+        "depth": 2
+    },
+    {
+        "name": "Umbral Glaive",
+        "description": "<stats>+50 Attack Damage<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive</unique>: +12 <a href='Lethality'>Lethality</a><br><unique>UNIQUE Passive - Blackout:</unique> When spotted by an enemy ward, reveal traps and disable wards around you for 8 seconds (45 second cooldown). Basic attacks instantly kill revealed traps and do triple damage to wards.",
+        "colloq": ";lethality",
+        "plaintext": "Provides trap and ward detection periodically",
+        "from": [
+            "3134",
+            "1036",
+            "1036"
+        ],
+        "image": {
+            "full": "3179.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 432,
+            "y": 240,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 600,
+            "purchasable": true,
+            "total": 2400,
+            "sell": 1680
+        },
+        "tags": [
+            "Damage",
+            "Vision",
+            "CooldownReduction",
+            "OnHit",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 50
+        },
+        "effect": {
+            "Effect1Amount": "12",
+            "Effect2Amount": "8",
+            "Effect3Amount": "45"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Sanguine Blade",
+        "description": "<stats>+55 Attack Damage<br>+15% Life Steal</stats><br><br><unique>UNIQUE Passive:</unique> +10 <a href='Lethality'>Lethality</a><br><unique>UNIQUE Passive - Blood Pursuit:</unique> While near one or fewer visible enemy champions gain 8 <a href='Lethality'>Lethality</a> and 20%-80% Attack Speed (based on level), decaying over 3 seconds if other enemy champions get too close.",
+        "colloq": ";lethality",
+        "plaintext": "When hunting lone enemy champions gain Attack Speed and Lethality",
+        "from": [
+            "3134",
+            "1053"
+        ],
+        "image": {
+            "full": "3181.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 0,
+            "y": 288,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 1000,
+            "purchasable": true,
+            "total": 3000,
+            "sell": 2100
+        },
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "LifeSteal",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 55,
+            "PercentLifeStealMod": 0.15
+        },
+        "effect": {
+            "Effect1Amount": "10",
+            "Effect2Amount": "0.2",
+            "Effect3Amount": "0.8",
+            "Effect4Amount": "4",
+            "Effect5Amount": "3",
+            "Effect6Amount": "1400",
+            "Effect7Amount": "8"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Guardian's Hammer",
+        "description": "<stats>+150 Health<br>+20 Attack Damage<br>+10% Life Steal</stats><br><br><groupLimit>Limited to 1 Guardian's Item.</groupLimit>",
+        "colloq": ";dblade",
+        "plaintext": "Good starting item for attackers",
+        "image": {
+            "full": "3184.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 48,
+            "y": 288,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 950,
+            "purchasable": true,
+            "total": 950,
+            "sell": 380
+        },
+        "tags": [
+            "Health",
+            "Damage",
+            "LifeSteal",
+            "Lane"
+        ],
+        "maps": {
+            "11": false,
+            "12": true,
+            "21": false,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 20,
+            "FlatHPPoolMod": 150,
+            "PercentLifeStealMod": 0.1
+        }
+    },
+    {
+        "name": "Molten Edge",
+        "description": "<stats><font color='#FFFFFF'>+110 Attack Damage</font><br>+25% Critical Strike Chance</stats><br><br><unique>UNIQUE Passive:</unique> Critical strikes deal 225% damage instead of 200%.",
+        "colloq": ";ie;Ornn;forge;Masterwork",
+        "plaintext": "Massively enhances critical strikes",
+        "from": [
+            "3031"
+        ],
+        "requiredAlly": "Ornn",
+        "image": {
+            "full": "3371.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 0,
+            "y": 384,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 0,
+            "purchasable": true,
+            "total": 3400,
+            "sell": 2380
+        },
+        "tags": [
+            "Damage",
+            "CriticalStrike"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 110,
+            "FlatCritChanceMod": 0.25
+        },
+        "effect": {
+            "Effect1Amount": "2.25"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Obsidian Cleaver",
+        "description": "<stats><font color='#FFFFFF'>+550 Health</font><br><font color='#FFFFFF'>+60 Attack Damage</font><br>+20% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> Dealing physical damage to an enemy champion Cleaves them, reducing their Armor by 4% for 6 seconds (stacks up to 6 times, up to 24%).<br><unique>UNIQUE Passive - Rage:</unique> Dealing physical damage grants 20 movement speed for 2 seconds. Assists on Cleaved enemy champions or kills on any unit grant 60 movement speed for 2 seconds instead. This Movement Speed is halved for ranged champions.",
+        "colloq": ";bc;Ornn;forge;Masterwork",
+        "plaintext": "Dealing physical damage to enemy champions reduces their Armor",
+        "from": [
+            "3071"
+        ],
+        "requiredAlly": "Ornn",
+        "image": {
+            "full": "3380.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 192,
+            "y": 384,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 0,
+            "purchasable": true,
+            "total": 3000,
+            "sell": 2100
+        },
+        "tags": [
+            "ArmorPenetration",
+            "CooldownReduction",
+            "Damage",
+            "Health",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 60,
+            "FlatHPPoolMod": 550
+        },
+        "effect": {
+            "Effect1Amount": "-0.2",
+            "Effect2Amount": "0.04",
+            "Effect3Amount": "6",
+            "Effect4Amount": "6",
+            "Effect5Amount": "0.24",
+            "Effect6Amount": "20",
+            "Effect7Amount": "2",
+            "Effect8Amount": "60",
+            "Effect9Amount": "2",
+            "Effect10Amount": "0.01"
+        },
+        "depth": 4
+    },
+    {
+        "name": "Trinity Fusion",
+        "description": "<stats><font color='#FFFFFF'>+350 Health</font><br><font color='#FFFFFF'><mana>+350 Mana</mana></font><br><font color='#FFFFFF'>+35 Attack Damage</font><br><font color='#FFFFFF'>+50% Attack Speed</font><br>+20% Cooldown Reduction<br><font color='#FFFFFF'>+8% Movement Speed</font></stats><br><br><unique>UNIQUE Passive - Rage:</unique> Basic attacks grant 20 Movement Speed for 2 seconds. Kills grant 60 Movement Speed instead. This Movement Speed bonus is halved for ranged champions.<br><unique>UNIQUE Passive - Spellblade:</unique> After using an ability, the next basic attack deals bonus physical damage equal to 200% of base Attack Damage on hit (1.5 second cooldown).",
+        "colloq": ";triforce;tons of damage;Ornn;forge;Masterwork",
+        "plaintext": "Tons of Damage",
+        "from": [
+            "3078"
+        ],
+        "requiredAlly": "Ornn",
+        "image": {
+            "full": "3384.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 336,
+            "y": 384,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 0,
+            "purchasable": true,
+            "total": 3733,
+            "sell": 2613
+        },
+        "tags": [
+            "Health",
+            "Damage",
+            "AttackSpeed",
+            "Mana",
+            "CooldownReduction",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 35,
+            "PercentMovementSpeedMod": 0.08,
+            "FlatHPPoolMod": 350,
+            "FlatMPPoolMod": 350,
+            "PercentAttackSpeedMod": 0.5
+        },
+        "effect": {
+            "Effect1Amount": "20",
+            "Effect2Amount": "60",
+            "Effect3Amount": "2",
+            "Effect4Amount": "2",
+            "Effect5Amount": "1.5"
+        },
+        "depth": 4
+    },
+    {
+        "name": "Youmuu's Wraithblade",
+        "description": "<stats><font color='#FFFFFF'>+75 Attack Damage</font><br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> <font color='#FFFFFF'>+25 <a href='Lethality'>Lethality</a></font><br><unique>UNIQUE Passive:</unique> +40 Movement Speed out of Combat<br><active>UNIQUE Active:</active> Grants +20% Movement Speed and the ability to move through units for 6 seconds (45 second cooldown).",
+        "colloq": ";lethality;Ornn",
+        "plaintext": "Activate to greatly increase Movement Speed",
+        "from": [
+            "3142"
+        ],
+        "requiredAlly": "Ornn",
+        "image": {
+            "full": "3388.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 0,
+            "y": 432,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 0,
+            "purchasable": true,
+            "total": 2900,
+            "sell": 2030
+        },
+        "tags": [
+            "Damage",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 75
+        },
+        "effect": {
+            "Effect1Amount": "45",
+            "Effect2Amount": "25",
+            "Effect3Amount": "0.2",
+            "Effect4Amount": "0",
+            "Effect5Amount": "6",
+            "Effect6Amount": "40"
+        },
+        "depth": 4
+    },
+    {
+        "name": "Might of the Ruined King",
+        "description": "<stats><font color='#FFFFFF'>+55 Attack Damage</font><br><font color='#FFFFFF'>+40% Attack Speed</font><br>+12% Life Steal</stats><br><br><unique>UNIQUE Passive:</unique> Basic attacks deal 8% of the target's current Health as bonus physical damage on hit (Melee users deal 12%).<br><active>UNIQUE Active:</active> Deals 100 magic damage to target champion and steals 25% of their Movement Speed for 3 seconds (90 second cooldown).<br><br><rules>Minimum bonus physical damage dealt is 15.<br>Maximum bonus physical damage dealt to monsters and minions is 60.<br>User's Life Steal is applied to bonus physical damage dealt.</rules>",
+        "colloq": ";brk;bork;bork;bork;botrk;Ornn",
+        "plaintext": "Deals damage based on target's Health, can steal Movement Speed",
+        "from": [
+            "3153"
+        ],
+        "requiredAlly": "Ornn",
+        "image": {
+            "full": "3389.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 48,
+            "y": 432,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 0,
+            "purchasable": true,
+            "total": 3300,
+            "sell": 2310
+        },
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "LifeSteal",
+            "Active",
+            "Slow",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 55,
+            "PercentAttackSpeedMod": 0.4,
+            "PercentLifeStealMod": 0.12
+        },
+        "effect": {
+            "Effect1Amount": "0.08",
+            "Effect2Amount": "0.12",
+            "Effect3Amount": "15",
+            "Effect4Amount": "60"
+        },
+        "depth": 5
+    },
+    {
+        "name": "Essence Reaver",
+        "description": "<stats>+70 Attack Damage<br>+25% Critical Strike Chance</stats><br><br><unique>UNIQUE Passive:</unique> +20% Cooldown Reduction<br><unique>UNIQUE Passive:</unique> Basic attacks refund 1.5% of your missing mana.",
+        "colloq": ";",
+        "plaintext": "Grants Critical Strike Chance, Cooldown Reduction, Attack Damage and restores mana on hit.",
+        "from": [
+            "1038",
+            "3133",
+            "1018"
+        ],
+        "image": {
+            "full": "3508.png",
+            "sprite": "item1.png",
+            "group": "item",
+            "x": 432,
+            "y": 432,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 100,
+            "purchasable": true,
+            "total": 3300,
+            "sell": 2310
+        },
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "Mana",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 70,
+            "FlatCritChanceMod": 0.25
+        },
+        "effect": {
+            "Effect1Amount": "0.015",
+            "Effect2Amount": "0.2",
+            "Effect3Amount": "0.5",
+            "Effect4Amount": "0.2",
+            "Effect5Amount": "6",
+            "Effect6Amount": "30",
+            "Effect7Amount": "0.2",
+            "Effect8Amount": "10"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Titanic Hydra",
+        "description": "<stats>+450 Health<br>+40 Attack Damage<br>+100% Base Health Regen </stats><br><br><unique>UNIQUE Passive - Cleave:</unique> Basic attacks deal 5 + 1.5% of your maximum health as bonus physical damage  to your target and 40 + 3% of your maximum health as physical damage  to other enemies in a cone on hit.<br><active>UNIQUE Active - Crescent:</active> Cleave damage to all targets is increased to 40 + 10% of your maximum health as bonus physical damage  in a larger cone for your next basic attack (20 second cooldown).<br><br><rules>(Unique Passives with the same name don't stack.)</rules>",
+        "colloq": ";juggernaut",
+        "plaintext": "Deals area of effect damage based on owner's health",
+        "from": [
+            "3077",
+            "1028",
+            "3052"
+        ],
+        "image": {
+            "full": "3748.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 192,
+            "y": 96,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 575,
+            "purchasable": true,
+            "total": 3500,
+            "sell": 2450
+        },
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "Damage",
+            "Active",
+            "OnHit"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 40,
+            "FlatHPPoolMod": 450
+        },
+        "effect": {
+            "Effect1Amount": "0.03",
+            "Effect2Amount": "40",
+            "Effect3Amount": "0",
+            "Effect4Amount": "0",
+            "Effect5Amount": "0.1",
+            "Effect6Amount": "0",
+            "Effect7Amount": "20",
+            "Effect8Amount": "40",
+            "Effect9Amount": "0.015",
+            "Effect10Amount": "5"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Death's Dance",
+        "description": "<stats>+50 Attack Damage<br>+30 Armor<br>+30 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> Heal for 15% of damage dealt. This is 33% as effective for Area of Effect damage.<br><unique>UNIQUE Passive:</unique> <specialRules>[Melee Users: 30% || Ranged Users: 10%]</specialRules> of damage taken is dealt as a Bleed effect over 3 seconds instead.",
+        "colloq": ";Bloodbag",
+        "plaintext": "Trades incoming damage now for incoming damage later",
+        "stacks": 0,
+        "from": [
+            "3105",
+            "1053",
+            "3133"
+        ],
+        "image": {
+            "full": "3812.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 432,
+            "y": 96,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 500,
+            "purchasable": true,
+            "total": 3600,
+            "sell": 2520
+        },
+        "tags": [
+            "SpellBlock",
+            "Armor",
+            "Damage",
+            "LifeSteal",
+            "CooldownReduction"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 50,
+            "FlatSpellBlockMod": 30,
+            "FlatArmorMod": 30
+        },
+        "effect": {
+            "Effect1Amount": "0.15",
+            "Effect2Amount": "0.3",
+            "Effect3Amount": "3",
+            "Effect4Amount": "0.1"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Edge of Night",
+        "description": "<stats>+325 Health<br>+55 Attack Damage</stats><br><br><unique>UNIQUE Passive</unique>: +10 <a href='Lethality'>Lethality</a><br><unique>UNIQUE Passive - Spell Shield</unique>: Grants a spell shield that blocks the next enemy ability. This shield refreshes after no damage is taken from enemy champions for 40 seconds.",
+        "colloq": ";lethality",
+        "plaintext": "Periodically blocks enemy abilities",
+        "stacks": 0,
+        "from": [
+            "1037",
+            "3134",
+            "1028"
+        ],
+        "image": {
+            "full": "3814.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 0,
+            "y": 144,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 525,
+            "purchasable": true,
+            "total": 2900,
+            "sell": 2030
+        },
+        "tags": [
+            "Health",
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": true,
+            "12": true,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 55,
+            "FlatHPPoolMod": 325
+        },
+        "effect": {
+            "Effect1Amount": "10",
+            "Effect2Amount": "0",
+            "Effect3Amount": "0",
+            "Effect4Amount": "40"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Steel Shoulderguards",
+        "description": "<stats>+30 Health<br>+3 Attack Damage<br>+2 Gold Per 10 Seconds<br>+25% Base Health Regen </stats><br><br><unique>UNIQUE Passive - Spoils of War:</unique> While nearby an ally champion, basic attacks execute minions below 50% of their max Health (30% for ranged). Killing a minion grants kill gold to the nearest allied champion.<rules> (These effects recharge every 45 seconds. Max 3 charges.)</rules><hr><passive>QUEST:</passive> Earning gold through using this item will transform the item, granting <active>UNIQUE Active - Warding</active>.<br><br><rules>(Receive diminishing gold from <a href='Support_Minion_Penalty'>excessive minion kills</a>.)</rules><br><br><groupLimit>Limited to 1 Gold Income or Jungle item.</groupLimit>",
+        "colloq": "",
+        "plaintext": "Gain gold and upgrade by executing minions alongside allies",
+        "image": {
+            "full": "3854.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 192,
+            "y": 144,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 400,
+            "purchasable": true,
+            "total": 400,
+            "sell": 160
+        },
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "Damage",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "maps": {
+            "11": true,
+            "12": false,
+            "21": false,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 3,
+            "FlatHPPoolMod": 30
+        },
+        "effect": {
+            "Effect1Amount": "2",
+            "Effect2Amount": "0.5",
+            "Effect3Amount": "0.3",
+            "Effect4Amount": "500",
+            "Effect5Amount": "45",
+            "Effect6Amount": "3"
+        }
+    },
+    {
+        "name": "Spectral Sickle",
+        "description": "<stats>+5 Attack Damage<br>+10 Health<br>+2 Gold Per 10 Seconds<br><mana>+25% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive - Tribute:</unique> While nearby an ally champion, damaging spells and attacks against champions or buildings grant 15 gold. This can occur up to 3 times every 30 seconds.<hr><passive>QUEST:</passive> Earning gold through using this item will transform the item, granting <active>UNIQUE Active - Warding</active>.<br><br><rules>(Receive diminishing gold from <a href='Support_Minion_Penalty'>excessive minion kills</a>.)</rules><br><br><groupLimit>Limited to 1 Gold Income or Jungle item.</groupLimit>",
+        "colloq": "",
+        "plaintext": "Gain gold and upgrade by damaging enemy champions",
+        "image": {
+            "full": "3862.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 0,
+            "y": 192,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 400,
+            "purchasable": true,
+            "total": 400,
+            "sell": 160
+        },
+        "tags": [
+            "Health",
+            "Damage",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "maps": {
+            "11": true,
+            "12": false,
+            "21": false,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 5,
+            "FlatHPPoolMod": 10
+        },
+        "effect": {
+            "Effect1Amount": "2",
+            "Effect2Amount": "15",
+            "Effect3Amount": "15",
+            "Effect4Amount": "500",
+            "Effect5Amount": "10",
+            "Effect6Amount": "3",
+            "Effect7Amount": "2000"
+        }
+    },
+    {
+        "name": "Lifeline",
+        "description": "<stats>+20 Attack Damage</stats><br><br><unique>UNIQUE Passive:</unique> +8 <a href='Lethality'>Lethality</a><br><unique>UNIQUE Active:</unique> Mark the ground beneath you. After 4 seconds, you will return to the marked location (120 second cooldown).",
+        "colloq": ";lethality",
+        "plaintext": "Marks the ground, and returns you there after a few moments",
+        "from": [
+            "1036",
+            "2420"
+        ],
+        "into": [
+            "4004"
+        ],
+        "image": {
+            "full": "4003.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 0,
+            "y": 240,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 550,
+            "purchasable": true,
+            "total": 1550,
+            "sell": 1085
+        },
+        "tags": [
+            "Damage",
+            "NonbootsMovement",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 20
+        },
+        "effect": {
+            "Effect1Amount": "8",
+            "Effect2Amount": "4",
+            "Effect3Amount": "120"
+        },
+        "depth": 2
+    },
+    {
+        "name": "Spectral Cutlass",
+        "description": "<stats>+70 Attack Damage</stats><br><br><unique>UNIQUE Passive:</unique> +18 <a href='Lethality'>Lethality</a><br><unique>UNIQUE Active:</unique> Mark your current location. After 4 seconds, you will return to the marked location (60 second cooldown).",
+        "colloq": ";lethality",
+        "plaintext": "Marks the ground, and returns you there after a few moments",
+        "from": [
+            "4003",
+            "3134"
+        ],
+        "image": {
+            "full": "4004.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 48,
+            "y": 240,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 400,
+            "purchasable": true,
+            "total": 3050,
+            "sell": 2135
+        },
+        "tags": [
+            "Armor",
+            "Damage",
+            "NonbootsMovement",
+            "ArmorPenetration"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 70
+        },
+        "effect": {
+            "Effect1Amount": "18",
+            "Effect2Amount": "4",
+            "Effect3Amount": "60"
+        },
+        "depth": 3
+    },
+    {
+        "name": "Doran's Lost Blade",
+        "description": "<stats>+8 Attack Damage<br>+80 Health<br>+8% Life Steal</stats><br><br><groupLimit>Limited to 1 Starter item.</groupLimit>",
+        "colloq": ";dblade",
+        "plaintext": "Good starting item for attackers",
+        "image": {
+            "full": "4202.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 384,
+            "y": 240,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 450,
+            "purchasable": true,
+            "total": 450,
+            "sell": 180
+        },
+        "tags": [
+            "Damage",
+            "Health",
+            "Lane",
+            "LifeSteal"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 8,
+            "FlatHPPoolMod": 80,
+            "PercentLifeStealMod": 0.08
+        },
+        "effect": {
+            "Effect1Amount": "10"
+        }
+    },
+    {
+        "name": "Innervating Locket",
+        "description": "<stats>+400 Health<br><mana>+300 Mana</mana><br>+30 Attack Damage<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Eternity:</unique> 15% of damage taken from champions is gained as Mana. Spending Mana restores 20% of the cost as Health, up to 25 per spell cast.<br><br><unique>UNIQUE Passive:</unique> After using an ability, restore 8% missing Health and 3% missing Mana over 3 seconds.<br><br><rules><font color='#447777'>''Cast down the Noxians'' - Bobdyr, Temple Guardsman</font></rules>",
+        "colloq": ";",
+        "plaintext": "Cast spells to heal",
+        "from": [
+            "3010",
+            "3133"
+        ],
+        "image": {
+            "full": "4402.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 96,
+            "y": 288,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 600,
+            "purchasable": true,
+            "total": 2800,
+            "sell": 1960
+        },
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "Damage",
+            "Mana",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 30,
+            "FlatHPPoolMod": 400,
+            "FlatMPPoolMod": 300
+        },
+        "effect": {
+            "Effect1Amount": "3",
+            "Effect2Amount": "0.08",
+            "Effect3Amount": "0.03",
+            "Effect4Amount": "25",
+            "Effect5Amount": "0.2",
+            "Effect6Amount": "0.15"
+        },
+        "depth": 3
+    },
+    {
+        "name": "The Golden Spatula",
+        "description": "<stats>+250 Health<br><mana>+250 Mana</mana><br>+100% Base Health Regen <br><mana>+100% Base Mana Regen </mana><br>+30 Armor<br>+30 Magic Resist<br>+120 Ability Power<br>+70 Attack Damage<br>+50% Attack Speed<br>+30% Critical Strike Chance<br>+10% Life Steal<br>+10% Movement Speed<br>+20% Cooldown Reduction<br><br>You are permanently On Fire!</stats><br><br><rules><font color='#447777'>''It must do something...''<br>''Declined, it does EVERYTHING!''</font></rules>",
+        "colloq": ";",
+        "plaintext": "It does EVERYTHING!",
+        "from": [
+            "1038",
+            "1053",
+            "3086",
+            "1058",
+            "3067",
+            "3105"
+        ],
+        "image": {
+            "full": "4403.png",
+            "sprite": "item2.png",
+            "group": "item",
+            "x": 144,
+            "y": 288,
+            "w": 48,
+            "h": 48
+        },
+        "gold": {
+            "base": 687,
+            "purchasable": true,
+            "total": 7437,
+            "sell": 5206
+        },
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "HealthRegen",
+            "Armor",
+            "Damage",
+            "CriticalStrike",
+            "AttackSpeed",
+            "LifeSteal",
+            "SpellDamage",
+            "Mana",
+            "ManaRegen",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "maps": {
+            "11": false,
+            "12": false,
+            "21": true,
+            "22": false
+        },
+        "stats": {
+            "FlatPhysicalDamageMod": 70,
+            "FlatCritChanceMod": 0.3,
+            "PercentMovementSpeedMod": 0.1,
+            "FlatHPPoolMod": 250,
+            "FlatSpellBlockMod": 30,
+            "FlatMPPoolMod": 250,
+            "FlatMagicDamageMod": 120,
+            "FlatArmorMod": 30,
+            "PercentAttackSpeedMod": 0.5,
+            "PercentLifeStealMod": 0.1
+        },
+        "depth": 3
+    }
+]

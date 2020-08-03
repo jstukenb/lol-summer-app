@@ -5,7 +5,7 @@ import ExpandedGameStats from './ExpandedGameStats'
 import MatchTimeline from '../Timeline/MatchTimeline'
 import KillMap from '../Map/KillMap'
 import ExpandedObjectives from './ExpandedObjectives'
-import ItemAnalysisTimeline from '../Analysis/AnalysisShell'
+import AnalysisShell from '../Analysis/AnalysisShell'
 
 const ExpandedMatch = props => {
     const [userTimelineId, setUserTimelineId] = useState()
@@ -13,8 +13,7 @@ const ExpandedMatch = props => {
     const [analysisTimeline, setAnalysisTimeline] = useState()
     let count = 1
     useEffect(() => {
-        console.log(props.participantId)
-        console.log("thing: ", props.playerBios[props.participantId][4])
+        //console.log(props.participantId)
         setUserTimelineId(props.participantId+1)
         /*
         Object.keys(props.gameTimeline.frames[0].participantFrames).forEach(key => {
@@ -61,7 +60,7 @@ const ExpandedMatch = props => {
                     <KillMap playerBios={props.playerBios} mapId={props.gameData.mapId} killTimeline={killTimeline}/>
                 </TabPanel>
                 <TabPanel>
-                    <ItemAnalysisTimeline playerBios={props.playerBios} gameData={props.gameData} analysisTimeline={analysisTimeline} itemJson={props.itemJson} championJson={props.championJson} userTimelineId={userTimelineId} gameTimeline={props.gameTimeline}/>
+                    <AnalysisShell playerBios={props.playerBios} gameData={props.gameData} analysisTimeline={analysisTimeline} itemJson={props.itemJson} championJson={props.championJson} userTimelineId={userTimelineId} gameTimeline={props.gameTimeline} participantId={props.participantId}/>
                 </TabPanel>
             </Tabs>
 
