@@ -33,7 +33,7 @@ const ItemTimeline = props => {
                 let armorPerLevel = props.championJson.data[props.playerBios[i][3]].stats.armorperlevel
                 let magicResist = props.championJson.data[props.playerBios[i][3]].stats.spellblock
                 let magicResistPerLevel = props.championJson.data[props.playerBios[i][3]].stats.spellblockperlevel
-                console.log("NAME: ", props.playerBios[i][3], " ARMOR: ", armor, " armorperlevel: ", armorPerLevel, " magic resist: ", magicResist, " magic resist per level: ", magicResistPerLevel)
+                //console.log("NAME: ", props.playerBios[i][3], " ARMOR: ", armor, " armorperlevel: ", armorPerLevel, " magic resist: ", magicResist, " magic resist per level: ", magicResistPerLevel)
             }
         } else if(color==="red") {
             for(let i=5; i<props.playerBios.length; i++) {
@@ -41,7 +41,7 @@ const ItemTimeline = props => {
                 let armorPerLevel = props.championJson.data[props.playerBios[i][3]].stats.armorperlevel
                 let magicResist = props.championJson.data[props.playerBios[i][3]].stats.spellblock
                 let magicResistPerLevel = props.championJson.data[props.playerBios[i][3]].stats.spellblockperlevel
-                console.log("NAME: ", props.playerBios[i][3], " ARMOR: ", armor, " armorperlevel: ", armorPerLevel, " magic resist: ", magicResist, " magic resist per level: ", magicResistPerLevel)
+                //console.log("NAME: ", props.playerBios[i][3], " ARMOR: ", armor, " armorperlevel: ", armorPerLevel, " magic resist: ", magicResist, " magic resist per level: ", magicResistPerLevel)
             }
         }
     }

@@ -33,12 +33,24 @@ const ItemSuggestion = props => {
     useEffect(() => {
         if (spellDamageJson !== undefined && armorJson !== undefined && damageJson !== undefined && spellBlockJson !== undefined ) {
             let arrayOfSuggestion = []
-            console.log("HERHERHEHREHRH: ", spellDamageJson)
+            //console.log("HERHERHEHREHRH: ", spellDamageJson)
             function handleDiffTag() {
                 for (let i=0; i<props.purchaseGroupTags.length; i++) {
                     if(props.purchaseGroupTags[i].includes("SpellDamage")) {
                         for (var key in spellDamageJson) {
                             arrayOfSuggestion.push(spellDamageJson[key])
+                        }
+                    } else if(props.purchaseGroupTags[i].includes("Damage")) {
+                        for (var key in damageJson) {
+                            arrayOfSuggestion.push(damageJson[key])
+                        }
+                    } else if(props.purchaseGroupTags[i].includes("Armor")) {
+                        for (var key in armorJson) {
+                            arrayOfSuggestion.push(armorJson[key])
+                        }
+                    } else if(props.purchaseGroupTags[i].includes("SpellBlock")) {
+                        for (var key in spellBlockJson) {
+                            arrayOfSuggestion.push(spellBlockJson[key])
                         }
                     }
                     

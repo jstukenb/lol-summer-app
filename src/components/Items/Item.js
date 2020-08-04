@@ -3,6 +3,7 @@ import { getItemPic } from '../../RiotAPI'
 import HoverCard from '../HoverCards/HoverCard'
 
 const Item = props => {
+    //console.log("ITEM PROPS: ", props)
     const [ isShown, setIsShown ] = useState(false)
     let blurb = ""
     if(props.item !== 0) {

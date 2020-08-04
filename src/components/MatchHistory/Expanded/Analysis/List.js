@@ -10,6 +10,7 @@ const List = props => {
     }
     return(
         <div>
+            SUGGESTIONS
             {props.list.map(key => (
                 <div key={getUniqueKey()}>
                     <Item itemJson={props.itemJson} item={key}/>

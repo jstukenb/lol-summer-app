@@ -44,23 +44,23 @@ const AnalysisShell = props => {
         for (let j=i+1; j<props.analysisTimeline.length; j++) {
             difference = props.analysisTimeline[j].timestamp - props.analysisTimeline[i].timestamp
             timesThroughLoop++
+            //console.log("i: ", i , " PLUS: " ,props.analysisTimeline[i])
             if (difference > 30000) {
                 
                 specificFrameGroup.push(Math.floor(props.analysisTimeline[i].timestamp/60000) + 1)
                 i+=timesThroughLoop
                 break
             } else {
+                //console.log("PUSHING: ", props.analysisTimeline[j])
                 purchase.push(props.analysisTimeline[j])
-                if(i > props.analysisTimeline.length - 5) {
-                    console.log("I: ", i)
-                }
-                i+=timesThroughLoop
+                //i+=timesThroughLoop
             }
             
         }
         purchaseGroups.push(purchase)
+        console.log("PUSHING: ", purchase)
     }
-    console.log("OOGA BOOGA: ", specificFrameGroup)
+    //console.log("OOGA BOOGA: ", specificFrameGroup)
     return(
         <div>
             ITEM ANALYSIS
