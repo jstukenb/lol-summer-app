@@ -11,29 +11,26 @@ const ExpandedMatch = props => {
     const [userTimelineId, setUserTimelineId] = useState()
     const [killTimeline, setKillTimeline] = useState()
     const [analysisTimeline, setAnalysisTimeline] = useState()
-    let count = 1
+    const [levelTimeline, setLevelTimeline] = useState()
+    //let count = 1
     useEffect(() => {
         //console.log(props.participantId)
         setUserTimelineId(props.participantId+1)
-        /*
-        Object.keys(props.gameTimeline.frames[0].participantFrames).forEach(key => {
-            if (props.gameTimeline.frames[0].participantFrames[key].participantId === props.playerBios[props.participantId][4]){
-                setUserTimelineId(count)
-            }
-            count++;
-        })*/
     }, [])
     useEffect(() => {
         setKillTimeline(props.gameTimeline.frames.flatMap(frames => (
             frames.events.filter(event => event.type === "CHAMPION_KILL")
         )))
-        console.log("USERTIMELINE ID: ", userTimelineId)
+        //console.log("USERTIMELINE ID: ", userTimelineId)
         setAnalysisTimeline(props.gameTimeline.frames.flatMap(frames => (
-            frames.events.filter(event => event.type === "ITEM_PURCHASED" && event.participantId === props.participantId+1)
+            frames.events.filter(event => (event.type === "ITEM_PURCHASED" || event.type === "ITEM_SOLD" || event.type === "ITEM_UNDO") && event.participantId === props.participantId+1)
         )))
+        /*setLevelTimeline(props.gameTimeline.frames.flatMap(frames => (
+            frames.events.filter(event => (event.type === "SKILL_LEVEL_UP"))
+        )))*/
     }, [userTimelineId])
     
-    console.log("MARCO IS COOL: ", props.participantId, " ", analysisTimeline)
+    //console.log("MARCO IS COOL: ", props.participantId, " ", analysisTimeline)
     return (
         <div>
             <Tabs style = {{display: "inlineFlex"}}>

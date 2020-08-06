@@ -2,7 +2,7 @@ import React from 'react'
 import Item from '../../../Items/Item'
 
 const List = props => {
-    //console.log(props)
+    console.log("LIST PROPS: ", props)
     var tracker = 0
     function getUniqueKey() {
         tracker += 1

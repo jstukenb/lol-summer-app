@@ -6,6 +6,7 @@ import Runes from '../../Runes'
 import { getChampionPic, getSummonerSpellPic } from '../../../../RiotAPI'
 
 const ExpandedGameStats = props => {
+    //console.log("EXPANDED PROPS: ", props)
     let color = ""
     if (props.gameData.participants[props.participantId - 1].stats.win) {
         color = "#a3cfec"

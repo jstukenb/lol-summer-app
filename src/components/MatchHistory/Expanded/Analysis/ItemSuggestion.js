@@ -4,7 +4,7 @@ import List from './List'
 import { set } from 'd3'
 
 const ItemSuggestion = props => {
-    console.log("Item suggestion props: ", props)
+    //console.log("Item suggestion props: ", props)
     const [damageJson, setDamageJson] = useState()
     const [spellDamageJson, setSpellDamageJson] = useState()
     const [armorJson, setArmorJson] = useState()
@@ -15,19 +15,22 @@ const ItemSuggestion = props => {
         getDamageJson()
             .then(result =>{
                 setDamageJson(result)
+                //console.log("DAMAGE: ", result)
             })
         getSpellDamageJson()
             .then(result =>{
                 setSpellDamageJson(result)
-                console.log("SPELLDAMAGE: ", result)
+                //console.log("SPELLDAMAGE: ", result)
             })
         getArmorJson()
             .then(result =>{
                 setArmorJson(result)
+                //console.log("ARMOR: ", result)
             })
         getSpellBlockJson()
             .then(result =>{
                 setSpellBLockJson(result)
+                //console.log("MAGIC RESIST: ", result)
             })
     }, [])
     useEffect(() => {
@@ -44,6 +47,7 @@ const ItemSuggestion = props => {
                         for (var key in damageJson) {
                             arrayOfSuggestion.push(damageJson[key])
                         }
+                        
                     } else if(props.purchaseGroupTags[i].includes("Armor")) {
                         for (var key in armorJson) {
                             arrayOfSuggestion.push(armorJson[key])
@@ -69,7 +73,7 @@ const ItemSuggestion = props => {
     },[list])    
 
     return(
-        <div style={{backgroundColor: '#b19cd9', display: 'inlineFlex', height:'100px', position: 'relative', overflowY:'auto'}}>
+        <div style={{backgroundColor: '#b19cd9', display: 'inlineFlex', height:'200px', width:'200px', overflowY:'auto', float: 'right'}}>
             {isShown && <List list={list} itemJson={props.itemJson}/>}
         </div>
     )

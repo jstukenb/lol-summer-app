@@ -6,7 +6,7 @@ import MatchDetails from './MatchDetails'
 import '../app.css'
 
 const MatchHistory = (props) => {
-    console.log("MATCH HISTORY PROPS: ", props)
+    //console.log("MATCH HISTORY PROPS: ", props)
     const [ matchListGrabbed, setMatchListGrabbed ] = useState()
     const [ isLoaded, setIsLoaded ] = useState(false)
     const [ error, setError ] = useState(null)
@@ -14,7 +14,7 @@ const MatchHistory = (props) => {
         getMatchList(props.accountId)
             .then((result) => {
                 setMatchListGrabbed(result.matches)
-                console.log("result: ", result)
+                //console.log("result: ", result)
             },
             (error) => {
                 setIsLoaded(true)

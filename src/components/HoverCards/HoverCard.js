@@ -8,17 +8,16 @@ const HoverCard = props => {
         e.innerHTML = value
         let test = e.childNodes
         test.forEach(key => {
+            //console.log("FART: ", key.textContent)
             if (key.innerText === undefined) {
-                let temp = JSON.stringify(key)
-                console.log("CHECK: " , temp)
-                text = text + key + " "
+                //console.log("TYPE: ", key.substringData(0,key.length))
+                let temp = key.substringData(0,key.length)
+                text = text + temp + " "
             } else {
                 text = text + key.innerText + " "
-                console.log(key)
             }
             
         })
-        console.log("TEXT TEXT: ", text)
         /*console.log("INNER NODES: ", e.childNodes)
         if (e.childNodes.includes("unique")) {
             console.log("FART FART")

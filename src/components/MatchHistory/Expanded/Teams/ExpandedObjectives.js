@@ -2,7 +2,7 @@ import React from 'react'
 import {getScoreboardImage} from '../../../../RiotAPI'
 
 const ExpandedObjectives = props => {
-    console.log("OBJECTIVES: ", props.gameData.teams[0])
+    //console.log("OBJECTIVES: ", props.gameData.teams[0])
     return (
         <div>
             <img src={getScoreboardImage("icon-baron-b")} alt="loading"></img>: {props.gameData.teams[0].baronKills}

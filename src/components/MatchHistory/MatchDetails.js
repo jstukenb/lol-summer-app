@@ -28,7 +28,7 @@ const MatchDetails = (props) => {
         getMatchDetails(props.gameId).then(
             (result) => {
                 setGameData(result);
-                console.log("RESULT: ", result);
+                //console.log("RESULT: ", result);
                 for (let i = 0; i < result.participantIdentities.length; i++) {
                     let playerBio = [
                         result.participantIdentities[i].player.summonerName,
@@ -146,7 +146,7 @@ const MatchDetails = (props) => {
                         onClick={handleButtonPress}
                         style={{ display: "inLineFlex" }}
                     >
-                        poggers
+                        pogschab
           </button>
                 </div>
                 {showExpanded && (
