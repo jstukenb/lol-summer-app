@@ -2,6 +2,7 @@ import React from "react";
 import { getChampionPic, getTimelineImage } from "../../../../RiotAPI";
 
 const Event = (props) => {
+  //console.log("EVENT PROPS: ", props)
   let time = props.timestamp / 1000;
   if (time % 60 !== 0) {
     let seconds = "" + Math.floor(time % 60);
@@ -19,27 +20,33 @@ const Event = (props) => {
     switch (props.type) {
       case "CHAMPION_KILL":
         if (props.killerId !== 0) {
-          return (
-            <div className="champKill">
-              Time: {time}{" "}
-              <img
-                height="20px"
-                width="20px"
-                style={{ display: "inLineFlex" }}
-                alt="loading"
-                src={getChampionPic(props.playerBios[props.killerId - 1][3])}
-              ></img>{" "}
-              {props.playerBios[props.killerId - 1][0]} killed{" "}
-              <img
-                height="20px"
-                width="20px"
-                style={{ display: "inLineFlex" }}
-                alt="loading"
-                src={getChampionPic(props.playerBios[props.victimId - 1][3])}
-              ></img>{" "}
-              {props.playerBios[props.victimId - 1][0]}
-            </div>
-          );
+          if (props.victimId === 0) {
+            //console.log("GOT HERE AT RIGHT TIME")
+            return <div></div>
+          } else {
+            return (
+              <div className="champKill">
+                Time: {time}{" "}
+                <img
+                  height="20px"
+                  width="20px"
+                  style={{ display: "inLineFlex" }}
+                  alt="loading"
+                  src={getChampionPic(props.playerBios[props.killerId - 1][3])}
+                ></img>{" "}
+                {props.playerBios[props.killerId - 1][0]} killed{" "}
+                <img
+                  height="20px"
+                  width="20px"
+                  style={{ display: "inLineFlex" }}
+                  alt="loading"
+                  src={getChampionPic(props.playerBios[props.victimId - 1][3])}
+                ></img>{" "}
+                {props.playerBios[props.victimId - 1][0]}
+              </div>
+            );
+          }
+          
         } else {
           return (
             <div>

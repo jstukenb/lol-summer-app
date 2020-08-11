@@ -34,7 +34,7 @@ const ItemTimeline = props => {
             this is going to be the timeline that draws the items, gotta do some math to space out when you bought items
             {props.purchaseGroups.map(purchaseGroup => (
                 <div key={getUniqueKey()}>
-                    <PurchaseGroup specificFrameGroups={props.specificFrameGroup} allEnemyItems={props.allEnemyItems}playerBios={props.playerBios} purchaseGroup={purchaseGroup} itemJson={props.itemJson} championJson={props.championJson} participantId={props.participantId}/>
+                    <PurchaseGroup gameTimeline={props.gameTimeline} specificFrameGroups={props.specificFrameGroup} allEnemyItems={props.allEnemyItems}playerBios={props.playerBios} purchaseGroup={purchaseGroup} itemJson={props.itemJson} championJson={props.championJson} participantId={props.participantId}/>
                 </div>
             ))}
         </div>
