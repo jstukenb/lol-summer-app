@@ -6,9 +6,27 @@ const throwResponseError = (response) => {
   throw error;
 };
 
-const queryGET = (resource) => {
-  return fetch(resource).then((response) => response.json());
+const HTTP_OK = 200;
+
+const emitNativeError = error => {
+  console.log("ERROR: ", error)
+  throw error;
 };
+
+const statusCheck = successStatuses => response => {
+  if (successStatuses.includes(response.status)) {
+    return response;
+  } else {
+    throwResponseError(response);
+  }
+};
+
+const queryGET = (resource) => {
+  return fetch(resource)
+    .then((response) => response.json(), response => console.log(response));
+};
+
+const okCheck = statusCheck([HTTP_OK]);
 
 const searchSummonerName = (summonerName) => {
   //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`
@@ -33,7 +51,7 @@ const getMatchDetails = (matchId) => {
 
 const getMatchTimeline = (matchId) => {
   const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchtimeline/na1/${matchId}`;
-  //const url = `https://na1.api.riotgames.com/lol/match/v4/timelines/by-match/${matchId}`
+  //const url = `https://na1.api.riotgames.com/lol/match/v4/timelines/by-match/${matchId}?api_key=RGAPI-2ddb7972-04a8-4b8c-9ca2-0f0a220ae2ed`
   return queryGET(url);
 };
 

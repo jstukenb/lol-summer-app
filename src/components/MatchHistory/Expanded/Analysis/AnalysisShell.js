@@ -9,6 +9,11 @@ const AnalysisShell = props => {
     //ENEMY ITEMS AND PURCHASES
     let allEnemyItems = []
 
+    let userItems = props.gameTimeline.frames.flatMap(frames => (
+        frames.events.filter(event => (event.type === "ITEM_PURCHASED" || event.type === "ITEM_SOLD" || event.type === "ITEM_DESTROYED" || event.type === "ITEM_UNDO") && event.participantId === props.playerBios[props.participantId][4])
+    ))
+
+    console.log("COOOMING: ", userItems)
     if (props.participantId <= 5) {
         getEnemyItems("red")
     } else {
@@ -85,7 +90,7 @@ const AnalysisShell = props => {
     return (
         <div>
             ITEM ANALYSIS
-            <ItemTimeline allEnemyItems={allEnemyItems} playerBios={props.playerBios} purchaseGroups={purchaseGroups} itemJson={props.itemJson} championJson={props.championJson} participantId={props.participantId} gameTimeline={props.gameTimeline} />
+            <ItemTimeline userItems={userItems} allEnemyItems={allEnemyItems} playerBios={props.playerBios} purchaseGroups={purchaseGroups} itemJson={props.itemJson} championJson={props.championJson} participantId={props.participantId} gameTimeline={props.gameTimeline} gameData={props.gameData}/>
 
         </div>
     )

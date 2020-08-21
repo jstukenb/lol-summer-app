@@ -13,7 +13,7 @@ const List = props => {
             SUGGESTIONS
             {props.list.map(key => (
                 <div key={getUniqueKey()}>
-                    <Item itemJson={props.itemJson} item={key}/>
+                    <Item itemJson={props.itemJson} item={key.key}/>
                 </div>
             ))}
         </div>
