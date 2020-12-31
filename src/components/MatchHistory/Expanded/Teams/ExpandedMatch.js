@@ -38,7 +38,7 @@ const ExpandedMatch = props => {
                     <Tab>Scores</Tab>
                     <Tab>Timeline</Tab>
                     <Tab>Kill Map</Tab>
-                    <Tab>Item Analysis</Tab>
+
                 </TabList>
                 <TabPanel>
                     <div>
@@ -56,9 +56,7 @@ const ExpandedMatch = props => {
                 <TabPanel>
                     <KillMap playerBios={props.playerBios} mapId={props.gameData.mapId} killTimeline={killTimeline}/>
                 </TabPanel>
-                <TabPanel>
-                    <AnalysisShell playerBios={props.playerBios} gameData={props.gameData} analysisTimeline={analysisTimeline} itemJson={props.itemJson} championJson={props.championJson} userTimelineId={userTimelineId} gameTimeline={props.gameTimeline} participantId={props.participantId}/>
-                </TabPanel>
+                
             </Tabs>
 
         </div>
@@ -74,4 +72,14 @@ export default ExpandedMatch
                             <ExpandedGameStats {...participant} gameData={props.gameData} />
                         </div>
                     ))}
+
+                    <Tab>Item Analysis</Tab>
+
+<TabPanel>
+                    <AnalysisShell playerBios={props.playerBios} gameData={props.gameData} analysisTimeline={analysisTimeline} itemJson={props.itemJson} championJson={props.championJson} userTimelineId={userTimelineId} gameTimeline={props.gameTimeline} participantId={props.participantId}/>
+                </TabPanel>
+
+
+
+
 */

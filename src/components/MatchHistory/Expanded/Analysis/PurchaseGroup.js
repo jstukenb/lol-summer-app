@@ -460,6 +460,7 @@ const PurchaseGroup = props => {
                         break
                     }
                 }
+                
             }
             
     
@@ -541,6 +542,7 @@ const PurchaseGroup = props => {
     }
 
     useEffect(() => {
+        console.log("SUGGESTION LIST: ", suggestionList)
         if (purchaseGroupTags !== undefined && enemyInventories !== undefined && enemyResistances !== undefined && blurb !== undefined && suggestionList !== undefined) {
             setShowResult(!showResult)
             setShowEnemies(!showEnemies)
