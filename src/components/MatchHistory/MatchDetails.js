@@ -146,7 +146,7 @@ const MatchDetails = (props) => {
                         onClick={handleButtonPress}
                         style={{ display: "inLineFlex" }}
                     >
-                        pogschab
+                        Expand
           </button>
                 </div>
                 {showExpanded && (
