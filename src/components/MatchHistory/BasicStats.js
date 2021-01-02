@@ -6,7 +6,7 @@ const BasicStats = props => {
     let assists = props.gameData.participants[props.participantId].stats.assists
     let KDA = kills + "/" + deaths + "/" + assists
     let KDANumber = (kills + assists) / deaths
-
+    let CS = props.gameData.participants[props.participantId].stats.totalMinionsKilled + props.gameData.participants[props.participantId].stats.neutralMinionsKilled
     if (KDANumber === Infinity) {
         KDANumber = "PERFECT"
     } else {
@@ -14,7 +14,7 @@ const BasicStats = props => {
     }
     return(
         <div className = "basicStatsShell">
-            {KDA} KDA: {KDANumber} CS: {props.gameData.participants[props.participantId].stats.totalMinionsKilled}
+            {KDA} KDA: {KDANumber} CS: {CS}
         </div>
     )
 }
