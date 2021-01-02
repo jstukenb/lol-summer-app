@@ -1,0 +1,1438 @@
+{
+  "SpellBlock": [
+    {
+      "name": "Null-Magic Mantle",
+      "description": "<stats>+25 Magic Resist</stats>",
+      "colloq": ";",
+      "plaintext": "Slightly increases Magic Resist",
+      "into": [
+        "3111",
+        "3211",
+        "1057",
+        "3028",
+        "3140",
+        "3155",
+        "3105",
+        "3190",
+        "3102",
+        "3194"
+      ],
+      "image": {
+        "full": "1033.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 0,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 450,
+        "purchasable": true,
+        "total": 450,
+        "sell": 315
+      },
+      "tags": [
+        "SpellBlock"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 25
+      }
+    },
+    {
+      "name": "Negatron Cloak",
+      "description": "<stats>+40 Magic Resist</stats>",
+      "colloq": ";",
+      "plaintext": "Moderately increases Magic Resist",
+      "from": [
+        "1033"
+      ],
+      "into": [
+        "3170",
+        "3091",
+        "3193",
+        "3001",
+        "4401"
+      ],
+      "image": {
+        "full": "1057.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 144,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 270,
+        "purchasable": true,
+        "total": 720,
+        "sell": 504
+      },
+      "tags": [
+        "SpellBlock"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 40
+      },
+      "depth": 2
+    },
+    {
+      "name": "Abyssal Mask",
+      "description": "<stats>+350 Health<br><mana>+300 Mana</mana><br>+55 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Eternity:</unique> 15% of damage taken from champions is gained as Mana. Spending Mana restores 20% of the cost as Health, up to 25 per spell cast.<br><aura>UNIQUE Aura:</aura> Nearby enemy champions take 15% more magic damage.",
+      "colloq": ";",
+      "plaintext": "Nearby enemies take more magic damage",
+      "from": [
+        "3010",
+        "1057"
+      ],
+      "into": [
+        "3379"
+      ],
+      "image": {
+        "full": "3001.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 384,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1180,
+        "purchasable": true,
+        "total": 3000,
+        "sell": 2100
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "Mana",
+        "ManaRegen",
+        "Aura",
+        "CooldownReduction",
+        "MagicPenetration"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatSpellBlockMod": 55,
+        "FlatMPPoolMod": 300
+      },
+      "effect": {
+        "Effect1Amount": "-10",
+        "Effect2Amount": "-25",
+        "Effect3Amount": "0.15",
+        "Effect4Amount": "25",
+        "Effect5Amount": "0.2",
+        "Effect6Amount": "0.15",
+        "Effect7Amount": "325"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Atma's Reckoning",
+      "description": "<stats>+25 Attack Damage<br>+30 Armor<br>+30 Magic Resist</stats><br><br><unique>UNIQUE Passive:</unique> For each second in combat with enemy champions, turrets, or epic monsters, gain Attack Damage equal to 0.5% of maximum health , up to 2.5% .",
+      "colloq": ";wreckoning;Wreckoning",
+      "plaintext": "Increases Attack Damage based on maximum Health",
+      "from": [
+        "3105",
+        "1037"
+      ],
+      "image": {
+        "full": "3005.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 48,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 925,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Damage"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 25,
+        "FlatSpellBlockMod": 30,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "0.005",
+        "Effect2Amount": "5",
+        "Effect3Amount": "0.025",
+        "Effect4Amount": "25",
+        "Effect5Amount": "0.2",
+        "Effect6Amount": "75"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Chalice of Harmony",
+      "description": "<stats>+30 Magic Resist<br><mana>+50% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive - Harmony:</unique> Grants bonus % Base Health Regen equal to your bonus % Base Mana Regen.",
+      "colloq": ";",
+      "plaintext": "Increases Mana and Health Regeneration",
+      "from": [
+        "1004",
+        "1033",
+        "1004"
+      ],
+      "into": [
+        "3174",
+        "3222"
+      ],
+      "image": {
+        "full": "3028.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 144,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 100,
+        "purchasable": true,
+        "total": 800,
+        "sell": 560
+      },
+      "tags": [
+        "SpellBlock",
+        "HealthRegen",
+        "ManaRegen"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "2",
+        "Effect2Amount": "5",
+        "Effect3Amount": "600",
+        "Effect4Amount": "180",
+        "Effect5Amount": "8",
+        "Effect6Amount": "1",
+        "Effect7Amount": "1"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Zeke's Convergence",
+      "description": "<stats>+60 Armor<br>+30 Magic Resist<br><mana>+250 Mana</mana><br>+10% Cooldown Reduction</stats><br><mainText><active>UNIQUE Active - Conduit:</active> Bind to an ally without an existing Conduit.<br><unique>UNIQUE Passive:</unique> Casting your ultimate near your ally surrounds you with a frost storm and ignites your ally's basic attacks for 10 seconds. Enemies inside your frost storm are slowed by 20% and your ally's attacks burn their target for 30% bonus magic damage over 2 seconds (45 second cooldown).<br><br><unlockedPassive>Frostfire Covenant:</unlockedPassive> Your frost storm ignites when it slows a burning enemy, dealing 40 magic damage per second and slowing by 40% instead for 3 seconds.</mainText><br><br><rules>(Champions can only be linked by one Zeke's Convergence at a time.)</rules>",
+      "colloq": ";haroldandkumar",
+      "plaintext": "Grants you and your ally bonuses when you cast your ultimate.",
+      "from": [
+        "3105",
+        "3024"
+      ],
+      "image": {
+        "full": "3050.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 384,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 250,
+        "purchasable": true,
+        "total": 2250,
+        "sell": 1575
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Mana",
+        "Aura",
+        "Active",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatMPPoolMod": 250,
+        "FlatArmorMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "-0.1",
+        "Effect2Amount": "20",
+        "Effect3Amount": "40",
+        "Effect4Amount": "0.3",
+        "Effect5Amount": "1000",
+        "Effect6Amount": "0.5",
+        "Effect7Amount": "10",
+        "Effect8Amount": "3",
+        "Effect9Amount": "45",
+        "Effect10Amount": "3",
+        "Effect11Amount": "2",
+        "Effect12Amount": "300",
+        "Effect13Amount": "40",
+        "Effect14Amount": "2",
+        "Effect15Amount": "0.5"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Spirit Visage",
+      "description": "<stats>+450 Health<br>+55 Magic Resist<br>+100% Base Health Regen <br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> Increases all healing received by 30%.",
+      "colloq": ";sv",
+      "plaintext": "Increases Health and healing effects",
+      "from": [
+        "3211",
+        "3067"
+      ],
+      "image": {
+        "full": "3065.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 96,
+        "y": 432,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 800,
+        "purchasable": true,
+        "total": 2800,
+        "sell": 1960
+      },
+      "tags": [
+        "CooldownReduction",
+        "Health",
+        "HealthRegen",
+        "SpellBlock"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 450,
+        "FlatSpellBlockMod": 55
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "0.3",
+        "Effect3Amount": "0.5"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Wit's End",
+      "description": "<stats>+50% Attack Speed<br>+50 Magic Resist<br>+5% Movement Speed</stats><br><br><unique>UNIQUE Passive - At Wit's End:</unique> Deal <scaleLevel>15 - 80</scaleLevel> magic damage on hit. While below half health, heal for 33% of this effect's damage dealt - increased to 100% for Melee Champions.",
+      "colloq": ";",
+      "plaintext": "Resist magic damage and claw your way back to life.",
+      "from": [
+        "1043",
+        "1057",
+        "1042"
+      ],
+      "image": {
+        "full": "3091.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 880,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "SpellBlock",
+        "AttackSpeed",
+        "LifeSteal",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "PercentMovementSpeedMod": 0.05,
+        "FlatSpellBlockMod": 50,
+        "PercentAttackSpeedMod": 0.5
+      },
+      "effect": {
+        "Effect1Amount": "15",
+        "Effect2Amount": "80",
+        "Effect3Amount": "0.5",
+        "Effect4Amount": "0.33",
+        "Effect5Amount": "1",
+        "Effect6Amount": "10",
+        "Effect7Amount": "-8.75"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Banshee's Veil",
+      "description": "<stats>+75 Ability Power<br>+60 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Spell Shield:</unique> Grants a spell shield that blocks the next enemy ability. This shield refreshes after no damage is taken from enemy champions for 40 seconds.",
+      "colloq": ";bv",
+      "plaintext": "Periodically blocks enemy abilities",
+      "from": [
+        "3108",
+        "1033",
+        "1026"
+      ],
+      "image": {
+        "full": "3102.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 288,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 800,
+        "purchasable": true,
+        "total": 3000,
+        "sell": 2100
+      },
+      "tags": [
+        "SpellBlock",
+        "SpellDamage",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 60,
+        "FlatMagicDamageMod": 75
+      },
+      "effect": {
+        "Effect1Amount": "40",
+        "Effect2Amount": "45",
+        "Effect3Amount": "10",
+        "Effect4Amount": "-0.1",
+        "Effect5Amount": "8",
+        "Effect6Amount": "2"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Aegis of the Legion",
+      "description": "<stats>+30 Armor<br>+30 Magic Resist</stats>",
+      "colloq": ";",
+      "plaintext": "Grants Armor and Magic Resistance",
+      "from": [
+        "1033",
+        "1029"
+      ],
+      "into": [
+        "3190",
+        "3005",
+        "3050",
+        "3812",
+        "4403"
+      ],
+      "image": {
+        "full": "3105.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 336,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 350,
+        "purchasable": true,
+        "total": 1100,
+        "sell": 770
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatArmorMod": 30
+      },
+      "depth": 2
+    },
+    {
+      "name": "Mercury's Treads",
+      "description": "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><stats>+25 Magic Resist</stats><br><br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed<br><unique>UNIQUE Passive - Tenacity:</unique> Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 30%.",
+      "colloq": ";",
+      "plaintext": "Increases Movement Speed and reduces duration of disabling effects",
+      "from": [
+        "1001",
+        "1033"
+      ],
+      "image": {
+        "full": "3111.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 96,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 350,
+        "purchasable": true,
+        "total": 1100,
+        "sell": 770
+      },
+      "tags": [
+        "Boots",
+        "SpellBlock",
+        "Tenacity"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMovementSpeedMod": 45,
+        "FlatSpellBlockMod": 25
+      },
+      "depth": 2
+    },
+    {
+      "name": "Dervish Blade",
+      "description": "<stats>+50% Attack Speed<br>+45 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><active>UNIQUE Active - Quicksilver:</active> Removes all debuffs, and if the champion is melee, also grants +50% bonus Movement Speed for 1 second (90 second cooldown).",
+      "colloq": ";",
+      "plaintext": "Activate to remove all debuffs and grant massive Movement Speed",
+      "from": [
+        "3140",
+        "3101"
+      ],
+      "image": {
+        "full": "3137.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 336,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 300,
+        "purchasable": true,
+        "total": 2700,
+        "sell": 1890
+      },
+      "tags": [
+        "Active",
+        "AttackSpeed",
+        "CooldownReduction",
+        "NonbootsMovement",
+        "SpellBlock"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 45,
+        "PercentAttackSpeedMod": 0.5
+      },
+      "effect": {
+        "Effect1Amount": "0.5",
+        "Effect2Amount": "1",
+        "Effect3Amount": "90"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Mercurial Scimitar",
+      "description": "<stats>+50 Attack Damage<br>+35 Magic Resist<br>+10% Life Steal</stats><br><br><active>UNIQUE Active - Quicksilver:</active> Removes all crowd control debuffs and also grants +50% bonus Movement Speed for 1 second (90 second cooldown).",
+      "colloq": ";",
+      "plaintext": "Activate to remove all crowd control debuffs and grant massive Movement Speed",
+      "from": [
+        "3140",
+        "1037",
+        "1053"
+      ],
+      "image": {
+        "full": "3139.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 384,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 325,
+        "purchasable": true,
+        "total": 3400,
+        "sell": 2380
+      },
+      "tags": [
+        "SpellBlock",
+        "Damage",
+        "LifeSteal",
+        "Active",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 50,
+        "FlatSpellBlockMod": 35,
+        "PercentLifeStealMod": 0.1
+      },
+      "effect": {
+        "Effect1Amount": "0.5",
+        "Effect2Amount": "1",
+        "Effect3Amount": "90"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Quicksilver Sash",
+      "description": "<stats>+30 Magic Resist</stats><br><br><active>UNIQUE Active - Quicksilver:</active> Removes all crowd control debuffs (90 second cooldown).",
+      "colloq": ";qss",
+      "plaintext": "Activate to remove all crowd control debuffs",
+      "from": [
+        "1033"
+      ],
+      "into": [
+        "3139",
+        "3137"
+      ],
+      "image": {
+        "full": "3140.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 432,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 850,
+        "purchasable": true,
+        "total": 1300,
+        "sell": 910
+      },
+      "tags": [
+        "Active",
+        "SpellBlock"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "90"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Hexdrinker",
+      "description": "<stats>+20 Attack Damage<br>+35 Magic Resist</stats><br><br><unique>UNIQUE Passive - Lifeline:</unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs 110 to 280 (based on level) magic damage for 5 seconds (90 second cooldown).",
+      "colloq": ";",
+      "plaintext": "Increases Attack Damage and Magic Resist",
+      "stacks": 0,
+      "from": [
+        "1036",
+        "1033"
+      ],
+      "into": [
+        "3156"
+      ],
+      "image": {
+        "full": "3155.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 432,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": true,
+        "total": 1300,
+        "sell": 910
+      },
+      "tags": [
+        "Damage",
+        "SpellBlock"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 20,
+        "FlatSpellBlockMod": 35
+      },
+      "effect": {
+        "Effect1Amount": "0.3",
+        "Effect2Amount": "110",
+        "Effect3Amount": "5",
+        "Effect4Amount": "90",
+        "Effect5Amount": "280",
+        "Effect6Amount": "100",
+        "Effect7Amount": "10"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Maw of Malmortius",
+      "description": "<stats>+50 Attack Damage<br>+50 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Lifeline:</unique> Upon taking magic damage that would reduce Health below 30%, grants a shield that absorbs up to 350 magic damage within 5 seconds (90 second cooldown).<br><unlockedPassive>Lifegrip:</unlockedPassive> When <i>Lifeline</i> triggers, gain +20 Attack Damage, +10% Spell Vamp and +10% Life Steal until out of combat.",
+      "colloq": ";",
+      "plaintext": "Grants bonus Attack Damage when Health is low",
+      "stacks": 0,
+      "from": [
+        "3155",
+        "3133"
+      ],
+      "image": {
+        "full": "3156.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 0,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 850,
+        "purchasable": true,
+        "total": 3250,
+        "sell": 2275
+      },
+      "tags": [
+        "SpellBlock",
+        "Damage",
+        "LifeSteal",
+        "CooldownReduction",
+        "SpellVamp"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 50,
+        "FlatSpellBlockMod": 50
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "35",
+        "Effect3Amount": "0.3",
+        "Effect4Amount": "350",
+        "Effect5Amount": "5",
+        "Effect6Amount": "90",
+        "Effect7Amount": "20",
+        "Effect8Amount": "0",
+        "Effect9Amount": "0.1",
+        "Effect10Amount": "0.1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Moonflair Spellblade",
+      "description": "<stats>+50 Ability Power<br>+50 Armor<br>+50 Magic Resist</stats><br><br><unique>UNIQUE Passive - Tenacity:</unique> Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%.",
+      "colloq": ";",
+      "plaintext": "Improves defense and reduces duration of disabling effects",
+      "from": [
+        "3191",
+        "1057"
+      ],
+      "image": {
+        "full": "3170.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 240,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 580,
+        "purchasable": true,
+        "total": 2400,
+        "sell": 1680
+      },
+      "tags": [
+        "Armor",
+        "SpellBlock",
+        "SpellDamage",
+        "Tenacity"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 50,
+        "FlatMagicDamageMod": 50,
+        "FlatArmorMod": 50
+      },
+      "depth": 3
+    },
+    {
+      "name": "Athene's Unholy Grail",
+      "description": "<stats>+30 Ability Power<br>+30 Magic Resist<br>+10% Cooldown Reduction<br><mana>+100% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive:</unique> Gain 35% of the <a href='premitigation'><font color='#6666FF'><u>premitigation</u></font></a> damage dealt to champions as Blood Charges, up to <scaleLevel>100 - 250</scaleLevel> max. Healing or shielding another ally consumes charges equal to 100% of the heal or shield value, healing the ally for that amount.<br><unique>UNIQUE Passive - Dissonance:</unique> Grants 5 ability power per 25% Base Mana Regen you have. Disables <unique>Harmony</unique> on your other items.<br><br><rules>(Maximum amount of Blood Charges stored is based on level. Healing amplification is applied to the total heal value.)</rules>",
+      "colloq": ";",
+      "plaintext": "Deal damage to empower your heals and shields",
+      "from": [
+        "3108",
+        "3028"
+      ],
+      "image": {
+        "full": "3174.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 336,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 2100,
+        "sell": 1470
+      },
+      "tags": [
+        "SpellBlock",
+        "HealthRegen",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatMagicDamageMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "10",
+        "Effect2Amount": "0",
+        "Effect3Amount": "0",
+        "Effect4Amount": "0",
+        "Effect5Amount": "5",
+        "Effect6Amount": "0.35",
+        "Effect7Amount": "100",
+        "Effect8Amount": "250",
+        "Effect9Amount": "1",
+        "Effect10Amount": "1",
+        "Effect11Amount": "0.25",
+        "Effect12Amount": "600",
+        "Effect13Amount": "8",
+        "Effect14Amount": "90"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Locket of the Iron Solari",
+      "description": "<stats>+30 Armor<br>+60 Magic Resist</stats><br><br><active>UNIQUE Active:</active> Grants a decaying shield to nearby allied champions for 2.5 seconds that absorbs up to 120 (+10 per level) <scaleHealth>(+20% of your bonus health)</scaleHealth> damage (120 second cooldown).<br><br><rules>Shield per level uses the higher of your level or the target's level.<br>Shield ratio scales with your level.<br>Shield amount is reduced to 25% if the target has been affected by another Locket of the Iron Solari in the last 20 seconds.</rules>",
+      "colloq": ";",
+      "plaintext": "Activate to shield nearby allies from damage",
+      "from": [
+        "3105",
+        "1033"
+      ],
+      "into": [
+        "3383"
+      ],
+      "image": {
+        "full": "3190.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 96,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 650,
+        "purchasable": true,
+        "total": 2200,
+        "sell": 1540
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Active"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 60,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "120",
+        "Effect2Amount": "10",
+        "Effect3Amount": "2.5",
+        "Effect4Amount": "0.25",
+        "Effect5Amount": "20",
+        "Effect6Amount": "120",
+        "Effect7Amount": "0.2"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Gargoyle Stoneplate",
+      "description": "<stats>+40 Armor<br>+40 Magic Resist</stats><br><br><unique>UNIQUE Passive - Stone Skin:</unique> If 3+ enemy champions are nearby, grants 40 bonus Armor and Magic Resist.<br><active>UNIQUE Active - Metallicize:</active> Increases Health by 40% and increases champion size, but reduces damage dealt by 60% for 4 seconds (90 second cooldown). If Stone Skin is active, the Health increase becomes 100% instead.",
+      "colloq": ";",
+      "plaintext": "Greatly increases defense near multiple enemies.",
+      "from": [
+        "1031",
+        "1057",
+        "2420"
+      ],
+      "image": {
+        "full": "3193.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 192,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 330,
+        "purchasable": true,
+        "total": 2500,
+        "sell": 1750
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 40,
+        "FlatArmorMod": 40
+      },
+      "effect": {
+        "Effect1Amount": "40",
+        "Effect2Amount": "850",
+        "Effect3Amount": "3",
+        "Effect4Amount": "4",
+        "Effect5Amount": "0.6",
+        "Effect6Amount": "0.4",
+        "Effect7Amount": "0.07",
+        "Effect8Amount": "1",
+        "Effect9Amount": "0.25",
+        "Effect10Amount": "90",
+        "Effect11Amount": "1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Adaptive Helm",
+      "description": "<stats>+350 Health<br>+55 Magic Resist<br>+100% Base Health Regeneration <br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> Taking magic damage from a spell or effect reduces all subsequent magic damage from that same spell or effect by 20% for 4 seconds.",
+      "colloq": ";",
+      "plaintext": "Reduces damage from repeated spells and effects.",
+      "from": [
+        "1033",
+        "3211",
+        "1006"
+      ],
+      "image": {
+        "full": "3194.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 240,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1000,
+        "purchasable": true,
+        "total": 2800,
+        "sell": 1960
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 350,
+        "FlatSpellBlockMod": 55
+      },
+      "effect": {
+        "Effect1Amount": "20",
+        "Effect2Amount": "4",
+        "Effect3Amount": "25"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Spectre's Cowl",
+      "description": "<stats>+250 Health<br>+25 Magic Resist</stats><br><br><unique>UNIQUE Passive:</unique> Grants 150% Base Health Regen for up to 10 seconds after taking damage from an enemy champion.",
+      "colloq": ";hat",
+      "plaintext": "Improves defense and grants regeneration upon being damaged",
+      "from": [
+        "1028",
+        "1033"
+      ],
+      "into": [
+        "3065",
+        "3194"
+      ],
+      "image": {
+        "full": "3211.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 0,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 350,
+        "purchasable": true,
+        "total": 1200,
+        "sell": 840
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "SpellBlock"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 250,
+        "FlatSpellBlockMod": 25
+      },
+      "effect": {
+        "Effect1Amount": "1.5",
+        "Effect2Amount": "10"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Mikael's Crucible",
+      "description": "<stats>+40 Magic Resist<br>+10% Cooldown Reduction<br><mana>+100% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive:</unique> +20% Heal and Shield Power<br><unique>UNIQUE Passive - Harmony:</unique> Grants bonus % Base Health Regen equal to your bonus % Base Mana Regen.<br><active>UNIQUE Active:</active> Cleanses all stuns, roots, taunts, fears, silences, and slows on an allied champion and grants them slow immunity for 2 seconds (120 second cooldown). <br><br>Cleansing an effect grants the ally 40% movement speed for 2 seconds.",
+      "colloq": ";",
+      "plaintext": "Activate to remove all disabling effects from an allied champion",
+      "from": [
+        "3028",
+        "3114"
+      ],
+      "image": {
+        "full": "3222.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": true,
+        "total": 2100,
+        "sell": 1470
+      },
+      "tags": [
+        "SpellBlock",
+        "HealthRegen",
+        "ManaRegen",
+        "Active",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 40
+      },
+      "effect": {
+        "Effect1Amount": "2",
+        "Effect2Amount": "5",
+        "Effect3Amount": "0.5",
+        "Effect4Amount": "0.25",
+        "Effect5Amount": "600",
+        "Effect6Amount": "8",
+        "Effect7Amount": "90",
+        "Effect8Amount": "1",
+        "Effect9Amount": "1",
+        "Effect10Amount": "0.4",
+        "Effect11Amount": "0.2",
+        "Effect12Amount": "2",
+        "Effect13Amount": "120"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Infernal Mask",
+      "description": "<stats><font color='#FFFFFF'>+750 Health</font><br><mana>+300 Mana</mana><br><font color='#FFFFFF'>+100 Magic Resist</font><br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Eternity:</unique> 15% of damage taken from champions is gained as Mana. Spending Mana restores 20% of the cost as Health, up to 25 per spell cast.<br><aura>UNIQUE Aura:</aura> Nearby enemy champions take 15% more magic damage.",
+      "colloq": ";Ornn;forge;Masterwork",
+      "plaintext": "Nearby enemies take more magic damage",
+      "from": [
+        "3001"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3379.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 144,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 3000,
+        "sell": 2100
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "Mana",
+        "ManaRegen",
+        "Aura",
+        "CooldownReduction",
+        "MagicPenetration"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 750,
+        "FlatSpellBlockMod": 100,
+        "FlatMPPoolMod": 300
+      },
+      "effect": {
+        "Effect1Amount": "-10",
+        "Effect2Amount": "-25",
+        "Effect3Amount": "0.15",
+        "Effect4Amount": "25",
+        "Effect5Amount": "0.2",
+        "Effect6Amount": "0.15"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Circlet of the Iron Solari",
+      "description": "<stats><font color='#FFFFFF'>+45 Armor</font><br><font color='#FFFFFF'>+75 Magic Resist</font></stats><br><br><active>UNIQUE Active:</active> Grants a decaying shield to nearby allied champions for 2.5 seconds that absorbs up to 120 (+10 per level) <scaleHealth>(+20% of your bonus health)</scaleHealth> damage (120 second cooldown).<br><br><rules>Shield per level uses the higher of your level or the target's level.<br>Shield ratio scales with your level.<br>Shield amount is reduced to 25% if the target has been affected by another Locket of the Iron Solari in the last 20 seconds.</rules>",
+      "colloq": ";Ornn;forge;Masterwork",
+      "plaintext": "Activate to shield nearby allies from damage",
+      "from": [
+        "3190"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3383.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 288,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 2200,
+        "sell": 1540
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Active"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 75,
+        "FlatArmorMod": 45
+      },
+      "effect": {
+        "Effect1Amount": "120",
+        "Effect2Amount": "10",
+        "Effect3Amount": "2.5",
+        "Effect4Amount": "0.25",
+        "Effect5Amount": "20",
+        "Effect6Amount": "120",
+        "Effect7Amount": "0.2"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Death's Dance",
+      "description": "<stats>+50 Attack Damage<br>+30 Armor<br>+30 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> Heal for 15% of damage dealt. This is 33% as effective for Area of Effect damage.<br><unique>UNIQUE Passive:</unique> <specialRules>[Melee Users: 30% || Ranged Users: 10%]</specialRules> of damage taken is dealt as a Bleed effect over 3 seconds instead.",
+      "colloq": ";Bloodbag",
+      "plaintext": "Trades incoming damage now for incoming damage later",
+      "stacks": 0,
+      "from": [
+        "3105",
+        "1053",
+        "3133"
+      ],
+      "image": {
+        "full": "3812.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 432,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": true,
+        "total": 3600,
+        "sell": 2520
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Damage",
+        "LifeSteal",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 50,
+        "FlatSpellBlockMod": 30,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "0.15",
+        "Effect2Amount": "0.3",
+        "Effect3Amount": "3",
+        "Effect4Amount": "0.1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Force of Nature",
+      "description": "<stats>+90 Magic Resist<br>+200% Base Health Regen <br>+8% Movement Speed</stats><br><br><unique>UNIQUE Passive:</unique> Regenerate 1.5% maximum Health every second.",
+      "colloq": ";fon",
+      "plaintext": "Movement Speed, Magic Resist, and max Health Regeneration",
+      "from": [
+        "1057",
+        "1057",
+        "1006",
+        "1006"
+      ],
+      "image": {
+        "full": "4401.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 48,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1160,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "SpellBlock",
+        "HealthRegen",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "PercentMovementSpeedMod": 0.08,
+        "FlatSpellBlockMod": 90
+      },
+      "effect": {
+        "Effect1Amount": "0.015"
+      },
+      "depth": 3
+    },
+    {
+      "name": "The Golden Spatula",
+      "description": "<stats>+250 Health<br><mana>+250 Mana</mana><br>+100% Base Health Regen <br><mana>+100% Base Mana Regen </mana><br>+30 Armor<br>+30 Magic Resist<br>+120 Ability Power<br>+70 Attack Damage<br>+50% Attack Speed<br>+30% Critical Strike Chance<br>+10% Life Steal<br>+10% Movement Speed<br>+20% Cooldown Reduction<br><br>You are permanently On Fire!</stats><br><br><rules><font color='#447777'>''It must do something...''<br>''Declined, it does EVERYTHING!''</font></rules>",
+      "colloq": ";",
+      "plaintext": "It does EVERYTHING!",
+      "from": [
+        "1038",
+        "1053",
+        "3086",
+        "1058",
+        "3067",
+        "3105"
+      ],
+      "image": {
+        "full": "4403.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 144,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 687,
+        "purchasable": true,
+        "total": 7437,
+        "sell": 5206
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "Armor",
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed",
+        "LifeSteal",
+        "SpellDamage",
+        "Mana",
+        "ManaRegen",
+        "CooldownReduction",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 70,
+        "FlatCritChanceMod": 0.3,
+        "PercentMovementSpeedMod": 0.1,
+        "FlatHPPoolMod": 250,
+        "FlatSpellBlockMod": 30,
+        "FlatMPPoolMod": 250,
+        "FlatMagicDamageMod": 120,
+        "FlatArmorMod": 30,
+        "PercentAttackSpeedMod": 0.5,
+        "PercentLifeStealMod": 0.1
+      },
+      "depth": 3
+    }
+  ]
+}

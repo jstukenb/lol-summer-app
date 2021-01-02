@@ -1,0 +1,1497 @@
+{
+  "Armor": [
+    {
+      "name": "Cloth Armor",
+      "description": "<stats>+15 Armor</stats>",
+      "colloq": ";",
+      "plaintext": "Slightly increases Armor",
+      "into": [
+        "3047",
+        "1031",
+        "3191",
+        "3024",
+        "3082",
+        "3076",
+        "3105"
+      ],
+      "image": {
+        "full": "1029.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 384,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 300,
+        "purchasable": true,
+        "total": 300,
+        "sell": 210
+      },
+      "tags": [
+        "Armor"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatArmorMod": 15
+      }
+    },
+    {
+      "name": "Chain Vest",
+      "description": "<stats>+40 Armor</stats>",
+      "colloq": ";",
+      "plaintext": "Greatly increases Armor",
+      "from": [
+        "1029"
+      ],
+      "into": [
+        "3068",
+        "3109",
+        "3026",
+        "3193",
+        "3742"
+      ],
+      "image": {
+        "full": "1031.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 432,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": true,
+        "total": 800,
+        "sell": 560
+      },
+      "tags": [
+        "Armor"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatArmorMod": 40
+      },
+      "depth": 2
+    },
+    {
+      "name": "Atma's Reckoning",
+      "description": "<stats>+25 Attack Damage<br>+30 Armor<br>+30 Magic Resist</stats><br><br><unique>UNIQUE Passive:</unique> For each second in combat with enemy champions, turrets, or epic monsters, gain Attack Damage equal to 0.5% of maximum health , up to 2.5% .",
+      "colloq": ";wreckoning;Wreckoning",
+      "plaintext": "Increases Attack Damage based on maximum Health",
+      "from": [
+        "3105",
+        "1037"
+      ],
+      "image": {
+        "full": "3005.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 48,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 925,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Damage"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 25,
+        "FlatSpellBlockMod": 30,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "0.005",
+        "Effect2Amount": "5",
+        "Effect3Amount": "0.025",
+        "Effect4Amount": "25",
+        "Effect5Amount": "0.2",
+        "Effect6Amount": "75"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Glacial Shroud",
+      "description": "<stats>+20 Armor<br><mana>+250 Mana</mana></stats><br><br><unique>UNIQUE Passive:</unique> +10% Cooldown Reduction",
+      "colloq": ";",
+      "plaintext": "Increases Armor and Cooldown Reduction",
+      "from": [
+        "1027",
+        "1029"
+      ],
+      "into": [
+        "3110",
+        "3025",
+        "3050",
+        "3800"
+      ],
+      "image": {
+        "full": "3024.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 432,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 250,
+        "purchasable": true,
+        "total": 900,
+        "sell": 630
+      },
+      "tags": [
+        "Armor",
+        "CooldownReduction",
+        "Mana"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 250,
+        "FlatArmorMod": 20
+      },
+      "effect": {
+        "Effect1Amount": "-0.1"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Iceborn Gauntlet",
+      "description": "<stats>+65 Armor<br>+20% Cooldown Reduction<br><mana>+500 Mana</mana></stats><br><br><unique>UNIQUE Passive - Spellblade:</unique> After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).<br><br>Size of zone increases with bonus armor.",
+      "colloq": ";frozen fist",
+      "plaintext": "Basic attacks create a slow field after spell cast",
+      "from": [
+        "3057",
+        "3024"
+      ],
+      "into": [
+        "3387"
+      ],
+      "image": {
+        "full": "3025.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 0,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 750,
+        "purchasable": true,
+        "total": 2700,
+        "sell": 1890
+      },
+      "tags": [
+        "Armor",
+        "Mana",
+        "CooldownReduction",
+        "Slow"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 500,
+        "FlatArmorMod": 65
+      },
+      "effect": {
+        "Effect1Amount": "-0.2",
+        "Effect2Amount": "1",
+        "Effect3Amount": "2",
+        "Effect4Amount": "-0.3",
+        "Effect5Amount": "1.5"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Guardian Angel",
+      "description": "<stats>+45 Attack Damage<br>+40 Armor</stats><br><br><unique>UNIQUE Passive:</unique> Upon taking lethal damage, restores 50% of base Health and 30% of maximum Mana after 4 seconds of stasis (300 second cooldown).",
+      "colloq": ";ga",
+      "plaintext": "Periodically revives champion upon death",
+      "from": [
+        "1038",
+        "1031",
+        "2420"
+      ],
+      "image": {
+        "full": "3026.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 48,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 50,
+        "purchasable": true,
+        "total": 2800,
+        "sell": 1120
+      },
+      "tags": [
+        "Armor",
+        "Damage"
+      ],
+      "maps": {
+        "11": true,
+        "12": false,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 45,
+        "FlatArmorMod": 40
+      },
+      "effect": {
+        "Effect1Amount": "0.5",
+        "Effect2Amount": "4",
+        "Effect3Amount": "300",
+        "Effect4Amount": "0.3"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Ninja Tabi",
+      "description": "<groupLimit>Limited to 1 pair of boots.</groupLimit><br><br><stats>+20 Armor</stats><br><br><unique>UNIQUE Passive:</unique> Blocks 12% of the damage from basic attacks.<br><unique>UNIQUE Passive - Enhanced Movement:</unique> +45 Movement Speed",
+      "colloq": ";",
+      "plaintext": "Enhances Movement Speed and reduces incoming basic attack damage",
+      "from": [
+        "1001",
+        "1029"
+      ],
+      "image": {
+        "full": "3047.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 288,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": true,
+        "total": 1100,
+        "sell": 770
+      },
+      "tags": [
+        "Armor",
+        "Boots"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMovementSpeedMod": 45,
+        "FlatArmorMod": 20
+      },
+      "effect": {
+        "Effect1Amount": "0.12"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Zeke's Convergence",
+      "description": "<stats>+60 Armor<br>+30 Magic Resist<br><mana>+250 Mana</mana><br>+10% Cooldown Reduction</stats><br><mainText><active>UNIQUE Active - Conduit:</active> Bind to an ally without an existing Conduit.<br><unique>UNIQUE Passive:</unique> Casting your ultimate near your ally surrounds you with a frost storm and ignites your ally's basic attacks for 10 seconds. Enemies inside your frost storm are slowed by 20% and your ally's attacks burn their target for 30% bonus magic damage over 2 seconds (45 second cooldown).<br><br><unlockedPassive>Frostfire Covenant:</unlockedPassive> Your frost storm ignites when it slows a burning enemy, dealing 40 magic damage per second and slowing by 40% instead for 3 seconds.</mainText><br><br><rules>(Champions can only be linked by one Zeke's Convergence at a time.)</rules>",
+      "colloq": ";haroldandkumar",
+      "plaintext": "Grants you and your ally bonuses when you cast your ultimate.",
+      "from": [
+        "3105",
+        "3024"
+      ],
+      "image": {
+        "full": "3050.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 384,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 250,
+        "purchasable": true,
+        "total": 2250,
+        "sell": 1575
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Mana",
+        "Aura",
+        "Active",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatMPPoolMod": 250,
+        "FlatArmorMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "-0.1",
+        "Effect2Amount": "20",
+        "Effect3Amount": "40",
+        "Effect4Amount": "0.3",
+        "Effect5Amount": "1000",
+        "Effect6Amount": "0.5",
+        "Effect7Amount": "10",
+        "Effect8Amount": "3",
+        "Effect9Amount": "45",
+        "Effect10Amount": "3",
+        "Effect11Amount": "2",
+        "Effect12Amount": "300",
+        "Effect13Amount": "40",
+        "Effect14Amount": "2",
+        "Effect15Amount": "0.5"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Sunfire Cape",
+      "description": "<stats>+425 Health<br>+60 Armor  </stats><br><br><unique>UNIQUE Passive - Immolate:</unique> Burns nearby enemies for <scaleLevel>[26 to 43]</scaleLevel> magic damage per second. Once every 12 seconds, your next immobilizing spell deals <scaleLevel>[26 to 43]</scaleLevel> <scaleHealth>(+4% Your Bonus HP)</scaleHealth> bonus magic damage and releases a fire nova that also deals that bonus damage around you. Immolate's damage is increased by 50% to minions and monsters.",
+      "colloq": ";",
+      "plaintext": "Constantly deals damage to nearby enemies",
+      "from": [
+        "1031",
+        "1028",
+        "3751"
+      ],
+      "into": [
+        "3373"
+      ],
+      "image": {
+        "full": "3068.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 192,
+        "y": 432,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 650,
+        "purchasable": true,
+        "total": 2750,
+        "sell": 1925
+      },
+      "tags": [
+        "Armor",
+        "Health"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 425,
+        "FlatArmorMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "26",
+        "Effect2Amount": "43",
+        "Effect3Amount": "0.5",
+        "Effect4Amount": "12",
+        "Effect5Amount": "0.04"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Thornmail",
+      "description": "<stats>+250 Health<br>+80 Armor</stats><br><br><unique>UNIQUE Passive - Thorns:</unique> Upon being hit by a basic attack, reflects magic damage equal to 10% of your bonus Armor plus 25, inflicting <a href='GrievousWounds'>Grievous Wounds</a> on the attacker for 3 second(s).<br><unique>UNIQUE Passive - Cold Steel:</unique> When hit by basic attacks, reduces the attacker's Attack Speed by 15% for 1 second(s).",
+      "colloq": ";grievous",
+      "plaintext": "Returns damage taken from basic attacks as magic damage",
+      "from": [
+        "3076",
+        "1028",
+        "3082"
+      ],
+      "image": {
+        "full": "3075.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 0,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "Slow"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 250,
+        "FlatArmorMod": 80
+      },
+      "effect": {
+        "Effect1Amount": "25",
+        "Effect2Amount": "3",
+        "Effect3Amount": "3",
+        "Effect4Amount": "1",
+        "Effect5Amount": "0.15",
+        "Effect6Amount": "0.1",
+        "Effect7Amount": "0.1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Bramble Vest",
+      "description": "<stats>+35 Armor</stats><br><br><unique>UNIQUE Passive - Thorns:</unique> Upon being hit by a basic attack, reflects magic damage equal to 3 plus 10% of your bonus Armor, inflicting <a href='GrievousWounds'>Grievous Wounds</a> on the attacker for 3 second(s).",
+      "colloq": ";grievous",
+      "plaintext": "Prevents enemies from using Life Steal against you.",
+      "from": [
+        "1029",
+        "1029"
+      ],
+      "into": [
+        "3075"
+      ],
+      "image": {
+        "full": "3076.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 1000,
+        "sell": 700
+      },
+      "tags": [
+        "Armor"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatArmorMod": 35
+      },
+      "effect": {
+        "Effect1Amount": "0.1",
+        "Effect2Amount": "3",
+        "Effect3Amount": "3"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Warden's Mail",
+      "description": "<stats>+40 Armor</stats><br><br><unique>UNIQUE Passive - Cold Steel:</unique> When hit by basic attacks, reduces the attacker's Attack Speed by 15% for 1 seconds.",
+      "colloq": ";",
+      "plaintext": "Slows Attack Speed of enemy champions when receiving basic attacks",
+      "from": [
+        "1029",
+        "1029"
+      ],
+      "into": [
+        "3110",
+        "3143",
+        "3075"
+      ],
+      "image": {
+        "full": "3082.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 192,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 1000,
+        "sell": 700
+      },
+      "tags": [
+        "Armor",
+        "Slow"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatArmorMod": 40
+      },
+      "effect": {
+        "Effect1Amount": "-0.15",
+        "Effect2Amount": "1"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Aegis of the Legion",
+      "description": "<stats>+30 Armor<br>+30 Magic Resist</stats>",
+      "colloq": ";",
+      "plaintext": "Grants Armor and Magic Resistance",
+      "from": [
+        "1033",
+        "1029"
+      ],
+      "into": [
+        "3190",
+        "3005",
+        "3050",
+        "3812",
+        "4403"
+      ],
+      "image": {
+        "full": "3105.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 336,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 350,
+        "purchasable": true,
+        "total": 1100,
+        "sell": 770
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatArmorMod": 30
+      },
+      "depth": 2
+    },
+    {
+      "name": "Knight's Vow",
+      "description": "<stats>+250 Health<br>+40 Armor<br>+10% Cooldown Reduction</stats><br><br><active>UNIQUE Active:</active> Designate an allied champion as your <a href='KnightsVowPartner'>Partner</a> (90 second cooldown).<br><passive>UNIQUE Passive:</passive> If your <a href='KnightsVowPartner'>Partner</a> is nearby, gain +20 additional Armor and +15% Movement Speed towards them.<br><passive>UNIQUE Passive:</passive> If your <a href='KnightsVowPartner'>Partner</a> is nearby, heal for 12% of the damage your <a href='KnightsVowPartner'>Partner</a> deals to champions and redirect 12% of the damage your <a href='KnightsVowPartner'>Partner</a> takes from champions to you as <font color='#FFFFFF'>true</font> damage (healing and damage redirection are reduced by 50% if you are ranged).<br><br><rules>(Champions can only be linked by one Knight's Vow at a time.)</rules>",
+      "colloq": ";",
+      "plaintext": "Partner with an ally to protect each other",
+      "from": [
+        "3067",
+        "1031"
+      ],
+      "image": {
+        "full": "3109.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 0,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 600,
+        "purchasable": true,
+        "total": 2200,
+        "sell": 1540
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "Aura",
+        "CooldownReduction",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 250,
+        "FlatArmorMod": 40
+      },
+      "effect": {
+        "Effect1Amount": "20",
+        "Effect2Amount": "0.15",
+        "Effect3Amount": "0.12",
+        "Effect4Amount": "0.12",
+        "Effect5Amount": "90",
+        "Effect6Amount": "0.5",
+        "Effect7Amount": "1000"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Frozen Heart",
+      "description": "<stats>+110 Armor<br>+20% Cooldown Reduction<br><mana>+400 Mana</mana></stats><br><br><aura>UNIQUE Aura:</aura> Reduces the Attack Speed of nearby enemies by 15%.",
+      "colloq": ";fh",
+      "plaintext": "Massively increases Armor and slows enemy basic attacks",
+      "from": [
+        "3082",
+        "3024"
+      ],
+      "image": {
+        "full": "3110.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 800,
+        "purchasable": true,
+        "total": 2700,
+        "sell": 1890
+      },
+      "tags": [
+        "Armor",
+        "Aura",
+        "CooldownReduction",
+        "Mana"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 400,
+        "FlatArmorMod": 110
+      },
+      "effect": {
+        "Effect1Amount": "-0.2",
+        "Effect2Amount": "-0.15"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Randuin's Omen",
+      "description": "<stats>+400 Health<br>+70 Armor</stats><br><br><unique>UNIQUE Passive:</unique> -20% damage taken from basic attack critical strikes.<br><unique>UNIQUE Passive - Cold Steel:</unique> When hit by basic attacks, reduces the attacker's Attack Speed by 15% for 1 second.<br><active>UNIQUE Active:</active> Slows the Movement Speed of nearby enemy units by 55% for 2 seconds (60 second cooldown).",
+      "colloq": ";",
+      "plaintext": "Greatly increases defenses, activate to slow nearby enemies",
+      "from": [
+        "3082",
+        "1011"
+      ],
+      "image": {
+        "full": "3143.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 900,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "Active",
+        "Armor",
+        "Health",
+        "Slow"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatArmorMod": 70
+      },
+      "effect": {
+        "Effect1Amount": "2",
+        "Effect2Amount": "0.2",
+        "Effect3Amount": "-0.55",
+        "Effect4Amount": "1",
+        "Effect5Amount": "-0.15",
+        "Effect6Amount": "0.15",
+        "Effect7Amount": "0.3"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Zhonya's Hourglass",
+      "description": "<stats>+75 Ability Power<br>+45 Armor<br>+10% Cooldown Reduction</stats><br><br><active>UNIQUE Active - Stasis:</active> Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (120 second cooldown).",
+      "colloq": ";zhg;zonyas",
+      "plaintext": "Activate to become invincible but unable to take actions",
+      "from": [
+        "3191",
+        "3108",
+        "2420"
+      ],
+      "into": [
+        "3386"
+      ],
+      "image": {
+        "full": "3157.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 250,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "Active",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 75,
+        "FlatArmorMod": 45
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "2.5",
+        "Effect3Amount": "120"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Moonflair Spellblade",
+      "description": "<stats>+50 Ability Power<br>+50 Armor<br>+50 Magic Resist</stats><br><br><unique>UNIQUE Passive - Tenacity:</unique> Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%.",
+      "colloq": ";",
+      "plaintext": "Improves defense and reduces duration of disabling effects",
+      "from": [
+        "3191",
+        "1057"
+      ],
+      "image": {
+        "full": "3170.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 240,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 580,
+        "purchasable": true,
+        "total": 2400,
+        "sell": 1680
+      },
+      "tags": [
+        "Armor",
+        "SpellBlock",
+        "SpellDamage",
+        "Tenacity"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 50,
+        "FlatMagicDamageMod": 50,
+        "FlatArmorMod": 50
+      },
+      "depth": 3
+    },
+    {
+      "name": "Locket of the Iron Solari",
+      "description": "<stats>+30 Armor<br>+60 Magic Resist</stats><br><br><active>UNIQUE Active:</active> Grants a decaying shield to nearby allied champions for 2.5 seconds that absorbs up to 120 (+10 per level) <scaleHealth>(+20% of your bonus health)</scaleHealth> damage (120 second cooldown).<br><br><rules>Shield per level uses the higher of your level or the target's level.<br>Shield ratio scales with your level.<br>Shield amount is reduced to 25% if the target has been affected by another Locket of the Iron Solari in the last 20 seconds.</rules>",
+      "colloq": ";",
+      "plaintext": "Activate to shield nearby allies from damage",
+      "from": [
+        "3105",
+        "1033"
+      ],
+      "into": [
+        "3383"
+      ],
+      "image": {
+        "full": "3190.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 96,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 650,
+        "purchasable": true,
+        "total": 2200,
+        "sell": 1540
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Active"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 60,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "120",
+        "Effect2Amount": "10",
+        "Effect3Amount": "2.5",
+        "Effect4Amount": "0.25",
+        "Effect5Amount": "20",
+        "Effect6Amount": "120",
+        "Effect7Amount": "0.2"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Seeker's Armguard",
+      "description": "<stats>+30 Armor<br>+20 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Killing a unit grants 0.5 bonus Armor and Ability Power. This bonus stacks up to 30 times.",
+      "colloq": ";",
+      "plaintext": "Increases Armor and Ability Power",
+      "from": [
+        "1029",
+        "1052",
+        "1029"
+      ],
+      "into": [
+        "3170",
+        "3157"
+      ],
+      "image": {
+        "full": "3191.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 144,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 65,
+        "purchasable": true,
+        "total": 1100,
+        "sell": 770
+      },
+      "tags": [
+        "Armor",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 20,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "0.5",
+        "Effect2Amount": "30"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Gargoyle Stoneplate",
+      "description": "<stats>+40 Armor<br>+40 Magic Resist</stats><br><br><unique>UNIQUE Passive - Stone Skin:</unique> If 3+ enemy champions are nearby, grants 40 bonus Armor and Magic Resist.<br><active>UNIQUE Active - Metallicize:</active> Increases Health by 40% and increases champion size, but reduces damage dealt by 60% for 4 seconds (90 second cooldown). If Stone Skin is active, the Health increase becomes 100% instead.",
+      "colloq": ";",
+      "plaintext": "Greatly increases defense near multiple enemies.",
+      "from": [
+        "1031",
+        "1057",
+        "2420"
+      ],
+      "image": {
+        "full": "3193.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 192,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 330,
+        "purchasable": true,
+        "total": 2500,
+        "sell": 1750
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "Armor"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 40,
+        "FlatArmorMod": 40
+      },
+      "effect": {
+        "Effect1Amount": "40",
+        "Effect2Amount": "850",
+        "Effect3Amount": "3",
+        "Effect4Amount": "4",
+        "Effect5Amount": "0.6",
+        "Effect6Amount": "0.4",
+        "Effect7Amount": "0.07",
+        "Effect8Amount": "1",
+        "Effect9Amount": "0.25",
+        "Effect10Amount": "90",
+        "Effect11Amount": "1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Forgefire Cape",
+      "description": "<stats><font color='#FFFFFF'>+750 Health</font><br><font color='#FFFFFF'>+100 Armor</font></stats><br><br><unique>UNIQUE Passive - Immolate:</unique> Burns nearby enemies for <scaleLevel>[26 to 43]</scaleLevel> magic damage per second. Once every 12 seconds, your next immobilizing spell deals <scaleLevel>[26 to 43]</scaleLevel> <scaleHealth>(+4% Your Bonus HP)</scaleHealth> bonus magic damage and releases a fire nova that also deals that bonus damage around you. Immolate's damage is increased by 50% to minions and monsters.",
+      "colloq": ";Ornn;forge;Masterwork",
+      "plaintext": "Constantly deals damage to nearby enemies",
+      "from": [
+        "3068"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3373.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 2750,
+        "sell": 1925
+      },
+      "tags": [
+        "Health",
+        "Armor"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 750,
+        "FlatArmorMod": 100
+      },
+      "effect": {
+        "Effect1Amount": "26",
+        "Effect2Amount": "43",
+        "Effect3Amount": "0.5",
+        "Effect4Amount": "12",
+        "Effect5Amount": "0.04"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Circlet of the Iron Solari",
+      "description": "<stats><font color='#FFFFFF'>+45 Armor</font><br><font color='#FFFFFF'>+75 Magic Resist</font></stats><br><br><active>UNIQUE Active:</active> Grants a decaying shield to nearby allied champions for 2.5 seconds that absorbs up to 120 (+10 per level) <scaleHealth>(+20% of your bonus health)</scaleHealth> damage (120 second cooldown).<br><br><rules>Shield per level uses the higher of your level or the target's level.<br>Shield ratio scales with your level.<br>Shield amount is reduced to 25% if the target has been affected by another Locket of the Iron Solari in the last 20 seconds.</rules>",
+      "colloq": ";Ornn;forge;Masterwork",
+      "plaintext": "Activate to shield nearby allies from damage",
+      "from": [
+        "3190"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3383.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 288,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 2200,
+        "sell": 1540
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Active"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 75,
+        "FlatArmorMod": 45
+      },
+      "effect": {
+        "Effect1Amount": "120",
+        "Effect2Amount": "10",
+        "Effect3Amount": "2.5",
+        "Effect4Amount": "0.25",
+        "Effect5Amount": "20",
+        "Effect6Amount": "120",
+        "Effect7Amount": "0.2"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Zhonya's Paradox",
+      "description": "<stats><font color='#FFFFFF'>+100 Ability Power</font><br><font color='#FFFFFF'>+60 Armor</font><br>+10% Cooldown Reduction</stats><br><br><active>UNIQUE Active - Stasis:</active> Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (120 second cooldown).",
+      "colloq": ";zhg;zonyas;ornn;forge",
+      "plaintext": "Activate to become invincible but unable to take actions",
+      "from": [
+        "3157"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3386.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 384,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "Active",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 100,
+        "FlatArmorMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "2.5",
+        "Effect3Amount": "120"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Frozen Fist",
+      "description": "<stats><font color='#FFFFFF'>+125 Armor</font><br>+20% Cooldown Reduction<br><font color='#FFFFFF'>+700 Mana</font></stats><br><br><unique>UNIQUE Passive - Spellblade:</unique> After using an ability, the next basic attack deals bonus physical damage equal to 100% of base Attack Damage in an area and creates an icy zone for 2 seconds that slows Movement Speed by 30% (1.5 second cooldown).<br><br>Size of zone increases with bonus armor.",
+      "colloq": ";frozen fist;Ornn",
+      "plaintext": "Basic attacks create a slow field after spell cast",
+      "from": [
+        "3025"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3387.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 432,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 2700,
+        "sell": 1890
+      },
+      "tags": [
+        "Armor",
+        "Mana",
+        "CooldownReduction",
+        "Slow"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 700,
+        "FlatArmorMod": 125
+      },
+      "effect": {
+        "Effect1Amount": "-0.2",
+        "Effect2Amount": "1",
+        "Effect3Amount": "2",
+        "Effect4Amount": "-0.3",
+        "Effect5Amount": "1.5"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Dead Man's Plate",
+      "description": "<stats>+425 Health<br>+60 Armor</stats><br><br><unique>UNIQUE Passive - Dreadnought:</unique> While moving, build stacks of Momentum, increasing movement speed by up to 60 at 100 stacks. Momentum decays while under the effect of a stun, taunt, fear, polymorph, or immobilize effect.<br><unique>UNIQUE Passive - Crushing Blow:</unique> Basic attacks deal 1 magic damage per stack of Momentum, discharging all stacks. At max stacks, if the attacker is melee, they also slow the target by 50% for 1 second.<br><br><flavorText>''There's only one way you'll get this armor from me...'' - forgotten namesake</flavorText>",
+      "colloq": ";juggernaut;dreadnought",
+      "plaintext": "Build momentum as you move around then smash into enemies.",
+      "from": [
+        "1031",
+        "1011"
+      ],
+      "image": {
+        "full": "3742.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 144,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1100,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "Health",
+        "Armor",
+        "OnHit",
+        "NonbootsMovement",
+        "Bilgewater"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 425,
+        "FlatArmorMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "60",
+        "Effect2Amount": "100",
+        "Effect3Amount": "1",
+        "Effect4Amount": "-0.5",
+        "Effect5Amount": "1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Righteous Glory",
+      "description": "<stats>+400 Health<br><mana>+300 Mana</mana><br>+30 Armor<br>+100% Base Health Regen <br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Active:</unique> Grants 75% Movement Speed when moving towards enemies or enemy turrets for 4 seconds. Once near an enemy (or after 4 seconds) a shockwave is emitted, slowing nearby enemy champion Movement Speed by 75% for 2 second(s) (90 second cooldown).",
+      "colloq": ";",
+      "plaintext": "Grants Health, Mana, and Armor. Activate to speed towards enemies and slow them.",
+      "from": [
+        "3024",
+        "3801"
+      ],
+      "image": {
+        "full": "3800.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 288,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1100,
+        "purchasable": true,
+        "total": 2650,
+        "sell": 1855
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Armor",
+        "Mana",
+        "Active",
+        "CooldownReduction",
+        "Slow",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 400,
+        "FlatMPPoolMod": 300,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "0.75",
+        "Effect2Amount": "4",
+        "Effect3Amount": "-0.75",
+        "Effect4Amount": "2",
+        "Effect5Amount": "90",
+        "Effect6Amount": "225",
+        "Effect7Amount": "450"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Death's Dance",
+      "description": "<stats>+50 Attack Damage<br>+30 Armor<br>+30 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive:</unique> Heal for 15% of damage dealt. This is 33% as effective for Area of Effect damage.<br><unique>UNIQUE Passive:</unique> <specialRules>[Melee Users: 30% || Ranged Users: 10%]</specialRules> of damage taken is dealt as a Bleed effect over 3 seconds instead.",
+      "colloq": ";Bloodbag",
+      "plaintext": "Trades incoming damage now for incoming damage later",
+      "stacks": 0,
+      "from": [
+        "3105",
+        "1053",
+        "3133"
+      ],
+      "image": {
+        "full": "3812.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 432,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": true,
+        "total": 3600,
+        "sell": 2520
+      },
+      "tags": [
+        "SpellBlock",
+        "Armor",
+        "Damage",
+        "LifeSteal",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 50,
+        "FlatSpellBlockMod": 30,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "0.15",
+        "Effect2Amount": "0.3",
+        "Effect3Amount": "3",
+        "Effect4Amount": "0.1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Spectral Cutlass",
+      "description": "<stats>+70 Attack Damage</stats><br><br><unique>UNIQUE Passive:</unique> +18 <a href='Lethality'>Lethality</a><br><unique>UNIQUE Active:</unique> Mark your current location. After 4 seconds, you will return to the marked location (60 second cooldown).",
+      "colloq": ";lethality",
+      "plaintext": "Marks the ground, and returns you there after a few moments",
+      "from": [
+        "4003",
+        "3134"
+      ],
+      "image": {
+        "full": "4004.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 48,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 3050,
+        "sell": 2135
+      },
+      "tags": [
+        "Armor",
+        "Damage",
+        "NonbootsMovement",
+        "ArmorPenetration"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 70
+      },
+      "effect": {
+        "Effect1Amount": "18",
+        "Effect2Amount": "4",
+        "Effect3Amount": "60"
+      },
+      "depth": 3
+    },
+    {
+      "name": "The Golden Spatula",
+      "description": "<stats>+250 Health<br><mana>+250 Mana</mana><br>+100% Base Health Regen <br><mana>+100% Base Mana Regen </mana><br>+30 Armor<br>+30 Magic Resist<br>+120 Ability Power<br>+70 Attack Damage<br>+50% Attack Speed<br>+30% Critical Strike Chance<br>+10% Life Steal<br>+10% Movement Speed<br>+20% Cooldown Reduction<br><br>You are permanently On Fire!</stats><br><br><rules><font color='#447777'>''It must do something...''<br>''Declined, it does EVERYTHING!''</font></rules>",
+      "colloq": ";",
+      "plaintext": "It does EVERYTHING!",
+      "from": [
+        "1038",
+        "1053",
+        "3086",
+        "1058",
+        "3067",
+        "3105"
+      ],
+      "image": {
+        "full": "4403.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 144,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 687,
+        "purchasable": true,
+        "total": 7437,
+        "sell": 5206
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "Armor",
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed",
+        "LifeSteal",
+        "SpellDamage",
+        "Mana",
+        "ManaRegen",
+        "CooldownReduction",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 70,
+        "FlatCritChanceMod": 0.3,
+        "PercentMovementSpeedMod": 0.1,
+        "FlatHPPoolMod": 250,
+        "FlatSpellBlockMod": 30,
+        "FlatMPPoolMod": 250,
+        "FlatMagicDamageMod": 120,
+        "FlatArmorMod": 30,
+        "PercentAttackSpeedMod": 0.5,
+        "PercentLifeStealMod": 0.1
+      },
+      "depth": 3
+    }
+  ]
+}

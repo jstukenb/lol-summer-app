@@ -1,0 +1,124 @@
+log.js:24 [HMR] Waiting for update signal from WDS...
+react_devtools_backend.js:2273 ./src/components/MatchHistory/Expanded/Teams/ExpandedMatch.js
+  Line 14:9:  'count' is assigned a value but never used                                                                                                                                                                                                                                                                                                        no-unused-vars
+  Line 25:8:  React Hook useEffect has a missing dependency: 'props.participantId'. Either include it or remove the dependency array. If 'setUserTimelineId' needs the current value of 'props.participantId', you can also switch to useReducer instead of useState and read 'props.participantId' in the reducer                                              react-hooks/exhaustive-deps
+  Line 34:8:  React Hook useEffect has missing dependencies: 'props.gameTimeline.frames' and 'props.participantId'. Either include them or remove the dependency array. If 'setKillTimeline' needs the current value of 'props.gameTimeline.frames', you can also switch to useReducer instead of useState and read 'props.gameTimeline.frames' in the reducer  react-hooks/exhaustive-deps
+overrideMethod @ react_devtools_backend.js:2273
+printWarnings @ webpackHotDevClient.js:138
+handleWarnings @ webpackHotDevClient.js:143
+push../node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:210
+react_devtools_backend.js:2273 ./src/components/MatchHistory/Expanded/Analysis/ItemTimeline.js
+  Line 1:16:  'useState' is defined but never used  no-unused-vars
+  Line 2:8:   'Item' is defined but never used      no-unused-vars
+overrideMethod @ react_devtools_backend.js:2273
+printWarnings @ webpackHotDevClient.js:138
+handleWarnings @ webpackHotDevClient.js:143
+push../node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:210
+react_devtools_backend.js:2273 ./src/components/MatchHistory/Expanded/Analysis/AnalysisShell.js
+  Line 1:16:  'useState' is defined but never used   no-unused-vars
+  Line 1:26:  'useEffect' is defined but never used  no-unused-vars
+overrideMethod @ react_devtools_backend.js:2273
+printWarnings @ webpackHotDevClient.js:138
+handleWarnings @ webpackHotDevClient.js:143
+push../node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:210
+react_devtools_backend.js:2273 ./src/components/MatchHistory/Expanded/Timeline/MatchTimeline.js
+  Line 1:17:  'useState' is defined but never used   no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used  no-unused-vars
+overrideMethod @ react_devtools_backend.js:2273
+printWarnings @ webpackHotDevClient.js:138
+handleWarnings @ webpackHotDevClient.js:143
+push../node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:210
+react_devtools_backend.js:2273 ./src/RiotAPI.js
+  Line 1:7:  'patch' is assigned a value but never used               no-unused-vars
+  Line 3:7:  'throwResponseError' is assigned a value but never used  no-unused-vars
+overrideMethod @ react_devtools_backend.js:2273
+printWarnings @ webpackHotDevClient.js:138
+handleWarnings @ webpackHotDevClient.js:143
+push../node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:210
+react_devtools_backend.js:2273 There were more warnings in other files.
+You can find a complete log in the terminal.
+overrideMethod @ react_devtools_backend.js:2273
+printWarnings @ webpackHotDevClient.js:132
+handleWarnings @ webpackHotDevClient.js:143
+push../node_modules/react-dev-utils/webpackHotDevClient.js.connection.onmessage @ webpackHotDevClient.js:210
+Search.js:67 SEARCH PRESSEd
+MatchHistory.js:9 MATCH HISTORY PROPS:  {accountId: "nue2V15Adiv-i_28ADk2lPug-D11O-gGjmcqza7BPVSOHw", championJson: {…}, runeJson: Array(5), itemJson: {…}, summonerJson: {…}}
+MatchHistory.js:9 MATCH HISTORY PROPS:  {accountId: "nue2V15Adiv-i_28ADk2lPug-D11O-gGjmcqza7BPVSOHw", championJson: {…}, runeJson: Array(5), itemJson: {…}, summonerJson: {…}}
+MatchHistory.js:17 result:  {matches: Array(5), startIndex: 0, endIndex: 5, totalGames: 194}
+MatchHistory.js:9 MATCH HISTORY PROPS:  {accountId: "nue2V15Adiv-i_28ADk2lPug-D11O-gGjmcqza7BPVSOHw", championJson: {…}, runeJson: Array(5), itemJson: {…}, summonerJson: {…}}
+MatchDetails.js:31 RESULT:  {gameId: 3515880135, platformId: "NA1", gameCreation: 1596175660429, gameDuration: 1782, queueId: 400, …}
+MatchDetails.js:31 RESULT:  {gameId: 3515898803, platformId: "NA1", gameCreation: 1596180269821, gameDuration: 2179, queueId: 400, …}
+MatchDetails.js:31 RESULT:  {gameId: 3515894471, platformId: "NA1", gameCreation: 1596177832014, gameDuration: 2060, queueId: 400, …}
+MatchDetails.js:31 RESULT:  {gameId: 3514157467, platformId: "NA1", gameCreation: 1596069849451, gameDuration: 1505, queueId: 400, …}
+MatchDetails.js:31 RESULT:  {gameId: 3514232644, platformId: "NA1", gameCreation: 1596071649602, gameDuration: 1275, queueId: 400, …}
+ExpandedMatch.js:36 MARCO IS COOL:  2   undefined
+ExpandedObjectives.js:5 OBJECTIVES:  {teamId: 100, win: "Win", firstBlood: false, firstTower: false, firstInhibitor: true, …}
+ExpandedMatch.js:30 USERTIMELINE ID:  undefined
+ExpandedMatch.js:36 MARCO IS COOL:  2   (19) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+ExpandedObjectives.js:5 OBJECTIVES:  {teamId: 100, win: "Win", firstBlood: false, firstTower: false, firstInhibitor: true, …}
+ExpandedMatch.js:30 USERTIMELINE ID:  3
+ExpandedMatch.js:36 MARCO IS COOL:  2   (19) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+ExpandedObjectives.js:5 OBJECTIVES:  {teamId: 100, win: "Win", firstBlood: false, firstTower: false, firstInhibitor: true, …}
+AnalysisShell.js:5 ANALYSIS PROPS:  {playerBios: Array(10), gameData: {…}, analysisTimeline: Array(19), itemJson: {…}, championJson: {…}, …}
+AnalysisShell.js:37 ALL ENEMY ITEMS:  (5) [Array(24), Array(22), Array(27), Array(26), Array(20)]
+AnalysisShell.js:63 OOGA BOOGA:  (11) [1, 5, 7, 9, 12, 15, 18, 20, 23, 26, 30]
+ItemTimeline.js:6 ITEM TIMELINE PROPS:  {allEnemyItems: Array(5), playerBios: Array(10), purchaseGroups: Array(12), itemJson: {…}, championJson: {…}, …}
+ItemTimeline.js:44 NAME:  Cassiopeia  ARMOR:  18  armorperlevel:  3.5  magic resist:  32  magic resist per level:  0.5
+ItemTimeline.js:44 NAME:  Sion  ARMOR:  32  armorperlevel:  3  magic resist:  32.1  magic resist per level:  1.25
+ItemTimeline.js:44 NAME:  Lulu  ARMOR:  29  armorperlevel:  3.7  magic resist:  30  magic resist per level:  0.5
+ItemTimeline.js:44 NAME:  Khazix  ARMOR:  36  armorperlevel:  3  magic resist:  32.1  magic resist per level:  1.25
+ItemTimeline.js:44 NAME:  Akali  ARMOR:  23  armorperlevel:  3.5  magic resist:  37  magic resist per level:  1.25
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3340 STATS OF ITEM:  {name: "Warding Totem (Trinket)", description: "<groupLimit>Limited to 1 Trinket.</groupLimit><br>…alth Wards</font> on the map per player.)</rules>", colloq: "yellow; totem; trinket", plaintext: "Periodically place a Stealth Ward", image: {…}, …}
+PurchaseGroup.js:31 ITEM ID:  2031 STATS OF ITEM:  {name: "Refillable Potion", description: "<groupLimit>Limited to 1 type of Healing Potion.</… to 2 charges and refills upon visiting the shop.", colloq: ";", plaintext: "Restores Health over time. Refills at shop.", into: Array(1), …}
+PurchaseGroup.js:31 ITEM ID:  1039 STATS OF ITEM:  {name: "Hunter's Talisman", description: "<br><unique>UNIQUE Passive - Tooth:</unique> Damag…ted to 1 Gold Income or Jungle item.</groupLimit>", colloq: ";jungle;Jungle", plaintext: "Provides damage against Monsters and Mana Regen in the Jungle", into: Array(2), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3108 STATS OF ITEM:  {name: "Fiendish Codex", description: "<stats>+35 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> +10% Cooldown Reduction", colloq: ";", plaintext: "Increases Ability Power and Cooldown Reduction", from: Array(1), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  1001 STATS OF ITEM:  {name: "Boots of Speed", description: "<groupLimit>Limited to 1 pair of boots.</groupLimi… - Enhanced Movement:</unique> +25 Movement Speed", colloq: ";", plaintext: "Slightly increases Movement Speed", into: Array(8), …}
+PurchaseGroup.js:31 ITEM ID:  2055 STATS OF ITEM:  {name: "Control Ward", description: "<groupLimit>Can only carry 2 Control Wards in inve…BFFFF'>Control Ward</font> on the map per player.", colloq: "orange;", plaintext: "Used to disable wards and invisible traps in an area.", stacks: 2, …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3706 STATS OF ITEM:  {name: "Stalker's Blade", description: "<groupLimit>Limited to 1 Gold Income or Jungle ite…g will be increased by 50% when under 30% Health.", colloq: ";jungle;Jungle;jangle", plaintext: "Lets your Smite slow Champions", from: Array(2), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  1402 STATS OF ITEM:  {name: "Enchantment: Runic Echoes", description: "<stats>+80 Ability Power<br>+10% Cooldown Reductio…ted to 1 Gold Income or Jungle item.</groupLimit>", colloq: "", plaintext: "Grants Ability Power and periodically empowers your Spells", from: Array(3), …}
+PurchaseGroup.js:31 ITEM ID:  1082 STATS OF ITEM:  {name: "Dark Seal", description: "<stats>+10 Ability Power<br>+25% Increased Healing…ist, up to 10 Glory total. Lose 4 Glory on death.", colloq: ";Noxian", plaintext: "Provides Ability Power and Mana.  Increases in power as you kill enemies.", into: Array(1), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3136 STATS OF ITEM:  {name: "Haunting Guise", description: "<stats>+35 Ability Power<br>+200 Health</stats><br…ch second in combat with champions (10% maximum).", colloq: ";mask", plaintext: "Increases magic damage", stacks: 0, …}
+PurchaseGroup.js:31 ITEM ID:  2055 STATS OF ITEM:  {name: "Control Ward", description: "<groupLimit>Can only carry 2 Control Wards in inve…BFFFF'>Control Ward</font> on the map per player.", colloq: "orange;", plaintext: "Used to disable wards and invisible traps in an area.", stacks: 2, …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3151 STATS OF ITEM:  {name: "Liandry's Torment", description: "<stats>+75 Ability Power<br>+300 Health</stats><br…f='MovementImpaired'>movement-impaired</a> units.", colloq: ";mask", plaintext: "Spell damage burns enemies for a portion of their Health", stacks: 0, …}
+PurchaseGroup.js:31 ITEM ID:  2055 STATS OF ITEM:  {name: "Control Ward", description: "<groupLimit>Can only carry 2 Control Wards in inve…BFFFF'>Control Ward</font> on the map per player.", colloq: "orange;", plaintext: "Used to disable wards and invisible traps in an area.", stacks: 2, …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3020 STATS OF ITEM:  {name: "Sorcerer's Shoes", description: "<groupLimit>Limited to 1 pair of boots.</groupLimi… - Enhanced Movement:</unique> +45 Movement Speed", colloq: ";", plaintext: "Enhances Movement Speed and magic damage", from: Array(1), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  1058 STATS OF ITEM:  {name: "Needlessly Large Rod", description: "<stats>+60 Ability Power</stats>", colloq: ";nlr", plaintext: "Greatly increases Ability Power", into: Array(4), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3089 STATS OF ITEM:  {name: "Rabadon's Deathcap", description: "<stats>+120 Ability Power  </stats><br><br><unique…Passive:</unique> Increases Ability Power by 40%.", colloq: ";dc;banksys;hat", plaintext: "Massively increases Ability Power", from: Array(2), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3135 STATS OF ITEM:  {name: "Void Staff", description: "<stats>+70 Ability Power</stats><br><br><unique>UN…0% <a href='TotalMagicPen'>Magic Penetration</a>.", colloq: ";", plaintext: "Increases magic damage", from: Array(2), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}
+PurchaseGroup.js:51 TEST:  undefined
+PurchaseGroup.js:29 NEW PURCHSE GROUP OSDGOI:SLDKFJ:LSDK
+PurchaseGroup.js:31 ITEM ID:  3165 STATS OF ITEM:  {name: "Morellonomicon", description: "<stats>+70 Ability Power<br>+300 Health</stats><br…rievousWounds'>Grievous Wounds</a> for 3 seconds.", colloq: ";nmst;grievous", plaintext: "Increases magic damage", from: Array(2), …}
+PurchaseGroup.js:45 TEST TEST:  {Damage: Array(59)}Damage: (59) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]__proto__: Object
+PurchaseGroup.js:51 TEST:  undefined

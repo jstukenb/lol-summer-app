@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/lol-summer-app/static/css/main.934a8677.chunk.css",
+    "main.js": "/lol-summer-app/static/js/main.b8f82104.chunk.js",
+    "main.js.map": "/lol-summer-app/static/js/main.b8f82104.chunk.js.map",
+    "runtime-main.js": "/lol-summer-app/static/js/runtime-main.8d7fcbb1.js",
+    "runtime-main.js.map": "/lol-summer-app/static/js/runtime-main.8d7fcbb1.js.map",
+    "static/css/2.5c17b9f1.chunk.css": "/lol-summer-app/static/css/2.5c17b9f1.chunk.css",
+    "static/js/2.13553b09.chunk.js": "/lol-summer-app/static/js/2.13553b09.chunk.js",
+    "static/js/2.13553b09.chunk.js.map": "/lol-summer-app/static/js/2.13553b09.chunk.js.map",
+    "index.html": "/lol-summer-app/index.html",
+    "precache-manifest.88d6761880f15ab63dc101bbe74aba55.js": "/lol-summer-app/precache-manifest.88d6761880f15ab63dc101bbe74aba55.js",
+    "service-worker.js": "/lol-summer-app/service-worker.js",
+    "static/css/2.5c17b9f1.chunk.css.map": "/lol-summer-app/static/css/2.5c17b9f1.chunk.css.map",
+    "static/css/main.934a8677.chunk.css.map": "/lol-summer-app/static/css/main.934a8677.chunk.css.map",
+    "static/js/2.13553b09.chunk.js.LICENSE.txt": "/lol-summer-app/static/js/2.13553b09.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d7fcbb1.js",
+    "static/css/2.5c17b9f1.chunk.css",
+    "static/js/2.13553b09.chunk.js",
+    "static/css/main.934a8677.chunk.css",
+    "static/js/main.b8f82104.chunk.js"
+  ]
+}

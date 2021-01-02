@@ -1,0 +1,2566 @@
+{
+  "SpellDamage": [
+    {
+      "name": "Blasting Wand",
+      "description": "<stats>+40 Ability Power</stats>",
+      "colloq": ";",
+      "plaintext": "Moderately increases Ability Power",
+      "into": [
+        "3135",
+        "3029",
+        "3151",
+        "3027",
+        "3100",
+        "3102",
+        "3116",
+        "3165",
+        "3285"
+      ],
+      "image": {
+        "full": "1026.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 240,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 850,
+        "purchasable": true,
+        "total": 850,
+        "sell": 595
+      },
+      "tags": [
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 40
+      }
+    },
+    {
+      "name": "Amplifying Tome",
+      "description": "<stats>+20 Ability Power</stats>",
+      "colloq": ";amptome",
+      "plaintext": "Slightly increases Ability Power",
+      "into": [
+        "3108",
+        "3191",
+        "3136",
+        "3135",
+        "3145",
+        "3113",
+        "3124",
+        "3116",
+        "3673",
+        "3802",
+        "3916"
+      ],
+      "image": {
+        "full": "1052.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 384,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 435,
+        "purchasable": true,
+        "total": 435,
+        "sell": 305
+      },
+      "tags": [
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 20
+      }
+    },
+    {
+      "name": "Doran's Ring",
+      "description": "<stats>+60 Health<br>+15 Ability Power<br><mana>+5 Mana per 5 seconds</mana></stats><br><br><passive>Passive: </passive>Basic attacks deal an additional 5 physical damage to minions on hit.",
+      "colloq": ";dring",
+      "plaintext": "Good starting item for casters",
+      "image": {
+        "full": "1056.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 96,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 400,
+        "sell": 160
+      },
+      "tags": [
+        "Health",
+        "Lane",
+        "ManaRegen",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 60,
+        "FlatMagicDamageMod": 15
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "5"
+      }
+    },
+    {
+      "name": "Needlessly Large Rod",
+      "description": "<stats>+60 Ability Power</stats>",
+      "colloq": ";nlr",
+      "plaintext": "Greatly increases Ability Power",
+      "into": [
+        "3089",
+        "3128",
+        "3907",
+        "4403"
+      ],
+      "image": {
+        "full": "1058.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 192,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1250,
+        "purchasable": true,
+        "total": 1250,
+        "sell": 875
+      },
+      "tags": [
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 60
+      }
+    },
+    {
+      "name": "Dark Seal",
+      "description": "<stats>+10 Ability Power<br>+25% Increased Healing from Potions<br><mana>+100 Mana</mana></stats><br><br><unique>UNIQUE Passive - Dread:</unique> Grants +3 Ability Power per Glory.  <br><unique>UNIQUE Passive - Do or Die:</unique> Grants 2 Glory for a champion kill or 1 Glory for an assist, up to 10 Glory total. Lose 4 Glory on death.",
+      "colloq": ";Noxian",
+      "plaintext": "Provides Ability Power and Mana.  Increases in power as you kill enemies.",
+      "into": [
+        "3041"
+      ],
+      "image": {
+        "full": "1082.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 240,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 350,
+        "purchasable": true,
+        "total": 350,
+        "sell": 140
+      },
+      "tags": [
+        "HealthRegen",
+        "SpellDamage",
+        "Mana",
+        "Lane"
+      ],
+      "maps": {
+        "11": true,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 100,
+        "FlatMagicDamageMod": 10
+      },
+      "effect": {
+        "Effect1Amount": "0.25",
+        "Effect2Amount": "2",
+        "Effect3Amount": "1",
+        "Effect4Amount": "10",
+        "Effect5Amount": "3",
+        "Effect6Amount": "4"
+      }
+    },
+    {
+      "name": "Elixir of Sorcery",
+      "description": "<stats><levelLimit>Level 9 required to purchase.</levelLimit></stats><br><br><consumable>Click to Consume:</consumable> Grants +50 Ability Power, 15 bonus Mana Regen per 5 seconds and <font color='#FF8811'><u>Sorcery</u></font> for 3 minutes. <br><br><font color='#FF8811'><u>Sorcery:</u></font> Damaging a champion or turret deals 25 bonus True Damage. This effect has a 5 second cooldown versus champions but no cooldown versus turrets.<br><br><rules>(Only one Elixir effect may be active at a time.)</rules><br>",
+      "colloq": ";blue",
+      "plaintext": "Temporarily grants Ability Power and Bonus Damage to champions and turrets.",
+      "consumed": true,
+      "consumeOnFull": true,
+      "image": {
+        "full": "2139.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 432,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 500,
+        "purchasable": true,
+        "total": 500,
+        "sell": 200
+      },
+      "tags": [
+        "Consumable",
+        "ManaRegen",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {},
+      "effect": {
+        "Effect1Amount": "50",
+        "Effect2Amount": "50",
+        "Effect3Amount": "25",
+        "Effect4Amount": "3",
+        "Effect5Amount": "5",
+        "Effect6Amount": "3",
+        "Effect7Amount": "0",
+        "Effect8Amount": "9"
+      }
+    },
+    {
+      "name": "Archangel's Staff",
+      "description": "<stats>+50 Ability Power<br><mana>+650 Mana</mana><br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Haste:</unique> This item gains an additional 10% Cooldown Reduction.<br><mana><unique>UNIQUE Passive - Awe:</unique> Grants Ability Power equal to 1% of maximum Mana. Refunds 25% of Mana spent.<br><unique>UNIQUE Passive - Mana Charge:</unique> Grants +8 maximum Mana (max +750 Mana) for each Mana expenditure (occurs up to 3 times every 12 seconds).<br><br>Transforms into Seraph's Embrace at +750 Mana.</mana><br><br><groupLimit>Limited to 1 Tear item.</groupLimit>",
+      "colloq": ";aa",
+      "plaintext": "Increases Ability Power based on maximum Mana",
+      "from": [
+        "3070",
+        "3802"
+      ],
+      "image": {
+        "full": "3003.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 432,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1050,
+        "purchasable": true,
+        "total": 3200,
+        "sell": 2240
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "ManaRegen",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 650,
+        "FlatMagicDamageMod": 50
+      },
+      "effect": {
+        "Effect1Amount": "0.01",
+        "Effect2Amount": "8",
+        "Effect3Amount": "750",
+        "Effect4Amount": "2",
+        "Effect5Amount": "8",
+        "Effect6Amount": "0",
+        "Effect7Amount": "0.25",
+        "Effect8Amount": "3",
+        "Effect9Amount": "12",
+        "Effect10Amount": "-0.1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Archangel's Staff (Quick Charge)",
+      "description": "<stats>+50 Ability Power<br><mana>+650 Mana</mana><br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Haste:</unique> This item gains an additional 10% Cooldown Reduction.<br><mana><unique>UNIQUE Passive - Awe:</unique> Grants Ability Power equal to 1% of maximum Mana. Refunds 25% of Mana spent. <br><unique>UNIQUE Passive - Mana Charge:</unique> Grants +12 maximum Mana (max +750 Mana) for each Mana expenditure (occurs up to 3 times every 12 seconds).<br><br>Transforms into Seraph's Embrace at +750 Mana.</mana>",
+      "colloq": ";aa",
+      "plaintext": "Increases Ability Power based on maximum Mana",
+      "from": [
+        "3073",
+        "3802"
+      ],
+      "image": {
+        "full": "3007.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 144,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1050,
+        "purchasable": true,
+        "total": 3200,
+        "sell": 2240
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "ManaRegen",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 650,
+        "FlatMagicDamageMod": 50
+      },
+      "effect": {
+        "Effect1Amount": "0.01",
+        "Effect2Amount": "12",
+        "Effect3Amount": "750",
+        "Effect4Amount": "2",
+        "Effect5Amount": "8",
+        "Effect6Amount": "0",
+        "Effect7Amount": "0.25",
+        "Effect8Amount": "3",
+        "Effect9Amount": "12",
+        "Effect10Amount": "-0.1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Rod of Ages",
+      "description": "<stats>+300 Health<br><mana>+300 Mana</mana><br>+60 Ability Power</stats><br><br><passive>Passive:</passive> Grants +20 Health, +10 Mana, and +4 Ability Power per stack (max +200 Health, +100 Mana, and +40 Ability Power). Grants 1 stack per minute (max 10 stacks).<br><unique>UNIQUE Passive - Eternity:</unique> 15% of damage taken from champions is gained as Mana. Spending Mana restores 20% of the cost as Health, up to 25 per spell cast.",
+      "colloq": ";roa",
+      "plaintext": "Greatly increases Health, Mana, and Ability Power",
+      "from": [
+        "3010",
+        "1026"
+      ],
+      "image": {
+        "full": "3027.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 96,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 650,
+        "purchasable": true,
+        "total": 2600,
+        "sell": 1820
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Mana",
+        "ManaRegen",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatMPPoolMod": 300,
+        "FlatMagicDamageMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "20",
+        "Effect2Amount": "10",
+        "Effect3Amount": "4",
+        "Effect4Amount": "1",
+        "Effect5Amount": "10",
+        "Effect6Amount": "150",
+        "Effect7Amount": "200",
+        "Effect8Amount": "8",
+        "Effect9Amount": "25",
+        "Effect10Amount": "0.2",
+        "Effect11Amount": "0.15"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Rod of Ages (Quick Charge)",
+      "description": "<stats>+300 Health<br><mana>+300 Mana</mana><br>+60 Ability Power</stats><br><br><passive>Passive:</passive> Grants +20 Health, +10 Mana, and +4 Ability Power per stack (max +200 Health, +100 Mana, and +40 Ability Power). Grants 1 stack per 40 seconds (max 10 stacks).<br><unique>UNIQUE Passive - Eternity:</unique> 15% of damage taken from champions is gained as Mana. Spending Mana restores 20% of the cost as Health, up to 25 per spell cast.",
+      "colloq": ";roa",
+      "plaintext": "Greatly increases Health, Mana, and Ability Power",
+      "from": [
+        "3010",
+        "1026"
+      ],
+      "image": {
+        "full": "3029.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 192,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 650,
+        "purchasable": true,
+        "total": 2600,
+        "sell": 1820
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "Mana",
+        "ManaRegen",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatMPPoolMod": 300,
+        "FlatMagicDamageMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "20",
+        "Effect2Amount": "10",
+        "Effect3Amount": "4",
+        "Effect4Amount": "1",
+        "Effect5Amount": "10",
+        "Effect6Amount": "150",
+        "Effect7Amount": "200",
+        "Effect8Amount": "8",
+        "Effect9Amount": "25",
+        "Effect10Amount": "0.2",
+        "Effect11Amount": "0.15"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Hextech GLP-800",
+      "description": "<stats>+80 Ability Power<br><mana>+600 Mana</mana><br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Haste:</unique> This item gains an additional 10% Cooldown Reduction.<br><unique>UNIQUE Active - Frost Bolt:</unique> Fires a spray of icy bolts that explode on first unit hit, dealing <scaleLevel>100 - 200</scaleLevel> (+20% of your Ability Power) magic damage to all enemies hit. (40 second cooldown, shared with other <font color='#9999FF'><a href='itembolt'>Hextech</a></font> items).<br><br> Enemies hit are slowed by 65% decaying over 2 second.",
+      "colloq": "frost cannon;",
+      "plaintext": "Activate to fire icy bolts to slow enemies",
+      "from": [
+        "3802",
+        "3145"
+      ],
+      "image": {
+        "full": "3030.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 240,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 450,
+        "purchasable": true,
+        "total": 2800,
+        "sell": 1960
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "Active",
+        "CooldownReduction",
+        "Slow"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 600,
+        "FlatMagicDamageMod": 80
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "0",
+        "Effect3Amount": "0",
+        "Effect4Amount": "2",
+        "Effect5Amount": "0.65",
+        "Effect6Amount": "100",
+        "Effect7Amount": "200",
+        "Effect8Amount": "0.2",
+        "Effect9Amount": "25",
+        "Effect10Amount": "0.2",
+        "Effect11Amount": "0.15",
+        "Effect12Amount": "40",
+        "Effect13Amount": "-0.1",
+        "Effect14Amount": "10",
+        "Effect15Amount": "-0.65"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Mejai's Soulstealer",
+      "description": "<stats>+20 Ability Power<br><mana>+200 Mana</mana></stats><br><br><unique>UNIQUE Passive - Dread:</unique> Grants +5 Ability Power per Glory. Grants 10% Movement Speed if you have at least 10 Glory.<br><unique>UNIQUE Passive - Do or Die:</unique> Grants 4 Glory for a champion kill or 2 Glory for an assist, up to 25 Glory total. Lose 10 stacks of Glory upon dying.",
+      "colloq": ";",
+      "plaintext": "Grants Ability Power for kills and assists",
+      "from": [
+        "1082"
+      ],
+      "image": {
+        "full": "3041.png",
+        "sprite": "item0.png",
+        "group": "item",
+        "x": 48,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1050,
+        "purchasable": true,
+        "total": 1400,
+        "sell": 980
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana"
+      ],
+      "maps": {
+        "11": true,
+        "12": false,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 200,
+        "FlatMagicDamageMod": 20
+      },
+      "effect": {
+        "Effect1Amount": "5",
+        "Effect2Amount": "4",
+        "Effect3Amount": "2",
+        "Effect4Amount": "25",
+        "Effect5Amount": "0.5",
+        "Effect6Amount": "0.1",
+        "Effect7Amount": "10",
+        "Effect8Amount": "10"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Rabadon's Deathcap",
+      "description": "<stats>+120 Ability Power  </stats><br><br><unique>UNIQUE Passive:</unique> Increases Ability Power by 40%.",
+      "colloq": ";dc;banksys;hat",
+      "plaintext": "Massively increases Ability Power",
+      "from": [
+        "1058",
+        "1058"
+      ],
+      "into": [
+        "3374"
+      ],
+      "image": {
+        "full": "3089.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 0,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1100,
+        "purchasable": true,
+        "total": 3600,
+        "sell": 2520
+      },
+      "tags": [
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 120
+      },
+      "effect": {
+        "Effect1Amount": "40"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Lich Bane",
+      "description": "<stats>+80 Ability Power<br>+7% Movement Speed<br>+10% Cooldown Reduction<br><mana>+250 Mana</mana></stats><br><br><unique>UNIQUE Passive - Spellblade:</unique> After using an ability, the next basic attack deals 75% Base Attack Damage (+50% of Ability Power) bonus magic damage on hit (1.5 second cooldown).",
+      "colloq": ";",
+      "plaintext": "Grants a bonus to next attack after spell cast",
+      "from": [
+        "3057",
+        "3113",
+        "1026"
+      ],
+      "image": {
+        "full": "3100.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 192,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 450,
+        "purchasable": true,
+        "total": 3200,
+        "sell": 2240
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "CooldownReduction",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "PercentMovementSpeedMod": 0.07,
+        "FlatMPPoolMod": 250,
+        "FlatMagicDamageMod": 80
+      },
+      "effect": {
+        "Effect1Amount": "0.75",
+        "Effect2Amount": "0.5",
+        "Effect3Amount": "1.5"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Banshee's Veil",
+      "description": "<stats>+75 Ability Power<br>+60 Magic Resist<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Spell Shield:</unique> Grants a spell shield that blocks the next enemy ability. This shield refreshes after no damage is taken from enemy champions for 40 seconds.",
+      "colloq": ";bv",
+      "plaintext": "Periodically blocks enemy abilities",
+      "from": [
+        "3108",
+        "1033",
+        "1026"
+      ],
+      "image": {
+        "full": "3102.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 288,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 800,
+        "purchasable": true,
+        "total": 3000,
+        "sell": 2100
+      },
+      "tags": [
+        "SpellBlock",
+        "SpellDamage",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 60,
+        "FlatMagicDamageMod": 75
+      },
+      "effect": {
+        "Effect1Amount": "40",
+        "Effect2Amount": "45",
+        "Effect3Amount": "10",
+        "Effect4Amount": "-0.1",
+        "Effect5Amount": "8",
+        "Effect6Amount": "2"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Fiendish Codex",
+      "description": "<stats>+35 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> +10% Cooldown Reduction",
+      "colloq": ";",
+      "plaintext": "Increases Ability Power and Cooldown Reduction",
+      "from": [
+        "1052"
+      ],
+      "into": [
+        "3174",
+        "3115",
+        "3157",
+        "1402",
+        "1414",
+        "3128",
+        "3102",
+        "3905",
+        "4104"
+      ],
+      "image": {
+        "full": "3108.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 432,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 465,
+        "purchasable": true,
+        "total": 900,
+        "sell": 630
+      },
+      "tags": [
+        "CooldownReduction",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 35
+      },
+      "effect": {
+        "Effect1Amount": "-0.1"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Guardian's Orb",
+      "description": "<stats>+150 Health<br>+35 Ability Power<br><mana>+10 Mana regen per 5 seconds</mana></stats><br><br><groupLimit>Limited to 1 Guardian's Item.</groupLimit>",
+      "colloq": ";",
+      "plaintext": "Good starting item for mages",
+      "image": {
+        "full": "3112.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 144,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 950,
+        "purchasable": true,
+        "total": 950,
+        "sell": 380
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "Lane"
+      ],
+      "maps": {
+        "11": false,
+        "12": true,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 150,
+        "FlatMagicDamageMod": 35
+      }
+    },
+    {
+      "name": "Aether Wisp",
+      "description": "<stats>+30 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> +5% Movement Speed",
+      "colloq": ";",
+      "plaintext": "Increases Ability Power and Movement Speed",
+      "from": [
+        "1052"
+      ],
+      "into": [
+        "3100",
+        "3504",
+        "3673",
+        "3905",
+        "3907"
+      ],
+      "image": {
+        "full": "3113.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 192,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 415,
+        "purchasable": true,
+        "total": 850,
+        "sell": 595
+      },
+      "tags": [
+        "NonbootsMovement",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "0.05"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Nashor's Tooth",
+      "description": "<stats>+50% Attack Speed<br>+80 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> +20% Cooldown Reduction<br><unique>UNIQUE Passive:</unique> Basic attacks deal 15 (+15% of Ability Power) bonus magic damage on hit.<br>",
+      "colloq": ";",
+      "plaintext": "Increases Attack Speed, Ability Power, and Cooldown Reduction",
+      "from": [
+        "3101",
+        "3108"
+      ],
+      "image": {
+        "full": "3115.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 288,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1000,
+        "purchasable": true,
+        "total": 3000,
+        "sell": 2100
+      },
+      "tags": [
+        "AttackSpeed",
+        "CooldownReduction",
+        "OnHit",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 80,
+        "PercentAttackSpeedMod": 0.5
+      },
+      "depth": 3
+    },
+    {
+      "name": "Rylai's Crystal Scepter",
+      "description": "<stats>+300 Health<br>+90 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Damaging spells and abilities reduce enemy movement speed by 20% for 1 second.",
+      "colloq": ";",
+      "plaintext": "Abilities slow enemies",
+      "from": [
+        "1026",
+        "1052",
+        "1028"
+      ],
+      "image": {
+        "full": "3116.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 336,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 915,
+        "purchasable": true,
+        "total": 2600,
+        "sell": 1820
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Slow"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatMagicDamageMod": 90
+      },
+      "effect": {
+        "Effect1Amount": "-0.2",
+        "Effect2Amount": "-0.2",
+        "Effect3Amount": "-0.2",
+        "Effect4Amount": "1",
+        "Effect5Amount": "1",
+        "Effect6Amount": "1"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Guinsoo's Rageblade",
+      "description": "<stats>+25 Attack Damage<br>+25 Ability Power<br>+25% Attack Speed</stats><br><br><passive>Passive: </passive>Basic attacks deal 15 magic damage on hit.<br><unique>UNIQUE Passive - Last Whisper:</unique> Gain 15% <a href='FlatArmorPen'>Armor Penetration</a>.<br><unique>UNIQUE Passive - Dissolve:</unique> Gain 15% <a href='TotalMagicPen'>Magic Penetration</a>.<br><unique>UNIQUE Passive:</unique> Basic attacks grant +8% Attack Speed for 5 seconds (up to 6 stacks). At max stacks, gain <unlockedPassive>Guinsoo's Rage</unlockedPassive>.<br><br><unlockedPassive>Guinsoo's Rage:</unlockedPassive> Every 3 basic attacks, trigger on hit effects twice.<br><br><rules><font color='#8c8c8c'>While at half stacks, melee champions' next attack will fully stack Rageblade.</font></rules>",
+      "colloq": ";",
+      "plaintext": "Increases Attack Speed, Armor Penetration, and Magic Penetration",
+      "from": [
+        "1052",
+        "1043",
+        "1037"
+      ],
+      "image": {
+        "full": "3124.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 0,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 790,
+        "purchasable": true,
+        "total": 3100,
+        "sell": 2170
+      },
+      "tags": [
+        "Damage",
+        "AttackSpeed",
+        "SpellDamage",
+        "OnHit",
+        "MagicPenetration",
+        "ArmorPenetration"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 25,
+        "FlatMagicDamageMod": 25,
+        "PercentAttackSpeedMod": 0.25
+      },
+      "effect": {
+        "Effect1Amount": "0.08",
+        "Effect2Amount": "2.5",
+        "Effect3Amount": "2.5",
+        "Effect4Amount": "5",
+        "Effect5Amount": "6",
+        "Effect6Amount": "0.1",
+        "Effect7Amount": "0.1",
+        "Effect8Amount": "15",
+        "Effect9Amount": "1",
+        "Effect10Amount": "3",
+        "Effect11Amount": "0.15",
+        "Effect12Amount": "0",
+        "Effect13Amount": "3"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Deathfire Grasp",
+      "description": "<stats>+120 Ability Power<br>+10% Cooldown Reduction</stats><br><br><active>UNIQUE Active:</active> Deals 15% of target champion's maximum Health in magic damage and increases all subsequent magic damage taken by the target by 20% for 4 seconds (90 second cooldown).",
+      "colloq": ";dfg",
+      "plaintext": "Activate to increase all magic damage dealt to an enemy champion",
+      "from": [
+        "1058",
+        "3108"
+      ],
+      "image": {
+        "full": "3128.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 850,
+        "purchasable": true,
+        "total": 3000,
+        "sell": 2100
+      },
+      "tags": [
+        "Active",
+        "CooldownReduction",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 120
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "0.15",
+        "Effect3Amount": "0.2"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Void Staff",
+      "description": "<stats>+70 Ability Power</stats><br><br><unique>UNIQUE Passive - Dissolve:</unique> +40% <a href='TotalMagicPen'>Magic Penetration</a>.",
+      "colloq": ";",
+      "plaintext": "Increases magic damage",
+      "from": [
+        "1026",
+        "1052"
+      ],
+      "image": {
+        "full": "3135.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 240,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1365,
+        "purchasable": true,
+        "total": 2650,
+        "sell": 1855
+      },
+      "tags": [
+        "MagicPenetration",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 70
+      },
+      "effect": {
+        "Effect1Amount": "0.4",
+        "Effect2Amount": "0",
+        "Effect3Amount": "0",
+        "Effect4Amount": "0",
+        "Effect5Amount": "0",
+        "Effect6Amount": "0",
+        "Effect7Amount": "0",
+        "Effect8Amount": "4"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Haunting Guise",
+      "description": "<stats>+35 Ability Power<br>+200 Health</stats><br><br><unique>UNIQUE Passive - Madness:</unique> Deal 2% more damage for each second in combat with champions (10% maximum).",
+      "colloq": ";mask",
+      "plaintext": "Increases magic damage",
+      "stacks": 0,
+      "from": [
+        "1028",
+        "1052"
+      ],
+      "into": [
+        "3151"
+      ],
+      "image": {
+        "full": "3136.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 288,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 665,
+        "purchasable": true,
+        "total": 1500,
+        "sell": 1050
+      },
+      "tags": [
+        "Health",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 200,
+        "FlatMagicDamageMod": 35
+      },
+      "effect": {
+        "Effect1Amount": "15",
+        "Effect2Amount": "15",
+        "Effect3Amount": "1",
+        "Effect4Amount": "3",
+        "Effect5Amount": "15",
+        "Effect6Amount": "33",
+        "Effect7Amount": "2",
+        "Effect8Amount": "10",
+        "Effect9Amount": "5"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Hextech Revolver",
+      "description": "<stats>+40 Ability Power</stats><br><br><unique>UNIQUE Passive - Magic Bolt:</unique> Damaging an enemy champion with a basic attack shocks them for <scaleLevel>50 - 125</scaleLevel> bonus magic damage (40 second cooldown, shared with other <font color='#9999FF'><a href='itembolt'>Hextech</a></font> items).<br><br>Magic Bolt's cooldown is reduced by Active Item cooldown reduction.<br><br><rules>(Damage scales based on level. Hextech effects can trigger other item spell effects.)</rules>",
+      "colloq": ";",
+      "plaintext": "Increases Ability Power. Deal bonus magic damage on attack periodically.",
+      "from": [
+        "1052",
+        "1052"
+      ],
+      "into": [
+        "3146",
+        "3152",
+        "3030"
+      ],
+      "image": {
+        "full": "3145.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 144,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 180,
+        "purchasable": true,
+        "total": 1050,
+        "sell": 735
+      },
+      "tags": [
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 40
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "50",
+        "Effect3Amount": "0",
+        "Effect4Amount": "125",
+        "Effect5Amount": "40"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Hextech Gunblade",
+      "description": "<stats>+40 Attack Damage<br>+80 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Heal for 15% of damage dealt. This is 33% as effective for Area of Effect damage.<br><active>UNIQUE Active - Lightning Bolt:</active> Deals <scaleLevel>175 - 253</scaleLevel> (+30% of Ability Power) magic damage and slows the target champion's Movement Speed by 40% for 2 seconds (40 second cooldown, shared with other <font color='#9999FF'><a href='itembolt'>Hextech</a></font> items).",
+      "colloq": ";",
+      "plaintext": "Increases Attack Damage and Ability Power, activate to slow a target",
+      "from": [
+        "3144",
+        "3145"
+      ],
+      "image": {
+        "full": "3146.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 192,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 750,
+        "purchasable": true,
+        "total": 3400,
+        "sell": 2380
+      },
+      "tags": [
+        "Active",
+        "Damage",
+        "LifeSteal",
+        "Slow",
+        "SpellDamage",
+        "SpellVamp"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 40,
+        "FlatMagicDamageMod": 80
+      },
+      "effect": {
+        "Effect1Amount": "0.15",
+        "Effect2Amount": "40",
+        "Effect3Amount": "175",
+        "Effect4Amount": "253",
+        "Effect5Amount": "0.4",
+        "Effect6Amount": "2"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Liandry's Torment",
+      "description": "<stats>+75 Ability Power<br>+300 Health</stats><br><br><unique>UNIQUE Passive - Madness:</unique> Deal 2% more damage for each second in combat with champions (10% maximum).<br><unique>UNIQUE Passive - Torment:</unique> Spells burn enemies for 3 seconds, dealing bonus magic damage equal to 1.5% of their maximum Health per second. Burn damage is increased to 2.5% against <a href='MovementImpaired'>movement-impaired</a> units.",
+      "colloq": ";mask",
+      "plaintext": "Spell damage burns enemies for a portion of their Health",
+      "stacks": 0,
+      "from": [
+        "3136",
+        "1026"
+      ],
+      "image": {
+        "full": "3151.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 288,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 750,
+        "purchasable": true,
+        "total": 3100,
+        "sell": 2170
+      },
+      "tags": [
+        "Health",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatMagicDamageMod": 75
+      },
+      "effect": {
+        "Effect1Amount": "15",
+        "Effect2Amount": "0.015",
+        "Effect3Amount": "3",
+        "Effect4Amount": "100",
+        "Effect5Amount": "2",
+        "Effect6Amount": "10",
+        "Effect7Amount": "2",
+        "Effect8Amount": "2.5"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Hextech Protobelt-01",
+      "description": "<stats>+300 Health<br>+60 Ability Power<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Active - Fire Bolt:</unique> Dash forward and unleash a nova of fire bolts that deal <scaleLevel>75 - 150</scaleLevel> (+25% of your Ability Power) as magic damage (40 second cooldown, shared with other <font color='#9999FF'><a href='itembolt'>Hextech</a></font> items).<br><br>Champions and Monsters hit by multiple fire bolts take 10% damage per additional bolt.<br><br><rules>(This dash cannot pass through terrain.)</rules>",
+      "colloq": "rocket belt;",
+      "plaintext": "Activate to dash forward and unleash a fiery explosion",
+      "from": [
+        "3145",
+        "3067"
+      ],
+      "image": {
+        "full": "3152.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 336,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 650,
+        "purchasable": true,
+        "total": 2500,
+        "sell": 1750
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "Active",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatMagicDamageMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "0.12",
+        "Effect2Amount": "0.04",
+        "Effect3Amount": "40",
+        "Effect4Amount": "75",
+        "Effect5Amount": "150",
+        "Effect6Amount": "0.1",
+        "Effect7Amount": "0.25",
+        "Effect8Amount": "40",
+        "Effect9Amount": "0.5"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Zhonya's Hourglass",
+      "description": "<stats>+75 Ability Power<br>+45 Armor<br>+10% Cooldown Reduction</stats><br><br><active>UNIQUE Active - Stasis:</active> Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (120 second cooldown).",
+      "colloq": ";zhg;zonyas",
+      "plaintext": "Activate to become invincible but unable to take actions",
+      "from": [
+        "3191",
+        "3108",
+        "2420"
+      ],
+      "into": [
+        "3386"
+      ],
+      "image": {
+        "full": "3157.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 48,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 250,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "Active",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 75,
+        "FlatArmorMod": 45
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "2.5",
+        "Effect3Amount": "120"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Morellonomicon",
+      "description": "<stats>+70 Ability Power<br>+300 Health</stats><br><br><unique>UNIQUE Passive - Touch of Death:</unique> +15 <a href='FlatMagicPen'>Magic Penetration</a><br><unique>UNIQUE Passive - Cursed Strike:</unique> Magic damage dealt to champions inflicts them with <a href='GrievousWounds'>Grievous Wounds</a> for 3 seconds.",
+      "colloq": ";nmst;grievous",
+      "plaintext": "Increases magic damage",
+      "from": [
+        "3916",
+        "1026"
+      ],
+      "image": {
+        "full": "3165.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 192,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 550,
+        "purchasable": true,
+        "total": 3000,
+        "sell": 2100
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "MagicPenetration"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 300,
+        "FlatMagicDamageMod": 70
+      },
+      "effect": {
+        "Effect1Amount": "15",
+        "Effect2Amount": "40",
+        "Effect3Amount": "3",
+        "Effect4Amount": "0.2",
+        "Effect5Amount": "60",
+        "Effect6Amount": "1",
+        "Effect7Amount": "50",
+        "Effect8Amount": "150",
+        "Effect9Amount": "20"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Moonflair Spellblade",
+      "description": "<stats>+50 Ability Power<br>+50 Armor<br>+50 Magic Resist</stats><br><br><unique>UNIQUE Passive - Tenacity:</unique> Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%.",
+      "colloq": ";",
+      "plaintext": "Improves defense and reduces duration of disabling effects",
+      "from": [
+        "3191",
+        "1057"
+      ],
+      "image": {
+        "full": "3170.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 240,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 580,
+        "purchasable": true,
+        "total": 2400,
+        "sell": 1680
+      },
+      "tags": [
+        "Armor",
+        "SpellBlock",
+        "SpellDamage",
+        "Tenacity"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 50,
+        "FlatMagicDamageMod": 50,
+        "FlatArmorMod": 50
+      },
+      "depth": 3
+    },
+    {
+      "name": "Athene's Unholy Grail",
+      "description": "<stats>+30 Ability Power<br>+30 Magic Resist<br>+10% Cooldown Reduction<br><mana>+100% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive:</unique> Gain 35% of the <a href='premitigation'><font color='#6666FF'><u>premitigation</u></font></a> damage dealt to champions as Blood Charges, up to <scaleLevel>100 - 250</scaleLevel> max. Healing or shielding another ally consumes charges equal to 100% of the heal or shield value, healing the ally for that amount.<br><unique>UNIQUE Passive - Dissonance:</unique> Grants 5 ability power per 25% Base Mana Regen you have. Disables <unique>Harmony</unique> on your other items.<br><br><rules>(Maximum amount of Blood Charges stored is based on level. Healing amplification is applied to the total heal value.)</rules>",
+      "colloq": ";",
+      "plaintext": "Deal damage to empower your heals and shields",
+      "from": [
+        "3108",
+        "3028"
+      ],
+      "image": {
+        "full": "3174.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 336,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 2100,
+        "sell": 1470
+      },
+      "tags": [
+        "SpellBlock",
+        "HealthRegen",
+        "SpellDamage",
+        "ManaRegen",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatSpellBlockMod": 30,
+        "FlatMagicDamageMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "10",
+        "Effect2Amount": "0",
+        "Effect3Amount": "0",
+        "Effect4Amount": "0",
+        "Effect5Amount": "5",
+        "Effect6Amount": "0.35",
+        "Effect7Amount": "100",
+        "Effect8Amount": "250",
+        "Effect9Amount": "1",
+        "Effect10Amount": "1",
+        "Effect11Amount": "0.25",
+        "Effect12Amount": "600",
+        "Effect13Amount": "8",
+        "Effect14Amount": "90"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Seeker's Armguard",
+      "description": "<stats>+30 Armor<br>+20 Ability Power</stats><br><br><unique>UNIQUE Passive:</unique> Killing a unit grants 0.5 bonus Armor and Ability Power. This bonus stacks up to 30 times.",
+      "colloq": ";",
+      "plaintext": "Increases Armor and Ability Power",
+      "from": [
+        "1029",
+        "1052",
+        "1029"
+      ],
+      "into": [
+        "3170",
+        "3157"
+      ],
+      "image": {
+        "full": "3191.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 144,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 65,
+        "purchasable": true,
+        "total": 1100,
+        "sell": 770
+      },
+      "tags": [
+        "Armor",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 20,
+        "FlatArmorMod": 30
+      },
+      "effect": {
+        "Effect1Amount": "0.5",
+        "Effect2Amount": "30"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Hex Core mk-1",
+      "description": "<stats>+3 Ability Power per level<br>+15 Mana per level</stats><br><br><unique>UNIQUE Passive - Progress:</unique> Viktor can upgrade one of his basic spells.",
+      "colloq": ";viktor",
+      "plaintext": "Allows Viktor to improve an ability of his choice",
+      "from": [
+        "3200"
+      ],
+      "requiredChampion": "Viktor",
+      "into": [
+        "3197"
+      ],
+      "image": {
+        "full": "3196.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 288,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1150,
+        "purchasable": true,
+        "total": 1150,
+        "sell": 805
+      },
+      "tags": [
+        "Mana",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {},
+      "effect": {
+        "Effect1Amount": "3",
+        "Effect2Amount": "15"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Hex Core mk-2",
+      "description": "<stats>+6 Ability Power per level<br>+20 Mana per level</stats><br><br><unique>UNIQUE Passive - Progress:</unique> Viktor can upgrade one of his basic spells.",
+      "colloq": ";viktor",
+      "plaintext": "Allows Viktor to improve an ability of his choice",
+      "from": [
+        "3196"
+      ],
+      "requiredChampion": "Viktor",
+      "into": [
+        "3198"
+      ],
+      "image": {
+        "full": "3197.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 336,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1000,
+        "purchasable": true,
+        "total": 2150,
+        "sell": 1505
+      },
+      "tags": [
+        "Mana",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {},
+      "effect": {
+        "Effect1Amount": "6",
+        "Effect2Amount": "20"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Perfect Hex Core",
+      "description": "<stats>+10 Ability Power per level<br>+25 Mana per level</stats><br><br><unique>UNIQUE Passive - Glorious Evolution:</unique> Viktor has reached the pinnacle of his power, upgrading Chaos Storm in addition to his basic spells.",
+      "colloq": ";viktor",
+      "plaintext": "Allows Viktor to improve an ability of his choice",
+      "from": [
+        "3197"
+      ],
+      "requiredChampion": "Viktor",
+      "image": {
+        "full": "3198.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 384,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 850,
+        "purchasable": true,
+        "total": 3000,
+        "sell": 2100
+      },
+      "tags": [
+        "Mana",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {},
+      "effect": {
+        "Effect1Amount": "10",
+        "Effect2Amount": "25"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Luden's Echo",
+      "description": "<stats>+90 Ability Power<br><mana>+600 Mana</mana><br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Haste:</unique> This item gains an additional 10% Cooldown Reduction.<br><unique>UNIQUE Passive - Echo:</unique> Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 100 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.",
+      "colloq": ";",
+      "plaintext": "Increases Ability Power, Mana, and Cooldown Reduction",
+      "from": [
+        "3802",
+        "1026"
+      ],
+      "into": [
+        "3390"
+      ],
+      "image": {
+        "full": "3285.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 96,
+        "y": 336,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 1050,
+        "purchasable": true,
+        "total": 3200,
+        "sell": 2240
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "CooldownReduction",
+        "OnHit"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 600,
+        "FlatMagicDamageMod": 90
+      },
+      "effect": {
+        "Effect1Amount": "100",
+        "Effect2Amount": "100",
+        "Effect3Amount": "4",
+        "Effect4Amount": "0.1",
+        "Effect5Amount": "35",
+        "Effect6Amount": "10",
+        "Effect7Amount": "0",
+        "Effect8Amount": "0",
+        "Effect9Amount": "-0.1"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Rabadon's Deathcrown",
+      "description": "<stats><font color='#FFFFFF'>+175 Ability Power</font>  </stats><br><br><unique>UNIQUE Passive:</unique> Increases Ability Power by 40%.",
+      "colloq": ";dc;banksys;hat;Ornn;forge;Masterwork",
+      "plaintext": "Massively increases Ability Power",
+      "from": [
+        "3089"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3374.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 96,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 3600,
+        "sell": 2520
+      },
+      "tags": [
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 175
+      },
+      "effect": {
+        "Effect1Amount": "40"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Zhonya's Paradox",
+      "description": "<stats><font color='#FFFFFF'>+100 Ability Power</font><br><font color='#FFFFFF'>+60 Armor</font><br>+10% Cooldown Reduction</stats><br><br><active>UNIQUE Active - Stasis:</active> Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (120 second cooldown).",
+      "colloq": ";zhg;zonyas;ornn;forge",
+      "plaintext": "Activate to become invincible but unable to take actions",
+      "from": [
+        "3157"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3386.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 384,
+        "y": 384,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "Armor",
+        "SpellDamage",
+        "Active",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 100,
+        "FlatArmorMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "2.5",
+        "Effect3Amount": "120"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Luden's Pulse",
+      "description": "<stats><font color='#FFFFFF'>+120 Ability Power</font><br><mana><font color='#FFFFFF'>+850 Mana</font></mana><br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Passive - Haste:</unique> This item gains an additional 10% Cooldown Reduction.<br><unique>UNIQUE Passive - Echo:</unique> Gain charges upon moving or casting. At 100 charges, the next damaging spell hit expends all charges to deal 100 (+10% of Ability Power) bonus magic damage to up to 4 targets on hit.",
+      "colloq": ";Ornn",
+      "plaintext": "Increases Ability Power, Mana, and Cooldown Reduction",
+      "from": [
+        "3285"
+      ],
+      "requiredAlly": "Ornn",
+      "image": {
+        "full": "3390.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 96,
+        "y": 432,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 0,
+        "purchasable": true,
+        "total": 3200,
+        "sell": 2240
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "CooldownReduction",
+        "OnHit"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 850,
+        "FlatMagicDamageMod": 120
+      },
+      "effect": {
+        "Effect1Amount": "100",
+        "Effect2Amount": "100",
+        "Effect3Amount": "4",
+        "Effect4Amount": "0.1",
+        "Effect5Amount": "35",
+        "Effect6Amount": "10",
+        "Effect7Amount": "0",
+        "Effect8Amount": "0",
+        "Effect9Amount": "-0.1"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Ardent Censer",
+      "description": "<stats>+60 Ability Power<br>+10% Cooldown Reduction<br><mana>+50% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive:</unique> +10% Heal and Shield Power<br><unique>UNIQUE Passive:</unique> +8% Movement Speed<br><unique>UNIQUE Passive:</unique> Whenever you heal or shield an ally, you and your ally gain 10% - 30% Attack Speed and your attacks deal an additional 5 - 20 on-hit magic damage for 6 seconds. <br><br><rules>This does not include regeneration effects. Bonus effects are based on target's level.</rules>",
+      "colloq": "",
+      "plaintext": "Shield and heal effects on other units grant both of you Attack Speed and their attacks deal additional on-hit magic damage.",
+      "from": [
+        "3114",
+        "3113"
+      ],
+      "image": {
+        "full": "3504.png",
+        "sprite": "item1.png",
+        "group": "item",
+        "x": 384,
+        "y": 432,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 650,
+        "purchasable": true,
+        "total": 2300,
+        "sell": 1610
+      },
+      "tags": [
+        "CooldownReduction",
+        "ManaRegen",
+        "NonbootsMovement",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 60
+      },
+      "effect": {
+        "Effect1Amount": "0.08",
+        "Effect2Amount": "0.1",
+        "Effect3Amount": "6",
+        "Effect4Amount": "5",
+        "Effect5Amount": "0.1",
+        "Effect6Amount": "0.3",
+        "Effect7Amount": "20"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Lost Chapter",
+      "description": "<stats>+40 Ability Power<br><mana>+300 Mana</mana></stats><br><br><unique>UNIQUE Passive - Haste:</unique> +10% Cooldown Reduction<br><unique>UNIQUE Passive:</unique> Upon levelling up, restores 20% of your maximum Mana over 3 seconds.",
+      "colloq": ";",
+      "plaintext": "Restores Mana upon levelling up.",
+      "from": [
+        "1052",
+        "1027",
+        "1052"
+      ],
+      "into": [
+        "3003",
+        "3007",
+        "3030",
+        "3285"
+      ],
+      "image": {
+        "full": "3802.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 384,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 80,
+        "purchasable": true,
+        "total": 1300,
+        "sell": 910
+      },
+      "tags": [
+        "SpellDamage",
+        "Mana",
+        "ManaRegen",
+        "CooldownReduction"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMPPoolMod": 300,
+        "FlatMagicDamageMod": 40
+      },
+      "effect": {
+        "Effect1Amount": "25",
+        "Effect2Amount": "-0.1",
+        "Effect3Amount": "15",
+        "Effect4Amount": "10",
+        "Effect5Amount": "20",
+        "Effect6Amount": "5",
+        "Effect7Amount": "0.2",
+        "Effect8Amount": "3"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Spellthief's Edge",
+      "description": "<stats>+8 Ability Power<br>+10 Health<br>+2 Gold Per 10 Seconds<br><mana>+50% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive - Tribute:</unique> While nearby an ally champion, damaging spells and attacks against champions or buildings grant 15 gold. This can occur up to 3 times every 30 seconds.<hr><passive>QUEST:</passive> Earning gold through using this item will transform the item, granting <active>UNIQUE Active - Warding</active>.<br><br><rules>(Receive diminishing gold from <a href='Support_Minion_Penalty'>excessive minion kills</a>.)</rules><br><br><groupLimit>Limited to 1 Gold Income or Jungle item.</groupLimit>",
+      "colloq": "",
+      "plaintext": "Gain gold and upgrade by damaging enemy champions",
+      "image": {
+        "full": "3850.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 48,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 400,
+        "sell": 160
+      },
+      "tags": [
+        "Health",
+        "SpellDamage",
+        "ManaRegen",
+        "Vision",
+        "GoldPer",
+        "Lane"
+      ],
+      "maps": {
+        "11": true,
+        "12": false,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 10,
+        "FlatMagicDamageMod": 8
+      },
+      "effect": {
+        "Effect1Amount": "2",
+        "Effect2Amount": "15",
+        "Effect3Amount": "15",
+        "Effect4Amount": "500",
+        "Effect5Amount": "10",
+        "Effect6Amount": "3",
+        "Effect7Amount": "2000"
+      }
+    },
+    {
+      "name": "Frostfang",
+      "description": "<stats>+15 Ability Power<br>+70 Health<br>+3 Gold Per 10 Seconds<br><mana>+75% Base Mana Regen </mana></stats><br><br><unique>UNIQUE Passive - Tribute:</unique> While nearby an ally champion, damaging spells and attacks against champions or buildings grant 15 gold. This can occur up to 3 times every 30 seconds.<br><br><passive>QUEST:</passive> Earn 1000 gold to upgrade to Shard of True Ice.<br><br><active>UNIQUE Active - Warding:</active> Place a <font color='#FF9900'>Stealth Ward</font>. Holds up to 3 charges which refill upon visiting the shop.<br><br><rules>(Receive diminishing gold from <a href='Support_Minion_Penalty'>excessive minion kills</a>.)</rules>",
+      "colloq": "",
+      "plaintext": "",
+      "specialRecipe": 3850,
+      "inStore": false,
+      "image": {
+        "full": "3851.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 96,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": false,
+        "total": 400,
+        "sell": 160
+      },
+      "tags": [
+        "GoldPer",
+        "Lane",
+        "ManaRegen",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": false,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 70,
+        "FlatMagicDamageMod": 15
+      },
+      "effect": {
+        "Effect1Amount": "3",
+        "Effect2Amount": "15",
+        "Effect3Amount": "15",
+        "Effect4Amount": "1000",
+        "Effect5Amount": "10",
+        "Effect6Amount": "3",
+        "Effect7Amount": "2000"
+      }
+    },
+    {
+      "name": "Shard of True Ice",
+      "description": "<stats>+50 Ability Power<br>+100 Health<br>+3 Gold Per 10 Seconds<br><mana>+100% Base Mana Regen </mana></stats><br><br><active>UNIQUE Active - Warding:</active> Place a <font color='#FF9900'>Stealth Ward</font>. Holds up to 4 charges which refill upon visiting the shop.<br><br><rules>(Receive diminishing gold from <a href='Support_Minion_Penalty'>excessive minion kills</a>.)</rules>",
+      "colloq": "",
+      "plaintext": "",
+      "specialRecipe": 3851,
+      "inStore": false,
+      "image": {
+        "full": "3853.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 144,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": false,
+        "total": 400,
+        "sell": 160
+      },
+      "tags": [
+        "GoldPer",
+        "Lane",
+        "ManaRegen",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": false,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 100,
+        "FlatMagicDamageMod": 50
+      },
+      "effect": {
+        "Effect1Amount": "3"
+      }
+    },
+    {
+      "name": "Relic Shield",
+      "description": "<stats>+30 Health<br>+5 Ability Power<br>+2 Gold Per 10 Seconds<br>+25% Base Health Regen </stats><br><br><unique>UNIQUE Passive - Spoils of War:</unique> While nearby an ally champion, basic attacks execute minions below 50% of their max Health (30% for ranged). Killing a minion grants kill gold to the nearest allied champion.<rules> (These effects recharge every 45 seconds. Max 3 charges.)</rules><hr><passive>QUEST:</passive> Earning gold through using this item will transform the item, granting <active>UNIQUE Active - Warding</active>.<br><br><rules>(Receive diminishing gold from <a href='Support_Minion_Penalty'>excessive minion kills</a>.)</rules><br><br><groupLimit>Limited to 1 Gold Income or Jungle item.</groupLimit>",
+      "colloq": "",
+      "plaintext": "Gain gold and upgrade by executing minions alongside allies",
+      "image": {
+        "full": "3858.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 336,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 400,
+        "sell": 160
+      },
+      "tags": [
+        "Health",
+        "HealthRegen",
+        "SpellDamage",
+        "Vision",
+        "GoldPer",
+        "Lane"
+      ],
+      "maps": {
+        "11": true,
+        "12": false,
+        "21": false,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 30,
+        "FlatMagicDamageMod": 5
+      },
+      "effect": {
+        "Effect1Amount": "2",
+        "Effect2Amount": "0.5",
+        "Effect3Amount": "0.3",
+        "Effect4Amount": "500",
+        "Effect5Amount": "45",
+        "Effect6Amount": "3"
+      }
+    },
+    {
+      "name": "Twin Shadows",
+      "description": "<stats>+70 Ability Power<br>+7% Movement Speed<br>+10% Cooldown Reduction</stats><br><br><unique>UNIQUE Active - Spectral Pursuit:</unique> Summons 2 spooky ghosts that hunt down nearby champions, revealing and Haunting them on contact. <br><br>Haunted enemies are slowed by 40% for up to 5 seconds based on the distance the ghosts travel. (90 second cooldown).",
+      "colloq": ";spooky;spooky ghosts",
+      "plaintext": "Increases Ability Power and Movement Speed",
+      "from": [
+        "3108",
+        "3113"
+      ],
+      "image": {
+        "full": "3905.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 288,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 650,
+        "purchasable": true,
+        "total": 2400,
+        "sell": 1680
+      },
+      "tags": [
+        "SpellDamage",
+        "Active",
+        "CooldownReduction",
+        "Slow",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "PercentMovementSpeedMod": 0.07,
+        "FlatMagicDamageMod": 70
+      },
+      "effect": {
+        "Effect1Amount": "10",
+        "Effect2Amount": "35",
+        "Effect3Amount": "8",
+        "Effect4Amount": "0.2",
+        "Effect5Amount": "0.5",
+        "Effect6Amount": "10",
+        "Effect7Amount": "2100",
+        "Effect8Amount": "10",
+        "Effect9Amount": "90",
+        "Effect10Amount": "60",
+        "Effect11Amount": "150",
+        "Effect12Amount": "0.1",
+        "Effect13Amount": "40",
+        "Effect14Amount": "5",
+        "Effect15Amount": "2",
+        "Effect16Amount": "7"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Spellbinder",
+      "description": "<stats>+120 Ability Power<br>+10% Movement Speed<br></stats><br><unique>UNIQUE Passive:</unique> Nearby allied and enemy spellcasts charge Spellbinder up to a cap (100 maximum). <br><unique>UNIQUE Active:</unique> Gain a maximum of 80 Ability Power and 50% decaying Movement Speed for 4 seconds. <br><br>Each spellcast stored contributes +0.8 Ability Power and +0.5% Movement Speed to the effect. (60 second cooldown).",
+      "colloq": "",
+      "plaintext": "Stores nearby spellcasts and can consume them to grant Movement Speed and Ability Power.",
+      "from": [
+        "1058",
+        "3113"
+      ],
+      "image": {
+        "full": "3907.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 336,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 800,
+        "purchasable": true,
+        "total": 2900,
+        "sell": 2030
+      },
+      "tags": [
+        "SpellDamage",
+        "Active",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "PercentMovementSpeedMod": 0.1,
+        "FlatMagicDamageMod": 120
+      },
+      "effect": {
+        "Effect1Amount": "10",
+        "Effect2Amount": "100",
+        "Effect3Amount": "0.5",
+        "Effect4Amount": "4",
+        "Effect5Amount": "0.8",
+        "Effect6Amount": "60",
+        "Effect7Amount": "4",
+        "Effect8Amount": "80",
+        "Effect9Amount": "50",
+        "Effect10Amount": "120",
+        "Effect11Amount": "1800"
+      },
+      "depth": 3
+    },
+    {
+      "name": "Oblivion Orb",
+      "description": "<stats>+20 Ability Power<br>+200 Health</stats><br><br><unique>UNIQUE Passive - Touch of Death:</unique> +15 <a href='FlatMagicPen'>Magic Penetration</a>",
+      "colloq": "",
+      "plaintext": "Increases magic damage",
+      "stacks": 0,
+      "from": [
+        "1028",
+        "1052"
+      ],
+      "into": [
+        "3165"
+      ],
+      "image": {
+        "full": "3916.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 384,
+        "y": 192,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 765,
+        "purchasable": true,
+        "total": 1600,
+        "sell": 1120
+      },
+      "tags": [
+        "Health",
+        "MagicPenetration",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": true,
+        "12": true,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 200,
+        "FlatMagicDamageMod": 20
+      },
+      "effect": {
+        "Effect1Amount": "15"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Doran's Lost Ring",
+      "description": "<stats>+60 Health<br>+15 Ability Power<br><mana>+10 Mana per 5 seconds</mana></stats><br><br><passive>Passive: </passive>Basic attacks deal an additional 5 physical damage to minions on hit.<br><br><groupLimit>Limited to 1 Starter item.</groupLimit>",
+      "colloq": ";dring",
+      "plaintext": "Good starting item for casters",
+      "image": {
+        "full": "4203.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 432,
+        "y": 240,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 400,
+        "sell": 160
+      },
+      "tags": [
+        "Health",
+        "Lane",
+        "ManaRegen",
+        "SpellDamage"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatHPPoolMod": 60,
+        "FlatMagicDamageMod": 15
+      },
+      "effect": {
+        "Effect1Amount": "0",
+        "Effect2Amount": "5"
+      }
+    },
+    {
+      "name": "Doran's Lost Idol",
+      "description": "<stats>+10 Ability Power<br><mana>+75% Base Mana Regen </mana><br>+5% Heal and Shield Power</stats><br><br><passive>Passive: </passive>Basic attacks deal an additional 12 physical damage to minions on hit.<br><br><groupLimit>Limited to 1 Starter item.</groupLimit>",
+      "colloq": ";didol",
+      "plaintext": "Good starting item for Enchanters",
+      "image": {
+        "full": "4204.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 0,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 400,
+        "purchasable": true,
+        "total": 400,
+        "sell": 160
+      },
+      "tags": [
+        "SpellDamage",
+        "ManaRegen",
+        "Lane"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatMagicDamageMod": 10
+      },
+      "effect": {
+        "Effect1Amount": "0.05",
+        "Effect2Amount": "12"
+      }
+    },
+    {
+      "name": "The Golden Spatula",
+      "description": "<stats>+250 Health<br><mana>+250 Mana</mana><br>+100% Base Health Regen <br><mana>+100% Base Mana Regen </mana><br>+30 Armor<br>+30 Magic Resist<br>+120 Ability Power<br>+70 Attack Damage<br>+50% Attack Speed<br>+30% Critical Strike Chance<br>+10% Life Steal<br>+10% Movement Speed<br>+20% Cooldown Reduction<br><br>You are permanently On Fire!</stats><br><br><rules><font color='#447777'>''It must do something...''<br>''Declined, it does EVERYTHING!''</font></rules>",
+      "colloq": ";",
+      "plaintext": "It does EVERYTHING!",
+      "from": [
+        "1038",
+        "1053",
+        "3086",
+        "1058",
+        "3067",
+        "3105"
+      ],
+      "image": {
+        "full": "4403.png",
+        "sprite": "item2.png",
+        "group": "item",
+        "x": 144,
+        "y": 288,
+        "w": 48,
+        "h": 48
+      },
+      "gold": {
+        "base": 687,
+        "purchasable": true,
+        "total": 7437,
+        "sell": 5206
+      },
+      "tags": [
+        "Health",
+        "SpellBlock",
+        "HealthRegen",
+        "Armor",
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed",
+        "LifeSteal",
+        "SpellDamage",
+        "Mana",
+        "ManaRegen",
+        "CooldownReduction",
+        "NonbootsMovement"
+      ],
+      "maps": {
+        "11": false,
+        "12": false,
+        "21": true,
+        "22": false
+      },
+      "stats": {
+        "FlatPhysicalDamageMod": 70,
+        "FlatCritChanceMod": 0.3,
+        "PercentMovementSpeedMod": 0.1,
+        "FlatHPPoolMod": 250,
+        "FlatSpellBlockMod": 30,
+        "FlatMPPoolMod": 250,
+        "FlatMagicDamageMod": 120,
+        "FlatArmorMod": 30,
+        "PercentAttackSpeedMod": 0.5,
+        "PercentLifeStealMod": 0.1
+      },
+      "depth": 3
+    }
+  ]
+}
