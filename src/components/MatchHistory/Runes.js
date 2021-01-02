@@ -40,7 +40,7 @@ const Runes = props => {
             left: '.5%',
         }}>
             <img src={keystone} alt="loading" height="30px" width="30px" onMouseEnter={() => handleMouseOver()} onMouseLeave={() => handleMouseExit()}></img>
-            {isShowing && <HoverCard blurb={keystoneBlurb}/>}
+            
             <img style={{ position: 'relative', right: '30px', top: '30px' }} src={secondTree} alt="loading" height="30px" width="30px"></img>
         </div>
     )

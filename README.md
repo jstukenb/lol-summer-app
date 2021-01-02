@@ -1,3 +1,4 @@
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Purpose
@@ -9,6 +10,7 @@ Input a username for a League of Legends account, and you will get a list of you
 
 This project isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
 
+*Only works for pre-season 11 and hopefully onwards*
 ## Available Scripts
 
 In the project directory, you can run:

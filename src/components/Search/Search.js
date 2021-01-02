@@ -61,10 +61,9 @@ const SearchStuff = () => {
         setDataGrabbed(false)
     }
 
-    const onSearchButtonPress = (e) => {
+    function onSearchButtonPress(e) {
         e.preventDefault()
         resetSearch()
-        console.log("SEARCH PRESSEd")
         grabData()
     }
     
@@ -72,9 +71,9 @@ const SearchStuff = () => {
         return(
             <div className = "entireShell">
                 <h1 className = "searchTitle">
-                JOSH.GG
+                Summoner Synopsis
                 </h1>
-                <form>
+                <form onSubmit={onSearchButtonPress}>
                     <input
                         id = "summonerInfo"
                         placeholder = "Input a Summoner Name"
@@ -83,8 +82,9 @@ const SearchStuff = () => {
                         value = {summonerName}
                         >
                     </input>
+                    <button className = "search" type = "submit" >Search</button>
                 </form>
-                <button className = "search" onClick = {onSearchButtonPress}>Search</button>
+                
                 <Results 
                     summonerData = {summonerData}
                     rankData = {rankData}
@@ -103,9 +103,9 @@ const SearchStuff = () => {
     return(
         <div className="entireShell">
             <h1 className = "searchTitle">
-                JOSH.GG    
+                Summoner Synopsis    
             </h1>
-            <form>
+            <form onSubmit={onSearchButtonPress}>
                 <input
                   id = "summonerInfo"
                   placeholder = "Input a Summoner Name"
@@ -114,8 +114,9 @@ const SearchStuff = () => {
                   value = {summonerName}
                   >
                 </input>
+                <button className = "search" type="submit">Search</button>   
             </form>
-            <button className = "search" onClick = {onSearchButtonPress}>Search</button>   
+            
         </div>
     )
 }
