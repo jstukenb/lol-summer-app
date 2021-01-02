@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lol-summer-app/precache-manifest.88d6761880f15ab63dc101bbe74aba55.js"
+  "/lol-summer-app/precache-manifest.3a866cc8baf11716b77abfca5400a361.js"
 );
 
 self.addEventListener('message', (event) => {
