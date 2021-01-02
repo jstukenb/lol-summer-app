@@ -6,6 +6,37 @@ import Runes from '../../Runes'
 import { getChampionPic, getSummonerSpellPic } from '../../../../RiotAPI'
 
 const ExpandedGameStats = props => {
+    function getSummonerSpellName(id) {
+        switch(id) {
+            case 1:
+                return "summoner_boost.png"
+            case 3:
+                return "summoner_exhaust.png"
+            case 4:
+                return "summoner_flash.png"
+            case 6:
+                return "summoner_haste.png"
+            case 7:
+                return "summoner_heal.png"
+            case 11:
+                return "summoner_smite.png"
+            case 12:
+                return "summoner_teleport.png"
+            case 13:
+                return "summonermana.png"
+            case 14:
+                return "summonerignite.png"
+            case 21:
+                return "summonerbarrier.png"
+            case 32:
+                return "summoner_mark.png"
+            case 39:
+                return "summoner_mark.png"
+            default:
+                return "summonertemp2.png"
+        }
+    }
+
     //console.log("EXPANDED PROPS: ", props)
     let color = ""
     if (props.gameData.participants[props.participantId - 1].stats.win) {
@@ -41,7 +72,7 @@ const ExpandedGameStats = props => {
             
             <img className="championImage" src={getChampionPic(champName)} alt="loading" />
             <Runes gameData={props.gameData} participantId={props.participantId - 1} runeJson={props.runeJson} />
-            <SummonerSpell imageLink1={getSummonerSpellPic(props.gameData.participants[props.participantId - 1].spell1Id)} imageLink2={getSummonerSpellPic(props.gameData.participants[props.participantId - 1].spell2Id)} />
+            <SummonerSpell imageLink1={getSummonerSpellPic(getSummonerSpellName(props.gameData.participants[props.participantId - 1].spell1Id))} imageLink2={getSummonerSpellPic(getSummonerSpellName(props.gameData.participants[props.participantId - 1].spell2Id))} />
             <ItemList items={items} itemJson={props.itemJson}/>
             <BasicStats gameData={props.gameData} participantId={props.participantId - 1} />
         </div>

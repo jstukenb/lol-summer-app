@@ -14,7 +14,7 @@ const BasicStats = props => {
     }
     return(
         <div className = "basicStatsShell">
-            {KDA} KDA: {KDANumber}
+            {KDA} KDA: {KDANumber} CS: {props.gameData.participants[props.participantId].stats.totalMinionsKilled}
         </div>
     )
 }

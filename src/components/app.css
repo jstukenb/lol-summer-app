@@ -54,7 +54,7 @@
 }
 .matchDetails {
     display: inline-block;
-    width: 700px;
+    width: 750px;
     margin-top: 1%;
     margin-bottom: 1%;
     border: solid black 2px
@@ -108,7 +108,7 @@
     display: inline-flex;
     position: relative;
     left: 10%;
-    width: 150px;
+    width: 140px;
 }
 .expandMatchHistory {
     display: inline-flex;

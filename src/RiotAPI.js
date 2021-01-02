@@ -84,11 +84,14 @@ const getItemPic = (itemId) => {
 };
 
 const getRankPic = (rankTier) => {
-  return `/dragontail-10.11/10.11.1/img/ranked-emblems/Emblem_${rankTier}.png`;
+  if (rankTier === "0") {
+    return `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/unranked-emblem.png`
+  }
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/content/src/leagueclient/rankedcrests${rankTier}`;
 };
 
 const getSummonerSpellPic = (spellId) => {
-  return `/dragontail-10.11/10.11.1/img/summonerspells/${spellId}.png`;
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/spells/icons2d/${spellId}`;
 };
 
 const getRuneJson = () => {
@@ -140,11 +143,11 @@ const getMapImage = (mapId) => {
 };
 
 const getTimelineImage = (asset) => {
-  return `/dragontail-10.11/10.11.1/img/timeline-assets/${asset}.png`;
+  return `${asset}`;
 };
 
 const getScoreboardImage = (asset) => {
-  return `/dragontail-10.11/10.11.1/img/scoreboard/${asset}.png`;
+  return `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-match-history/global/default/${asset}.png`;
 };
 
 export {

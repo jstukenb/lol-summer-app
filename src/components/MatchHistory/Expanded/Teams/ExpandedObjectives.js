@@ -1,15 +1,16 @@
 import React from 'react'
 import {getScoreboardImage} from '../../../../RiotAPI'
+import './Scoreboard.css'
 
 const ExpandedObjectives = props => {
     //console.log("OBJECTIVES: ", props.gameData.teams[0])
     return (
         <div>
-            <img src={getScoreboardImage("icon-baron-b")} alt="loading"></img>: {props.gameData.teams[0].baronKills}
-            <img src={getScoreboardImage("icon-dragon-b")} alt="loading"></img>: {props.gameData.teams[0].dragonKills}
-            <img src={getScoreboardImage("icon-tower-b")} alt="loading"></img>: {props.gameData.teams[0].towerKills}  |||  <img src={getScoreboardImage("icon-baron-r")} alt="loading"></img> : {props.gameData.teams[1].baronKills}
-            <img src={getScoreboardImage("icon-dragon-r")} alt="loading"></img>: {props.gameData.teams[1].dragonKills}
-            <img src={getScoreboardImage("icon-tower-r")} alt="loading"></img>: {props.gameData.teams[1].towerKills}
+            <img className="scoreboardImage" src={getScoreboardImage("baron-100")} alt="loading"></img>: {props.gameData.teams[0].baronKills}
+            <img className="scoreboardImage" src={getScoreboardImage("dragon-100")} alt="loading"></img>: {props.gameData.teams[0].dragonKills}
+            <img className="scoreboardImage" src={getScoreboardImage("tower-100")} alt="loading"></img>: {props.gameData.teams[0].towerKills}  |||  <img className="scoreboardImage" src={getScoreboardImage("baron-200")} alt="loading"></img> : {props.gameData.teams[1].baronKills}
+            <img className="scoreboardImage"src={getScoreboardImage("dragon-200")} alt="loading"></img>: {props.gameData.teams[1].dragonKills}
+            <img className="scoreboardImage" src={getScoreboardImage("tower-200")} alt="loading"></img>: {props.gameData.teams[1].towerKills}
             
         </div>
     )

@@ -16,6 +16,47 @@ const Event = (props) => {
     time = time / 60;
   }
 
+  function getWardTypePath(wardType) {
+    switch (wardType) {
+      case "SIGHT_WARD": 
+        return "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3340_class_t1_wardingtotem.png"
+      case "CONTROL_WARD": 
+        return "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2055_class_t1_controlward.png"
+      case "YELLOW_TRINKET":
+        return "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3340_class_t1_wardingtotem.png"
+      case "BLUE_TRINKET": 
+        return "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3363_class_t1_farsightalteration.png"
+      default:
+        return ""
+    }
+  }
+
+  function killDragon() {
+    let teamId = props.playerBios[props.killerId-1][2]
+    switch(props.monsterSubType) {
+      case "FIRE_DRAGON":
+        return `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-match-history/global/default/fire-${teamId}.png`
+      case "WATER_DRAGON":
+        return `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-match-history/global/default/water-${teamId}.png`
+      case "AIR_DRAGON":
+        return `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-match-history/global/default/air-${teamId}.png`
+      case "EARTH_DRAGON":
+        return `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-match-history/global/default/earth-${teamId}.png`
+      case "ELDER_DRAGON":
+        return `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-match-history/global/default/elder-${teamId}.png`
+      default:
+        return ""
+    }
+  }
+
+  function destroyTower() {
+    let test = 100
+    if (props.teamId === 100) {
+      return `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-match-history/global/default/tower-${test}.png`
+    }
+    return "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-match-history/global/default/tower-200.png"
+  }
+
   const handleEvent = () => {
     switch (props.type) {
       case "CHAMPION_KILL":
@@ -85,14 +126,14 @@ const Event = (props) => {
                     width="20px"
                     style={{ display: "inLineFlex" }}
                     alt="loading"
-                    src={getTimelineImage(props.wardType)}
+                    src={getTimelineImage(getWardTypePath(props.wardType))}
                   ></img>
                 </div>
               )
         }
 
       case "WARD_KILL":
-        if (props.wardType === "TEEMO_MUSHROOM") {
+        if (props.wardType === "TEEMO_MUSHROOM" || props.wardType === "undefined") {
           return <div></div>
         } else {
           return (
@@ -111,7 +152,7 @@ const Event = (props) => {
                 width="20px"
                 style={{ display: "inLineFlex" }}
                 alt="loading"
-                src={getTimelineImage(props.wardType)}
+                src={getTimelineImage(getWardTypePath(props.wardType))}
               ></img>
             </div>
           );
@@ -128,7 +169,7 @@ const Event = (props) => {
                   width="15px"
                   style={{ display: "inLineFlex" }}
                   alt="loading"
-                  src={getTimelineImage(props.buildingType)}
+                  src={getTimelineImage(destroyTower())}
                 ></img>{" "}
                 Inhibitor
               </div>
@@ -142,7 +183,7 @@ const Event = (props) => {
                   width="15px"
                   style={{ display: "inLineFlex" }}
                   alt="loading"
-                  src={getTimelineImage(props.buildingType)}
+                  src={getTimelineImage(destroyTower())}
                 ></img>{" "}
                 Tower
               </div>
@@ -165,7 +206,7 @@ const Event = (props) => {
                 width="15px"
                 style={{ display: "inLineFlex" }}
                 alt="loading"
-                src={getTimelineImage("TOWER_BUILDING")}
+                src={getTimelineImage(destroyTower())}
               ></img>{" "}
               Inhibitor
             </div>
@@ -187,7 +228,7 @@ const Event = (props) => {
                 width="15px"
                 style={{ display: "inLineFlex" }}
                 alt="loading"
-                src={getTimelineImage(props.buildingType)}
+                src={getTimelineImage(destroyTower())}
               ></img>{" "}
               Tower
             </div>
@@ -210,7 +251,13 @@ const Event = (props) => {
                 src={getChampionPic(props.playerBios[props.killerId - 1][3])}
               ></img>{" "}
               {props.playerBios[props.killerId - 1][0]} killed{" "}
-              {props.monsterSubType}
+              <img
+                height="20px"
+                width="15px"
+                style={{ display: "inLineFlex" }}
+                alt="loading"
+                src={getTimelineImage(killDragon(props.monsterSubType))}
+              ></img>
             </div>
           );
         } else {

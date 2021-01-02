@@ -11,8 +11,8 @@ const BasicGameStats = props => {
     }
     return (
         <div className="basicGameStats">
-            {props.victory}
-                Game Time: {gameLength}
+            
+            Time: {gameLength}
         </div>
     )
 

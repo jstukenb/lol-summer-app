@@ -23,7 +23,36 @@ const MatchDetails = (props) => {
     const [playerBios, setPlayerBios] = useState();
     let tempArrayOfBios = [];
     //const [blurb, setBlurb] = useState()
-
+    function getSummonerSpellName(id) {
+        switch(id) {
+            case 1:
+                return "summoner_boost.png"
+            case 3:
+                return "summoner_exhaust.png"
+            case 4:
+                return "summoner_flash.png"
+            case 6:
+                return "summoner_haste.png"
+            case 7:
+                return "summoner_heal.png"
+            case 11:
+                return "summoner_smite.png"
+            case 12:
+                return "summoner_teleport.png"
+            case 13:
+                return "summonermana.png"
+            case 14:
+                return "summonerignite.png"
+            case 21:
+                return "summonerbarrier.png"
+            case 32:
+                return "summoner_mark.png"
+            case 39:
+                return "summoner_mark.png"
+            default:
+                return "summonertemp2.png"
+        }
+    }
     useEffect(() => {
         getMatchDetails(props.gameId).then(
             (result) => {
@@ -133,10 +162,10 @@ const MatchDetails = (props) => {
                     />
                     <SummonerSpell
                         imageLink1={getSummonerSpellPic(
-                            gameData.participants[participantId].spell1Id
+                            getSummonerSpellName(gameData.participants[participantId].spell1Id)
                         )}
                         imageLink2={getSummonerSpellPic(
-                            gameData.participants[participantId].spell2Id
+                            getSummonerSpellName(gameData.participants[participantId].spell2Id)
                         )}
                     />
                     <ItemList items={items} itemJson={props.itemJson} />
