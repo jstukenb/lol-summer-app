@@ -114,7 +114,9 @@ const SearchStuff = () => {
                   value = {summonerName}
                   >
                 </input>
+                <p style={{textAlign: "center"}}>Sample Summoner Names: Whodatwon, Crayzpirate, ponky, Malphus (case-sensitive)</p>
                 <button className = "search" type="submit">Search</button>   
+                
             </form>
             
         </div>

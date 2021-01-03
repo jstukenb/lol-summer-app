@@ -11,6 +11,7 @@ Input a username for a League of Legends account, and you will get a list of you
 This project isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
 
 *Only works for pre-season 11 and hopefully onwards*
+Goals for the future is to fix the rate limiting of the Riot Games api call. Right now the whole app breaks if you search too many people too fast because my key only allows for a small amount of calls. Once I figure that out I would like to fix the css to make it cleaner and not all in line like it currently is. 
 ## Available Scripts
 
 In the project directory, you can run:
