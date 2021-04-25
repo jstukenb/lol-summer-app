@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b60949c851d939235959ce1dc6c1840e",
+    "revision": "bdba41b0a0a1449ff55356ed71c07981",
     "url": "/lol-summer-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lol-summer-app/static/css/2.5c17b9f1.chunk.css"
   },
   {
-    "revision": "f52b038f34531d9f33cb",
+    "revision": "3dee793f197b25a364a2",
     "url": "/lol-summer-app/static/css/main.934a8677.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lol-summer-app/static/js/2.13553b09.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f52b038f34531d9f33cb",
-    "url": "/lol-summer-app/static/js/main.12b1aa82.chunk.js"
+    "revision": "3dee793f197b25a364a2",
+    "url": "/lol-summer-app/static/js/main.f823f2df.chunk.js"
   },
   {
     "revision": "aca236b2e4d3efd3ebf6",
