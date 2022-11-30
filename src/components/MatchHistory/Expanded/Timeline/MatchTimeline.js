@@ -7,7 +7,7 @@ const MatchTimeline = props => {
         <div style={{height: "200px", overflowY: 'auto'}}>
            
             
-            {props.gameTimeline.frames.map(frames => (
+            {props.gameTimeline.info.frames.map(frames => (
                 <div key = {frames.timestamp}>
                     <FrameInterval {...frames} playerBios={props.playerBios} showSkills={document.getElementById("showSkills")}/>
                 </div>

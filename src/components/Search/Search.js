@@ -46,6 +46,7 @@ const SearchStuff = () => {
 
     useEffect(() => {
         if (summonerData !== undefined && championJson !== undefined && itemJson !== undefined && runeJson !== undefined ) {
+            console.log("HERE: ", summonerData)
             getPlayerRank(summonerData.id)
                 .then((result) => {
                     setRankData(result)
@@ -89,7 +90,7 @@ const SearchStuff = () => {
                     summonerData = {summonerData}
                     rankData = {rankData}
                 />
-                <MatchHistory accountId = {summonerData.accountId} championJson={championJson} runeJson={runeJson} itemJson={itemJson} summonerJson={summonerJson}/>
+                <MatchHistory puuid = {summonerData.puuid} accountId = {summonerData.accountId} championJson={championJson} runeJson={runeJson} itemJson={itemJson} summonerJson={summonerJson}/>
             </div>
         )
     }
@@ -114,7 +115,7 @@ const SearchStuff = () => {
                   value = {summonerName}
                   >
                 </input>
-                <p style={{textAlign: "center"}}>Sample Summoner Names: Whodatwon, Crayzpirate, ponky, Malphus (case-sensitive)</p>
+                <p style={{textAlign: "center"}}>Sample Summoner Names: Tippunk, Crayzpirate, ponky, Malphus (case-sensitive)</p>
                 <button className = "search" type="submit">Search</button>   
                 
             </form>

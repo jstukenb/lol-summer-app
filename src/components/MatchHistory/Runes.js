@@ -19,12 +19,12 @@ const Runes = props => {
 
     useEffect(() => {
         for (let i = 0; i < props.runeJson.length; i++) {
-            if (props.runeJson[i].id === props.gameData.participants[props.participantId].stats.perkSubStyle) {
+            if (props.runeJson[i].id === props.gameData.info.participants[props.participantId].perkSubStyle) {
                 let secondHalf2 = props.runeJson[i].icon
                 setSecondTree(getRuneImage(secondHalf2))
             }
             for (let j = 0; j < props.runeJson[i].slots[0].runes.length; j++) {
-                if (props.runeJson[i].slots[0].runes[j].id === props.gameData.participants[props.participantId].stats.perk0) {
+                if (props.runeJson[i].slots[0].runes[j].id === props.gameData.info.participants[props.participantId].perk0) {
                     let secondHalf = props.runeJson[i].slots[0].runes[j].icon
                     setKeystone(getRuneImage(secondHalf))
                     setKeystoneBlurb(props.runeJson[i].slots[0].runes[j].longDesc)

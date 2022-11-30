@@ -7,7 +7,7 @@ const Item = props => {
     const [isShown, setIsShown] = useState(false)
     let blurb = ""
     if (props.item !== 0) {
-        blurb = props.itemJson.data[props.item].description
+        blurb = props.itemJson.data[props.item]?.description
     }
     //console.log(props.test)
     return (

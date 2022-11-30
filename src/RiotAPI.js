@@ -31,33 +31,41 @@ const okCheck = statusCheck([HTTP_OK]);
 const searchSummonerName = (summonerName) => {
   //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`
   //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/na1/${id}`
-  //return queryGET(url)
+  const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+  return queryGET(url)
   return queryGET(
     `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`
   );
 };
 
-const getMatchList = (accountId) => {
-  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchhistory/na1/${accountId}`;
-  //const url = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=5&beginIndex=0`
+const searchPuuid = (puuid) => {
+  const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+  return queryGET(url)
+}
+
+const getMatchList = (puuid) => {
+  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchhistory/na1/${accountId}`;
+  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=1&api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
   return queryGET(url);
 };
 
 const getMatchDetails = (matchId) => {
-  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchdetails/na1/${matchId}`;
-  //const url = `https://na1.api.riotgames.com/lol/match/v4/matches/${matchId}`
+  // const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchdetails/na1/${matchId}`;
+  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
   return queryGET(url);
 };
 
 const getMatchTimeline = (matchId) => {
-  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchtimeline/na1/${matchId}`;
-  //const url = `https://na1.api.riotgames.com/lol/match/v4/timelines/by-match/${matchId}?api_key=RGAPI-2ddb7972-04a8-4b8c-9ca2-0f0a220ae2ed`
+  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchtimeline/na1/${matchId}`;
+  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/${matchId}/timeline?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+
+  // const url = `https://na1.api.riotgames.com/lol/match/v5/timelines/by-match/${matchId}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
   return queryGET(url);
 };
 
 const getPlayerRank = (id) => {
-  const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/rank/na1/${id}`;
-  //const url = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}`
+  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/rank/na1/${id}`;
+  const url = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
   return queryGET(url);
 };
 
@@ -152,6 +160,7 @@ const getScoreboardImage = (asset) => {
 
 export {
   searchSummonerName,
+  searchPuuid,
   getMatchList,
   getMatchTimeline,
   getPlayerRank,

@@ -6,22 +6,21 @@ import MatchDetails from './MatchDetails'
 import '../app.css'
 
 const MatchHistory = (props) => {
-    //console.log("MATCH HISTORY PROPS: ", props)
+    console.log("MATCH HISTORY PROPS: ", props)
     const [ matchListGrabbed, setMatchListGrabbed ] = useState()
     const [ isLoaded, setIsLoaded ] = useState(false)
     const [ error, setError ] = useState(null)
     useEffect(() => {
-        getMatchList(props.accountId)
+        getMatchList(props.puuid)
             .then((result) => {
-                setMatchListGrabbed(result.matches)
-                //console.log("result: ", result)
+                setMatchListGrabbed(result)
             },
             (error) => {
                 setIsLoaded(true)
                 setError(error)
             })
               
-    }, [props.accountId])
+    }, [props.puuid])
 
     useEffect(() => {
         if (matchListGrabbed !== undefined) {
@@ -37,8 +36,8 @@ const MatchHistory = (props) => {
         return (
             <div className = "matchList"> Match History
                 {matchListGrabbed.map(match => (
-                    <div key={match.gameId}> 
-                        <MatchDetails {...match} accountId = {props.accountId} championJson={props.championJson} itemJson={props.itemJson} runeJson={props.runeJson}/>
+                    <div key={match}> 
+                        <MatchDetails gameId={match} accountId = {props.accountId} puuid = {props.puuid} championJson={props.championJson} itemJson={props.itemJson} runeJson={props.runeJson}/>
                     </div>
                 ))}
             </div>

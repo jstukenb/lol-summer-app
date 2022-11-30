@@ -8,6 +8,7 @@ import ExpandedObjectives from './ExpandedObjectives'
 import AnalysisShell from '../Analysis/AnalysisShell'
 
 const ExpandedMatch = props => {
+    console.log("Expanded Match props: ", props)
     const [userTimelineId, setUserTimelineId] = useState()
     const [killTimeline, setKillTimeline] = useState()
     const [analysisTimeline, setAnalysisTimeline] = useState()
@@ -18,14 +19,14 @@ const ExpandedMatch = props => {
         setUserTimelineId(props.participantId+1)
     }, [])
     useEffect(() => {
-        setKillTimeline(props.gameTimeline.frames.flatMap(frames => (
+        setKillTimeline(props.gameTimeline.info.frames.flatMap(frames => (
             frames.events.filter(event => event.type === "CHAMPION_KILL")
         )))
         //console.log("USERTIMELINE ID: ", userTimelineId)
-        setAnalysisTimeline(props.gameTimeline.frames.flatMap(frames => (
+        setAnalysisTimeline(props.gameTimeline.info.frames.flatMap(frames => (
             frames.events.filter(event => (event.type === "ITEM_PURCHASED" || event.type === "ITEM_SOLD" || event.type === "ITEM_UNDO") && event.participantId === props.participantId+1)
         )))
-        /*setLevelTimeline(props.gameTimeline.frames.flatMap(frames => (
+        /*setLevelTimeline(props.gameTimeline.info.frames.flatMap(frames => (
             frames.events.filter(event => (event.type === "SKILL_LEVEL_UP"))
         )))*/
     }, [userTimelineId])
@@ -43,8 +44,8 @@ const ExpandedMatch = props => {
                 <TabPanel>
                     <div>
                         <ExpandedObjectives gameData={props.gameData}/>
-                        {props.gameData.participantIdentities.map(participant => (
-                            <div key={participant.player.summonerName}>
+                        {props.gameData.info.participants.map(participant => (
+                            <div key={participant.summonerName}>
                                 {<ExpandedGameStats {...participant} gameData={props.gameData} itemJson={props.itemJson} runeJson={props.runeJson} championJson={props.championJson}/>}
                             </div>
                         ))}

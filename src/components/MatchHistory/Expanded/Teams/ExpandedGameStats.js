@@ -39,23 +39,23 @@ const ExpandedGameStats = props => {
 
     //console.log("EXPANDED PROPS: ", props)
     let color = ""
-    if (props.gameData.participants[props.participantId - 1].stats.win) {
+    if (props.gameData.info.participants[props.participantId - 1].win) {
         color = "#a3cfec"
     }
     else {
         color = "#e2b6b3"
     }
-    let summonerName = props.gameData.participantIdentities[props.participantId - 1].player.summonerName
-    let item0 = props.gameData.participants[props.participantId - 1].stats.item0
-    let item1 = props.gameData.participants[props.participantId - 1].stats.item1
-    let item2 = props.gameData.participants[props.participantId - 1].stats.item2
-    let item3 = props.gameData.participants[props.participantId - 1].stats.item3
-    let item4 = props.gameData.participants[props.participantId - 1].stats.item4
-    let item5 = props.gameData.participants[props.participantId - 1].stats.item5
-    let item6 = props.gameData.participants[props.participantId - 1].stats.item6
+    let summonerName = props.gameData.info.participants[props.participantId - 1].summonerName
+    let item0 = props.gameData.info.participants[props.participantId - 1].item0
+    let item1 = props.gameData.info.participants[props.participantId - 1].item1
+    let item2 = props.gameData.info.participants[props.participantId - 1].item2
+    let item3 = props.gameData.info.participants[props.participantId - 1].item3
+    let item4 = props.gameData.info.participants[props.participantId - 1].item4
+    let item5 = props.gameData.info.participants[props.participantId - 1].item5
+    let item6 = props.gameData.info.participants[props.participantId - 1].item6
     let items = [item0, item1, item2, item3, item4, item5, item6]
 
-    const champName = props.championJson.keys[props.gameData.participants[props.participantId - 1].championId]
+    const champName = props.championJson.keys[props.gameData.info.participants[props.participantId - 1].championId]
     //let blurb = props.championJson.data[champName].blurb
 
     return (
@@ -72,7 +72,7 @@ const ExpandedGameStats = props => {
             
             <img className="championImage" src={getChampionPic(champName)} alt="loading" />
             <Runes gameData={props.gameData} participantId={props.participantId - 1} runeJson={props.runeJson} />
-            <SummonerSpell imageLink1={getSummonerSpellPic(getSummonerSpellName(props.gameData.participants[props.participantId - 1].spell1Id))} imageLink2={getSummonerSpellPic(getSummonerSpellName(props.gameData.participants[props.participantId - 1].spell2Id))} />
+            <SummonerSpell imageLink1={getSummonerSpellPic(getSummonerSpellName(props.gameData.info.participants[props.participantId - 1].spell1Id))} imageLink2={getSummonerSpellPic(getSummonerSpellName(props.gameData.info.participants[props.participantId - 1].spell2Id))} />
             <ItemList items={items} itemJson={props.itemJson}/>
             <BasicStats gameData={props.gameData} participantId={props.participantId - 1} />
         </div>

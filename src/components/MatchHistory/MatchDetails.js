@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
+    searchPuuid,
     getMatchDetails,
     getChampionPic,
     getSummonerSpellPic,
@@ -14,9 +15,11 @@ import Runes from "./Runes";
 import "../app.css";
 
 const MatchDetails = (props) => {
+    //console.log("match details props: ", props)
     const [gameData, setGameData] = useState();
     const [gameTimeline, setGameTimeline] = useState();
     const [participantId, setParticipantId] = useState();
+    
     const [isLoaded, setIsLoaded] = useState(false);
     const [showExpanded, setShowExpanded] = useState(false);
     const [error, setError] = useState(null);
@@ -53,25 +56,34 @@ const MatchDetails = (props) => {
                 return "summonertemp2.png"
         }
     }
+    let playerInfo = []
     useEffect(() => {
         getMatchDetails(props.gameId).then(
             (result) => {
                 setGameData(result);
-                //console.log("RESULT: ", result);
-                for (let i = 0; i < result.participantIdentities.length; i++) {
-                    let playerBio = [
-                        result.participantIdentities[i].player.summonerName,
-                        result.participants[i].championId,
-                        result.participants[i].teamId,
-                        props.championJson.keys[result.participants[i].championId],
-                        result.participantIdentities[i].participantId,
-                    ];
-                    tempArrayOfBios.push(playerBio);
-                    if (
-                        result.participantIdentities[i].player.accountId === props.accountId
-                    ) {
-                        setParticipantId(i);
-                    }
+                console.log("RESULT: ", result)
+                for (let i = 0; i < result.metadata.participants.length; i++) {
+                    searchPuuid(result.metadata.participants[i]).then(
+                        (searchResult) => {
+                            /*
+                            we want one hub of a users team champion, champion key i guess and then the participant id
+                            */
+                            let playerBio = [
+                                searchResult.name,
+                                result.info.participants[i].championId,
+                                result.info.participants[i].teamId,
+                                props.championJson.keys[result.info.participants[i].championId],
+                                //this the account id because i assume we only need that
+                                searchResult.accountId,
+                            ]
+                            tempArrayOfBios.push(playerBio);
+                            if (result.metadata.participants[i] === props.puuid) {
+                                setParticipantId(i);
+                            }
+                        }
+                    )
+                    
+                    
                 }
                 setPlayerBios(tempArrayOfBios);
             },
@@ -100,28 +112,29 @@ const MatchDetails = (props) => {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
         return <div>Loading...</div>;
-    } else if (gameData.participants === undefined) {
+    } else if (gameData.info.participants === undefined) {
         return <div>Please reload and try again</div>;
     } else {
         let victory = "";
         let color = "";
-        if (gameData.participants[participantId].stats.win) {
+        if (gameData.info.participants[participantId].win) {
             victory = "VICTORY";
             color = "#a3cfec";
         } else {
             victory = "DEFEAT";
             color = "#e2b6b3";
         }
-        let item0 = gameData.participants[participantId].stats.item0;
-        let item1 = gameData.participants[participantId].stats.item1;
-        let item2 = gameData.participants[participantId].stats.item2;
-        let item3 = gameData.participants[participantId].stats.item3;
-        let item4 = gameData.participants[participantId].stats.item4;
-        let item5 = gameData.participants[participantId].stats.item5;
-        let item6 = gameData.participants[participantId].stats.item6;
+        let item0 = gameData.info.participants[participantId].item0;
+        let item1 = gameData.info.participants[participantId].item1;
+        let item2 = gameData.info.participants[participantId].item2;
+        let item3 = gameData.info.participants[participantId].item3;
+        let item4 = gameData.info.participants[participantId].item4;
+        let item5 = gameData.info.participants[participantId].item5;
+        let item6 = gameData.info.participants[participantId].item6;
         let items = [item0, item1, item2, item3, item4, item5, item6];
 
-        const champName = props.championJson.keys[props.champion];
+        const champName = props.championJson.keys[gameData.info.participants[participantId].championId];
+        console.log("BUTT FOR NO: ", champName)
 
         const handleButtonPress = (e) => {
             e.preventDefault();
@@ -162,10 +175,10 @@ const MatchDetails = (props) => {
                     />
                     <SummonerSpell
                         imageLink1={getSummonerSpellPic(
-                            getSummonerSpellName(gameData.participants[participantId].spell1Id)
+                            getSummonerSpellName(gameData.info.participants[participantId].spell1Id)
                         )}
                         imageLink2={getSummonerSpellPic(
-                            getSummonerSpellName(gameData.participants[participantId].spell2Id)
+                            getSummonerSpellName(gameData.info.participants[participantId].spell2Id)
                         )}
                     />
                     <ItemList items={items} itemJson={props.itemJson} />
@@ -186,7 +199,7 @@ const MatchDetails = (props) => {
                         itemJson={props.itemJson}
                         runeJson={props.runeJson}
                         championJson={props.championJson}
-                        champion={props.champion}
+                        champion={champName}
                         participantId={participantId}
                     />
                 )}
