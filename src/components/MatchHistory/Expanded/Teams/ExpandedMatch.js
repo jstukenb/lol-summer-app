@@ -31,7 +31,6 @@ const ExpandedMatch = props => {
         )))*/
     }, [userTimelineId])
     
-    //console.log("MARCO IS COOL: ", props.participantId, " ", analysisTimeline)
     return (
         <div>
             <Tabs style = {{display: "inlineFlex"}}>
@@ -46,7 +45,7 @@ const ExpandedMatch = props => {
                         <ExpandedObjectives gameData={props.gameData}/>
                         {props.gameData.info.participants.map(participant => (
                             <div key={participant.summonerName}>
-                                {<ExpandedGameStats {...participant} gameData={props.gameData} itemJson={props.itemJson} runeJson={props.runeJson} championJson={props.championJson}/>}
+                                {<ExpandedGameStats {...participant} gameData={props.gameData}/>}
                             </div>
                         ))}
                     </div>
@@ -55,7 +54,7 @@ const ExpandedMatch = props => {
                     <MatchTimeline playerBios={props.playerBios} gameData={props.gameData} gameTimeline={props.gameTimeline}/>
                 </TabPanel>
                 <TabPanel>
-                    <KillMap playerBios={props.playerBios} mapId={props.gameData.mapId} killTimeline={killTimeline}/>
+                    <KillMap playerBios={props.playerBios} mapId={props.gameData.info.mapId} killTimeline={killTimeline}/>
                 </TabPanel>
                 
             </Tabs>

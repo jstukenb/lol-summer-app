@@ -4,27 +4,24 @@ import {
 } from '../../RiotAPI'
 import MatchDetails from './MatchDetails'
 import '../app.css'
+import axios from 'axios'
 
 const MatchHistory = (props) => {
-    console.log("MATCH HISTORY PROPS: ", props)
+    //console.log("MATCH HISTORY PROPS: ", props)
     const [ matchListGrabbed, setMatchListGrabbed ] = useState()
     const [ isLoaded, setIsLoaded ] = useState(false)
     const [ error, setError ] = useState(null)
     useEffect(() => {
-        getMatchList(props.puuid)
-            .then((result) => {
-                setMatchListGrabbed(result)
-            },
-            (error) => {
-                setIsLoaded(true)
-                setError(error)
-            })
-              
-    }, [props.puuid])
+        grabData()
+    }, [])
 
+    async function grabData() {
+        const matchList = await axios.get(`http://localhost:4000/past5Games/${props.puuid}`)
+        setMatchListGrabbed(matchList.data)
+    }
     useEffect(() => {
         if (matchListGrabbed !== undefined) {
-            setIsLoaded(true)
+            setIsLoaded(true)     
         }
     }, [matchListGrabbed])
 
@@ -37,7 +34,7 @@ const MatchHistory = (props) => {
             <div className = "matchList"> Match History
                 {matchListGrabbed.map(match => (
                     <div key={match}> 
-                        <MatchDetails gameId={match} accountId = {props.accountId} puuid = {props.puuid} championJson={props.championJson} itemJson={props.itemJson} runeJson={props.runeJson}/>
+                        <MatchDetails gameId={match} accountId = {props.accountId} puuid = {props.puuid}/>
                     </div>
                 ))}
             </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import Event from './Event'
 
 const FrameInterval = props => {
-    console.log("frame interval props: ", props)
+    //console.log("frame interval props: ", props)
     var tracker = 0
     function getUniqueKey() {
         tracker += 1

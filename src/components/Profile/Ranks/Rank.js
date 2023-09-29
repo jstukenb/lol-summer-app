@@ -2,7 +2,7 @@ import React from 'react'
 import { getRankPic } from '../../../RiotAPI'
 import '../../app.css'
 
-const SoloRank = (props) => {
+const Rank = (props) => {
     let soloRank = ""
     let soloRankPic = ""
 
@@ -31,31 +31,23 @@ const SoloRank = (props) => {
         }
     }
 
-    if (props.rankData.length === 1) {
-        if (props.rankData[0].queueType === "RANKED_SOLO_5x5") {
-            soloRank = props.rankData[0].tier + " " + props.rankData[0].rank + " " + props.rankData[0].leaguePoints
-            soloRankPic = getRankPic(getCDragonPath(props.rankData[0].tier))
-        } else {
-            soloRank = "N/A"
-            soloRankPic = getRankPic("0")
-        }
-    } else if (props.rankData.length === 0) {
+    if (props.unranked === true) {
         soloRank = "N/A"
         soloRankPic = getRankPic("0")
-    } else {
-        if (props.rankData[0].queueType === "RANKED_SOLO_5x5") {
-            soloRank = props.rankData[0].tier + " " + props.rankData[0].rank + " " + props.rankData[0].leaguePoints
-            soloRankPic = getRankPic(getCDragonPath(props.rankData[0].tier))
-        } else {
-            soloRank = props.rankData[1].tier + " " + props.rankData[1].rank + " " + props.rankData[1].leaguePoints
-            soloRankPic = getRankPic(getCDragonPath(props.rankData[1].tier))
-        }
+        return(
+            <div className = "soloRank">
+                <img className = "soloRankImage" src = {soloRankPic} alt = "loading" height='57px' width='50px'/>Solo Rank: {soloRank}
+            </div>
+        )
     }
+    soloRank = props.rankData.tier + " " + props.rankData.rank + " " + props.rankData.leaguePoints
+    soloRankPic = getRankPic(getCDragonPath(props.rankData.tier))
     return(
         <div className = "soloRank">
             <img className = "soloRankImage" src = {soloRankPic} alt = "loading" height='57px' width='50px'/>Solo Rank: {soloRank}
         </div>
     )
+
 }
 
-export default SoloRank
+export default Rank

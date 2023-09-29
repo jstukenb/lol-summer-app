@@ -1,37 +1,16 @@
-const patch = "10.16.1";
-
-const throwResponseError = (response) => {
-  const error = new Error(response.statusText);
-  error.response = response;
-  throw error;
-};
-
-const HTTP_OK = 200;
-
-const emitNativeError = error => {
-  console.log("ERROR: ", error)
-  throw error;
-};
-
-const statusCheck = successStatuses => response => {
-  if (successStatuses.includes(response.status)) {
-    return response;
-  } else {
-    throwResponseError(response);
-  }
-};
+const patch = "13.14.1";
+const apioops = ""
 
 const queryGET = (resource) => {
   return fetch(resource)
     .then((response) => response.json(), response => console.log(response));
 };
 
-const okCheck = statusCheck([HTTP_OK]);
 
 const searchSummonerName = (summonerName) => {
-  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`
-  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/rgapi/summoner/na1/${id}`
-  const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+  
+  //const url = `https://eb575aj2ve.execute-api.us-west-2.amazonaws.com/test/searchsummoner=${summonerName}`
+  const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${apioops}`
   return queryGET(url)
   return queryGET(
     `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/summoner/na1/${summonerName}`
@@ -39,38 +18,35 @@ const searchSummonerName = (summonerName) => {
 };
 
 const searchPuuid = (puuid) => {
-  const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+  const url = `/riot-api/lol/summoner/v4/summoners/by-puuid/${puuid}`
+  // const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${apioops}`
   return queryGET(url)
 }
-
+let totalGames = 5
 const getMatchList = (puuid) => {
-  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchhistory/na1/${accountId}`;
-  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=1&api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=${totalGames}&api_key=${apioops}`
+  // const url = `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=${totalGames}&api_key=${apioops}`
   return queryGET(url);
 };
 
 const getMatchDetails = (matchId) => {
-  // const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchdetails/na1/${matchId}`;
-  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/${matchId}?api_key=${apioops}`
   return queryGET(url);
 };
 
 const getMatchTimeline = (matchId) => {
-  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/matchtimeline/na1/${matchId}`;
-  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/${matchId}/timeline?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
-
-  // const url = `https://na1.api.riotgames.com/lol/match/v5/timelines/by-match/${matchId}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+  const url = `https://americas.api.riotgames.com/lol/match/v5/matches/${matchId}/timeline?api_key=${apioops}`
+  // const url = `https://na1.api.riotgames.com/lol/match/v5/timelines/by-match/${matchId}?api_key=${apioops}`
   return queryGET(url);
 };
 
 const getPlayerRank = (id) => {
-  //const url = `https://wx4vohcvy0.execute-api.us-west-1.amazonaws.com/beta/rank/na1/${id}`;
-  const url = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=RGAPI-01b2a5c6-40aa-4a57-b0de-586e586b7d0b`
+  const url = `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=${apioops}`
   return queryGET(url);
 };
 
 const getProfilePic = (profileId) => {
-  return `https://ddragon.leagueoflegends.com/cdn/10.25.1/img/profileicon/${profileId}.png`;
+  return `https://ddragon.leagueoflegends.com/cdn/${patch}/img/profileicon/${profileId}.png`;
   //return `/dragontail-10.11/10.11.1/img/profileicon/${profileId}.png`
   //return `https://cdn.communitydragon.org/${patch}/profile-icon/${profileId}`
 };
@@ -79,7 +55,7 @@ const getChampionPic = (champName) => {
   if (champName === undefined) {
     return `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEWAgIB7e3vCwsLIyMjPz8/V1dV4eHjc3Nzj4+PMzMzt7e1zc3O/v7/////39/fx8fHg4ODJbms7AAABaElEQVR4nO3dSWrDABBFQcm2PMkZ7n/aaJFNiCEmZOBJVSf4b9/Qw9Pzy/V8Pp8W0+Lw7rL/YPd9+y9dDo+YHnH65DpM8/Ge8S/dXfAz5tswHYc1G3cK65bCg8I2hX0K+xT2KexT2LcUXsb/HvGrlsK9wjaFfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9h3yYKdwrbFPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8I+hX0K+xT2KexT2LeJiyGFcQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8I+hX0K+xT2baJw/T9K1v9nRmGcwj6FfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8K+pXBS2KawT2Gfwj6FfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insG8ThSeFbQr7FPYp7FPYp7BPYZ/Cvm0UzuOazbfhetut2e31DZx9EnazzT4gAAAAAElFTkSuQmCC`;
   } else {
-    return `https://ddragon.leagueoflegends.com/cdn/10.25.1/img/champion/${champName}.png`;
+    return `https://ddragon.leagueoflegends.com/cdn/${patch}/img/champion/${champName}.png`;
   }
 };
 
@@ -87,7 +63,7 @@ const getItemPic = (itemId) => {
   if (itemId === 0) {
     return `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEWAgIB7e3vCwsLIyMjPz8/V1dV4eHjc3Nzj4+PMzMzt7e1zc3O/v7/////39/fx8fHg4ODJbms7AAABaElEQVR4nO3dSWrDABBFQcm2PMkZ7n/aaJFNiCEmZOBJVSf4b9/Qw9Pzy/V8Pp8W0+Lw7rL/YPd9+y9dDo+YHnH65DpM8/Ge8S/dXfAz5tswHYc1G3cK65bCg8I2hX0K+xT2KexT2LcUXsb/HvGrlsK9wjaFfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9h3yYKdwrbFPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8I+hX0K+xT2KexT2LeJiyGFcQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8I+hX0K+xT2baJw/T9K1v9nRmGcwj6FfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8K+pXBS2KawT2Gfwj6FfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insG8ThSeFbQr7FPYp7FPYp7BPYZ/Cvm0UzuOazbfhetut2e31DZx9EnazzT4gAAAAAElFTkSuQmCC`;
   } else {
-    return `https://ddragon.leagueoflegends.com/cdn/10.25.1/img/item/${itemId}.png`;
+    return `https://ddragon.leagueoflegends.com/cdn/${patch}/img/item/${itemId}.png`;
   }
 };
 
@@ -104,25 +80,25 @@ const getSummonerSpellPic = (spellId) => {
 
 const getRuneJson = () => {
   return queryGET(
-    `https://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/runesReforged.json`
+    `https://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/runesReforged.json`
   );
 };
 
 const getChampionJson = () => {
   return queryGET(
-    `https://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/championFull.json`
+    `https://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/championFull.json`
   );
 };
 
 const getItemJson = () => {
   return queryGET(
-    `https://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/item.json`
+    `https://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/item.json`
   );
 };
 
 const getSummonerJson = () => {
   return queryGET(
-    `https://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/summoner.json`
+    `https://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/summoner.json`
   );
 };
 
@@ -147,7 +123,7 @@ const getRuneImage = (secondHalfOfPath) => {
 };
 
 const getMapImage = (mapId) => {
-  return `https://ddragon.leagueoflegends.com/cdn/10.16.1/img/map/map${mapId}.png`;
+  return `https://ddragon.leagueoflegends.com/cdn/${patch}/img/map/map${mapId}.png`;
 };
 
 const getTimelineImage = (asset) => {

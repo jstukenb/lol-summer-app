@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BasicGameStats = props => {
-    let gameLengthInSeconds = props.gameData.gameDuration
+    let gameLengthInSeconds = props.gameData.info.gameDuration
     let gameLength = 0
     if (gameLengthInSeconds % 60 === 0) {
         gameLength = gameLengthInSeconds / 60

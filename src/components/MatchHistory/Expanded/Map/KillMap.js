@@ -4,7 +4,7 @@ import MapDot from './MapDot'
 
 
 const KillMap = props => {
-    
+    console.log("map: ", props)
     var tracker = 0
     function getUniqueKey() {
         tracker += 1

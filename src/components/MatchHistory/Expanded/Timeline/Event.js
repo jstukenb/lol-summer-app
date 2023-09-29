@@ -2,7 +2,7 @@ import React from "react";
 import { getChampionPic, getTimelineImage } from "../../../../RiotAPI";
 
 const Event = (props) => {
-  //console.log("EVENT PROPS: ", props)
+
   let time = props.timestamp / 1000;
   if (time % 60 !== 0) {
     let seconds = "" + Math.floor(time % 60);
@@ -16,6 +16,24 @@ const Event = (props) => {
     time = time / 60;
   }
 
+  /** 
+  function convertSnakeCaseToCapitalizedString(snakeCaseText) {
+    // Replace underscores with spaces
+    let spacedText = snakeCaseText.replace(/_/g, ' ');
+  
+    // Convert to lowercase
+    let lowercaseText = spacedText.toLowerCase();
+  
+    // Capitalize the first letter of each word
+    let words = lowercaseText.split(' ');
+    let capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+  
+    // Join the words with spaces
+    let result = capitalizedWords.join(' ');
+  
+    return result;
+  }
+  */
   function getWardTypePath(wardType) {
     switch (wardType) {
       case "SIGHT_WARD": 
@@ -28,6 +46,62 @@ const Event = (props) => {
         return "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3363_class_t1_farsightalteration.png"
       default:
         return ""
+    }
+  }
+
+  function handleSpecialKill(eventType) {
+    switch (eventType.killType) {
+      case "KILL_FIRST_BLOOD":
+        return (
+          <div>
+            Time: {time}{" "}
+            <img
+              height="20px"
+              width="20px"
+              style={{ display: "inLineFlex" }}
+              alt="loading"
+              src={getChampionPic(props.playerBios[eventType.killerId - 1][3])}
+            ></img>{" "}
+            {props.playerBios[eventType.killerId - 1][0]} got First blood
+          </div>
+        )
+      case "KILL_ACE":
+        return (
+          <div>
+              Time: {time}{" "}
+              ACE!!!
+          </div>
+        )
+      case "KILL_MULTI":
+
+        return (
+          <div>
+            Time: {time}{" "}
+            <img
+              height="20px"
+              width="20px"
+              style={{ display: "inLineFlex" }}
+              alt="loading"
+              src={getChampionPic(props.playerBios[eventType.killerId - 1][3])}
+            ></img>{" "}
+            {props.playerBios[eventType.killerId - 1][0]} got a {convertNumberToWord(eventType.multiKillLength)} kill!
+          </div>
+        )
+      
+    }
+  }
+
+  function convertNumberToWord(number) {
+    if (number === 2) {
+      return 'Double';
+    } else if (number === 3) {
+      return 'Triple';
+    } else if (number === 4) {
+      return 'Quadra';
+    } else if (number === 5) {
+      return 'Penta';
+    } else {
+      return 'Unsupported number';
     }
   }
 
@@ -293,8 +367,31 @@ const Event = (props) => {
         return null;
       case "PORO_KING_SUMMON":
         return null;
+      case "TURRET_PLATE_DESTROYED":
+        return null;
+      case "PAUSE_END":
+        return null;
+      case "GAME_END":
+        return null;
+      case "LEVEL_UP":
+        return
+        return (
+          <div>
+            Time: {time}{" "}
+            <img
+              height="20px"
+              width="20px"
+              style={{ display: "inLineFlex" }}
+              alt="loading"
+              src={getChampionPic(props.playerBios[props.participantId - 1][3])}
+            ></img>{" "}
+            {props.playerBios[props.participantId - 1][0]} Leveled Up!
+          </div>
+        );
+      case "CHAMPION_SPECIAL_KILL":
+        return handleSpecialKill(props)
       default:
-        return <div>UH OHHHH SOMETHIGN WENT WRONG</div>;
+        return <div>{props.type}</div>;
     }
   };
   let eventResponse = handleEvent();

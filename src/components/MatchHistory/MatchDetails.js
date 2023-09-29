@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
     searchPuuid,
     getMatchDetails,
@@ -13,9 +13,13 @@ import BasicGameStats from "./BasicGameStats";
 import ExpandedMatch from "./Expanded/Teams/ExpandedMatch";
 import Runes from "./Runes";
 import "../app.css";
+import axios from 'axios'
+import { RiotJsonContext } from "../Search/Search2";
 
 const MatchDetails = (props) => {
-    //console.log("match details props: ", props)
+    // console.log("match details props: ", props)
+    const riotJsons = useContext(RiotJsonContext)
+    const championJson = riotJsons["championJson"]
     const [gameData, setGameData] = useState();
     const [gameTimeline, setGameTimeline] = useState();
     const [participantId, setParticipantId] = useState();
@@ -56,47 +60,32 @@ const MatchDetails = (props) => {
                 return "summonertemp2.png"
         }
     }
-    let playerInfo = []
+    async function grabData() {
+        const matchDetail = await axios.get(`http://localhost:4000/matchDetails/${props.gameId}`)
+        setGameData(matchDetail.data)
+        const matchTimeline = await axios.get(`http://localhost:4000/matchTimeline/${props.gameId}`)
+        setGameTimeline(matchTimeline.data)
+        for (let i = 0; i < matchDetail.data.metadata.participants.length; i++) {         
+            //we want one hub of a users team champion, champion key i guess and then the participant id  
+            let playerBio = [
+                matchDetail.data.info.participants[i].summonerName,
+                matchDetail.data.info.participants[i].championId,
+                matchDetail.data.info.participants[i].teamId,
+                championJson.keys[matchDetail.data.info.participants[i].championId],
+                //this the account id because i assume we only need that
+                matchDetail.data.info.participants[i].accountId,
+            ]
+            tempArrayOfBios.push(playerBio);
+            if (matchDetail.data.metadata.participants[i] === props.puuid) {
+                setParticipantId(i);
+            }         
+        }
+        setPlayerBios(tempArrayOfBios)
+
+    }
     useEffect(() => {
-        getMatchDetails(props.gameId).then(
-            (result) => {
-                setGameData(result);
-                console.log("RESULT: ", result)
-                for (let i = 0; i < result.metadata.participants.length; i++) {
-                    searchPuuid(result.metadata.participants[i]).then(
-                        (searchResult) => {
-                            /*
-                            we want one hub of a users team champion, champion key i guess and then the participant id
-                            */
-                            let playerBio = [
-                                searchResult.name,
-                                result.info.participants[i].championId,
-                                result.info.participants[i].teamId,
-                                props.championJson.keys[result.info.participants[i].championId],
-                                //this the account id because i assume we only need that
-                                searchResult.accountId,
-                            ]
-                            tempArrayOfBios.push(playerBio);
-                            if (result.metadata.participants[i] === props.puuid) {
-                                setParticipantId(i);
-                            }
-                        }
-                    )
-                    
-                    
-                }
-                setPlayerBios(tempArrayOfBios);
-            },
-            (error) => {
-                setIsLoaded(true);
-                setError(error);
-            }
-        );
-        getMatchTimeline(props.gameId).then((result) => {
-            setGameTimeline(result);
-            //console.log("timeline result: ", result)
-        });
-    }, [props.gameId, props.accountId, props.championJson, props.champion]);
+        grabData()
+    }, [])
 
     useEffect(() => {
         if (
@@ -133,8 +122,7 @@ const MatchDetails = (props) => {
         let item6 = gameData.info.participants[participantId].item6;
         let items = [item0, item1, item2, item3, item4, item5, item6];
 
-        const champName = props.championJson.keys[gameData.info.participants[participantId].championId];
-        console.log("BUTT FOR NO: ", champName)
+        const champName = championJson.keys[gameData.info.participants[participantId].championId];
 
         const handleButtonPress = (e) => {
             e.preventDefault();
@@ -171,17 +159,17 @@ const MatchDetails = (props) => {
                     <Runes
                         gameData={gameData}
                         participantId={participantId}
-                        runeJson={props.runeJson}
                     />
                     <SummonerSpell
+                        gameData={gameData}
                         imageLink1={getSummonerSpellPic(
-                            getSummonerSpellName(gameData.info.participants[participantId].spell1Id)
+                            getSummonerSpellName(gameData.info.participants[participantId].summoner1Id)
                         )}
                         imageLink2={getSummonerSpellPic(
-                            getSummonerSpellName(gameData.info.participants[participantId].spell2Id)
+                            getSummonerSpellName(gameData.info.participants[participantId].summoner2Id)
                         )}
                     />
-                    <ItemList items={items} itemJson={props.itemJson} />
+                    <ItemList items={items}/>
                     <BasicStats gameData={gameData} participantId={participantId} />
                     <button
                         className="expandMatchHistory"
@@ -196,9 +184,6 @@ const MatchDetails = (props) => {
                         playerBios={playerBios}
                         gameTimeline={gameTimeline}
                         gameData={gameData}
-                        itemJson={props.itemJson}
-                        runeJson={props.runeJson}
-                        championJson={props.championJson}
                         champion={champName}
                         participantId={participantId}
                     />

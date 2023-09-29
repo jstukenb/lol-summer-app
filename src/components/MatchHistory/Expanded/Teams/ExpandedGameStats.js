@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import BasicStats from '../../BasicStats'
 import SummonerSpell from '../../SummonerSpell'
 import ItemList from '../../../Items/ItemList'
 import Runes from '../../Runes'
 import { getChampionPic, getSummonerSpellPic } from '../../../../RiotAPI'
+import { RiotJsonContext } from '../../../Search/Search2'
 
 const ExpandedGameStats = props => {
     function getSummonerSpellName(id) {
@@ -55,7 +56,8 @@ const ExpandedGameStats = props => {
     let item6 = props.gameData.info.participants[props.participantId - 1].item6
     let items = [item0, item1, item2, item3, item4, item5, item6]
 
-    const champName = props.championJson.keys[props.gameData.info.participants[props.participantId - 1].championId]
+    const championJson = useContext(RiotJsonContext)["championJson"]
+    const champName = championJson.keys[props.gameData.info.participants[props.participantId - 1].championId]
     //let blurb = props.championJson.data[champName].blurb
 
     return (
@@ -72,7 +74,7 @@ const ExpandedGameStats = props => {
             
             <img className="championImage" src={getChampionPic(champName)} alt="loading" />
             <Runes gameData={props.gameData} participantId={props.participantId - 1} runeJson={props.runeJson} />
-            <SummonerSpell imageLink1={getSummonerSpellPic(getSummonerSpellName(props.gameData.info.participants[props.participantId - 1].spell1Id))} imageLink2={getSummonerSpellPic(getSummonerSpellName(props.gameData.info.participants[props.participantId - 1].spell2Id))} />
+            <SummonerSpell imageLink1={getSummonerSpellPic(getSummonerSpellName(props.gameData.info.participants[props.participantId - 1].summoner1Id))} imageLink2={getSummonerSpellPic(getSummonerSpellName(props.gameData.info.participants[props.participantId - 1].summoner2Id))} />
             <ItemList items={items} itemJson={props.itemJson}/>
             <BasicStats gameData={props.gameData} participantId={props.participantId - 1} />
         </div>
